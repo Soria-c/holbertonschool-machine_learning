@@ -23,4 +23,4 @@ def mat_mul(mat1, mat2):
             for j in list(matrix_transpose(mat2)):
                 inner.append(sum([x * y for x, y in zip(i, j)]))
             result.append(inner)
-    return result
+        return result
