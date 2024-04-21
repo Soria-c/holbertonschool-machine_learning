@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Calculus tasks"""
-import numpy as np
 
 
 def summation_i_squared(n):
     """Function to calculate a sum"""
-    if (isinstance(n, int)):
-        arr = np.arange(1, n+1)
-        return int(np.power(arr, 2).sum())
+    if (isinstance(n, int)) and n > 0:
+        return n * (n + 1) * (2 * n + 1) / 6
+    
