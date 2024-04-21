@@ -8,6 +8,7 @@ def poly_integral(poly, C=0):
         return None
     result = []
     for i, x in enumerate(poly):
-        value = x / (i + 1)
-        result.append(int(value) if (value.is_integer()) else value)
+        if (x != 0):
+            value = x / (i + 1)
+            result.append(int(value) if (value.is_integer()) else value)
     return [C, *result]
