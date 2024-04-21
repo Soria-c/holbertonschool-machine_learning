@@ -2,6 +2,7 @@
 """Calculus tasks"""
 import numpy as np
 
+
 def summation_i_squared(n):
     """Function to calculate a sum"""
     if (isinstance(n, int)):
