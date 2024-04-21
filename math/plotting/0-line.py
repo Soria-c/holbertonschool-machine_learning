@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
 def line():
     """Fuction to plot a curve"""
 
