@@ -4,7 +4,7 @@
 
 def poly_derivative(poly):
     """Function that calculates the derivative of a polynomial"""
-    if not(isinstance(poly, list) or len(poly) == 0):
+    if not(isinstance(poly, list) and len(poly) == 0):
         return None
     result = []
     for i, x in enumerate(poly):
