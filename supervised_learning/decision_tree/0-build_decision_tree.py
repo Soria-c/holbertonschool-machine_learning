@@ -27,6 +27,7 @@ class Node:
 
 
 class Leaf(Node):
+    """Leaf class"""
     def __init__(self, value, depth=None):
         """Constructor"""
         super().__init__()
