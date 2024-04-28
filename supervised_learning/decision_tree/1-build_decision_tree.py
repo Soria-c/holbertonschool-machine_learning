@@ -23,6 +23,12 @@ class Node:
         return max(self.left_child.max_depth_below(),
                    self.right_child.max_depth_below())
 
+    def count_nodes_below(self, only_leaves=False):
+        """Function to calculate the number of internal nodes or/and leaves"""
+        return int(not only_leaves) +\
+            self.left_child.count_nodes_below(only_leaves) +\
+            self.right_child.count_nodes_below(only_leaves)
+
 
 class Leaf(Node):
     """Leaf class"""
@@ -36,6 +42,10 @@ class Leaf(Node):
     def max_depth_below(self):
         """Function to calculate the maximum depth"""
         return self.depth
+
+    def count_nodes_below(self, only_leaves=False):
+        """Function to calculate the number of internal nodes or/and leaves"""
+        return 1
 
 
 class Decision_Tree():
@@ -58,3 +68,7 @@ class Decision_Tree():
     def depth(self):
         """Function to calculate the maximum depth"""
         return self.root.max_depth_below()
+
+    def count_nodes(self, only_leaves=False):
+        """Function to calculate the number of internal nodes or/and leaves"""
+        return self.root.count_nodes_below(only_leaves=only_leaves)
