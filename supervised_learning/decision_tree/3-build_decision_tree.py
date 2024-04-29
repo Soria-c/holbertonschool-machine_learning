@@ -77,7 +77,7 @@ class Leaf(Node):
 
     def __str__(self):
         """Function to format a leaf"""
-        return (f"-> leaf [value={self.value}]")
+        return (f"-> leaf [value={self.value}] ")
 
     def get_leaves_below(self):
         """Function to get a list of leaves below"""
