@@ -102,4 +102,4 @@ class Decision_Tree():
 
     def __str__(self):
         """Function to format a tree"""
-        return self.root.__str__()
+        return self.root.__str__() + "\n"
