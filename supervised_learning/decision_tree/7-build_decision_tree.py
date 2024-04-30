@@ -199,7 +199,7 @@ class Decision_Tree():
         self.update_predict()
 
         if verbose == 1:
-            print(f"""  Training finished.
+            print(f"""Training finished.
 - Depth                     : { self.depth()       }
 - Number of nodes           : { self.count_nodes() }
 - Number of leaves          : { self.count_nodes(only_leaves=True) }
@@ -228,12 +228,12 @@ class Decision_Tree():
         left_population = node.sub_population &\
             (self.explanatory[:, node.feature] > node.threshold)
         right_population = node.sub_population &\
-            (self.explanatory[:, node.feature] <= node.threshold)
+            ~left_population
 
         # Is left node a leaf ?
 
         left_filter = self.explanatory[:, node.feature][left_population]
-        is_left_leaf = ((left_filter.size < self.min_pop)
+        is_left_leaf = ((np.sum(left_population) < self.min_pop)
                         or (node.depth + 1 == self.max_depth)
                         or (np.unique(self.target[left_population]).size
                             == 1))
@@ -246,7 +246,7 @@ class Decision_Tree():
 
         # Is right node a leaf ?
         right_filter = self.explanatory[:, node.feature][right_population]
-        is_right_leaf = ((right_filter.size < self.min_pop)
+        is_right_leaf = ((np.sum(right_filter) < self.min_pop)
                          or (node.depth + 1 == self.max_depth)
                          or (np.unique(self.target[right_population]).size
                              == 1))
