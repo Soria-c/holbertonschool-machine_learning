@@ -228,7 +228,8 @@ class Decision_Tree():
 
         left_population = node.sub_population &\
             (self.explanatory[:, node.feature] > node.threshold)
-        right_population = ~left_population
+        right_population = node.sub_population &\
+            (self.explanatory[:, node.feature] <= node.threshold)
 
         # Is left node a leaf ?
 
