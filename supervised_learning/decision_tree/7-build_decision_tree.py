@@ -252,8 +252,8 @@ class Decision_Tree():
 
     def get_leaf_child(self, node, sub_population):
         """"Function to get create a leaf node"""
-        value = np.unique(self.target[sub_population], return_counts=True)
-        leaf_child = Leaf(value[0][0])
+        value = np.argmax(np.bincount(self.target[sub_population]))
+        leaf_child = Leaf(value)
         leaf_child.depth = node.depth + 1
         leaf_child.subpopulation = sub_population
         return leaf_child
