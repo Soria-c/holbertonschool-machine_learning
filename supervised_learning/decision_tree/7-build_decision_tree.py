@@ -233,7 +233,7 @@ class Decision_Tree():
         # Is left node a leaf ?
 
         left_filter = self.explanatory[:, node.feature][left_population]
-        is_left_leaf = ((np.sum(left_population) < self.min_pop)
+        is_left_leaf = ((np.sum(left_population) <= self.min_pop)
                         or (node.depth + 1 == self.max_depth)
                         or (np.unique(self.target[left_population]).size
                             == 1))
@@ -246,7 +246,7 @@ class Decision_Tree():
 
         # Is right node a leaf ?
         right_filter = self.explanatory[:, node.feature][right_population]
-        is_right_leaf = ((np.sum(right_filter) < self.min_pop)
+        is_right_leaf = ((np.sum(right_filter) <= self.min_pop)
                          or (node.depth + 1 == self.max_depth)
                          or (np.unique(self.target[right_population]).size
                              == 1))
