@@ -107,7 +107,7 @@ class Neuron:
         A: np.Array (1, m)
             containS the activated output of the neuron for each example
         """
-        return np.matmul(A - Y, X.transpose())
+        return np.matmul(A - Y, X.transpose()) / len(A)
 
     def __improve_bias(self, Y, A):
         """
@@ -120,7 +120,7 @@ class Neuron:
         A: np.Array (1, m)
             containS the activated output of the neuron for each example
         """
-        return A - Y
+        return (A - Y).mean()
 
     def gradient_descent(self, X, Y, A, alpha=0.05):
         """
@@ -138,7 +138,7 @@ class Neuron:
             learning rate
         """
         self.__W = self.__W - (alpha * self.__improve_weight(X, Y, A))
-        self.__b = self.__b - (alpha * self.__improve_bias(Y, A).mean())
+        self.__b = self.__b - (alpha * self.__improve_bias(Y, A))
 
     @property
     def W(self):
