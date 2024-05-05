@@ -107,7 +107,7 @@ class Neuron:
         A: np.Array (1, m)
             containS the activated output of the neuron for each example
         """
-        return np.matmul(A - Y, X.transpose()) / len(A)
+        return np.matmul(A - Y, X.transpose()) / len(A[0])
 
     def __improve_bias(self, Y, A):
         """
