@@ -29,7 +29,7 @@ class Neuron:
             is the number of input features to the neuron
         """
         self.__validate(nx)
-        self.W = np.random.default_rng().normal(size=(1, nx))
+        self.W = np.random.normal(size=(1, nx))
         self.b = 0
         self.A = 0
 
