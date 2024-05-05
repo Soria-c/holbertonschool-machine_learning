@@ -94,34 +94,6 @@ class Neuron:
         self.forward_prop(X)
         return ((self.__A >= 0.50).astype(int), self.cost(Y, self.__A))
 
-    def __improve_weight(self, X, Y, A):
-        """
-        Function to improve the weight
-        ```
-        Parameters
-        ----------
-        X: np.Array (nx, m)
-            contains input data
-        Y: np.Array (1, m)
-            contains the correct labels for the input data
-        A: np.Array (1, m)
-            containS the activated output of the neuron for each example
-        """
-        return np.matmul(A - Y, X.transpose()) / len(A[0])
-
-    def __improve_bias(self, Y, A):
-        """
-        Function to improve the bias
-        ```
-        Parameters
-        ----------
-        Y: np.Array (1, m)
-            contains the correct labels for the input data
-        A: np.Array (1, m)
-            containS the activated output of the neuron for each example
-        """
-        return (A - Y).mean()
-
     def gradient_descent(self, X, Y, A, alpha=0.05):
         """
         Calculates one pass of gradient descent on the neuron
@@ -137,8 +109,11 @@ class Neuron:
         alpha: float
             learning rate
         """
-        self.__W = self.__W - (alpha * self.__improve_weight(X, Y, A))
-        self.__b = self.__b - (alpha * self.__improve_bias(Y, A))
+        dz = A - Y
+        dw = np.matmul(dz, X.transpose()) / len(A[0])
+        db = dz.mean()
+        self.__W = self.__W - (alpha * dw)
+        self.__b = self.__b - (alpha * db)
 
     @property
     def W(self):
