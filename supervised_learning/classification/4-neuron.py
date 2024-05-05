@@ -70,6 +70,7 @@ class Neuron:
     def cost(self, Y, A):
         """
         Calculates the cost of the model using logistic regression
+        ```
         Parameters
         ----------
         Y: np.Array (1, m)
@@ -78,7 +79,21 @@ class Neuron:
             containS the activated output of the neuron for each example
         """
         return np.mean(-((Y * np.log(A)) + (1 - Y)*(np.log(1.0000001 - A))))
-    
+
+    def evaluate(self, X, Y):
+        """
+        Evaluates the neuron’s predictions
+        ```
+        Parameters
+        ----------
+        X: np.Array (nx, m)
+            contains input data
+        Y: np.Array (1, m)
+            contains the correct labels for the input data
+        """
+        self.forward_prop(X)
+        return ((self.__A >= 0.50).astype(int), self.cost(Y, self.__A))
+
     @property
     def W(self):
         """
