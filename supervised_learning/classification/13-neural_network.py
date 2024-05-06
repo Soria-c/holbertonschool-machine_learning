@@ -147,7 +147,7 @@ class NeuralNetwork:
         db2 = dz2.mean(axis=1, keepdims=True)
 
         dz1 = np.matmul(self.__W2.transpose(), dz2) * self.dzig(A1)
-        dw1 = np.matmul(dz1, X.transpose())
+        dw1 = np.matmul(dz1, X.transpose()) / len(A2[0])
         db1 = dz1.mean(axis=1, keepdims=True)
 
         self.__W1 = self.__W1 - (alpha * dw1)
