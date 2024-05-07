@@ -19,6 +19,6 @@ def one_hot_decode(one_hot):
     if type(one_hot) is not np.ndarray:
         return
     try:
-        return np.where(one_hot.transpose() > 0)[1]
+        return np.argmax(one_hot.transpose(), axis=1)
     except Exception:
         return
