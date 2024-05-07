@@ -161,7 +161,7 @@ class NeuralNetwork:
               graph=True, step=100):
         """
         Trains the neuron
-                ```
+        ```
         Parameters
         ----------
         X: np.Array (nx, m)
