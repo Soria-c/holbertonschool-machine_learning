@@ -76,14 +76,14 @@ class DeepNeuralNetwork:
         return self.__L
 
     @property
-    def L(self):
+    def cache(self):
         """
         Getter for __cache
         """
         return self.__cache
 
     @property
-    def L(self):
+    def weights(self):
         """
         Getter for __weights
         """
