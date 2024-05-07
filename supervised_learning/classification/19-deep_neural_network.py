@@ -101,7 +101,7 @@ class DeepNeuralNetwork:
                 + self.__weights[f"b{i +1}"])
             self.__cache[f"A{i+1}"] = result
         return result, self.__cache
-    
+
     def cost(self, Y, A):
         """
         Calculates the cost of the model using logistic regression
