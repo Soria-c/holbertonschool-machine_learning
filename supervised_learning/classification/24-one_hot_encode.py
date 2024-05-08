@@ -17,8 +17,6 @@ def one_hot_encode(Y, classes):
     --------
         a one-hot encoding of Y with shape (classes, m), or None on failure
     """
-    if type(Y) is not np.ndarray:
-        return
     try:
         return np.identity(classes)[Y].transpose()
     except Exception:

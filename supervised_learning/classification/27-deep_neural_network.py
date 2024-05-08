@@ -3,6 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
+one_hot_encode = __import__('24-one_hot_encode').one_hot_encode
 
 
 class DeepNeuralNetwork:
@@ -87,6 +88,10 @@ class DeepNeuralNetwork:
         """
         return 1/(1 + np.exp(-x))
 
+    def softmax(self, x):
+        """Compute softmax values for each sets of scores in x."""
+        return np.exp(x) / np.sum(np.exp(x), axis=0, keepdims=True)
+
     def dzig(self, x):
         """
         Function to apply the derivative sigmoid activation function
@@ -115,9 +120,14 @@ class DeepNeuralNetwork:
         """
         self.__cache["A0"] = X
         for i in range(self.__L):
-            result = self.sig(np.matmul(
-                self.__weights[f"W{i +1}"], self.__cache[f"A{i}"])
-                + self.__weights[f"b{i +1}"])
+            r = np.matmul(
+                self.__weights[f"W{i +1}"], self.__cache[f"A{i}"])\
+                + self.__weights[f"b{i +1}"]
+            if (i + 1 == self.__L):
+                result = self.softmax(r)
+                # print(result)
+            else:
+                result = self.sig(r)
             self.__cache[f"A{i+1}"] = result
         return result, self.__cache
 
@@ -132,7 +142,12 @@ class DeepNeuralNetwork:
         A: np.Array (1, m)
             containS the activated output of the neuron for each example
         """
-        return np.mean(-((Y * np.log(A)) + (1 - Y)*(np.log(1.0000001 - A))))
+        # print("asdsds")
+        # print(A)
+        # print(A.shape)
+        # print("a")
+        # print(Y.shape)
+        return np.mean(-(Y * np.log(A + 1e-8)))
 
     def evaluate(self, X, Y):
         """
@@ -146,7 +161,8 @@ class DeepNeuralNetwork:
             contains the correct labels for the input data
         """
         result = self.forward_prop(X)[0]
-        return ((result >= 0.50).astype(int), self.cost(Y, result))
+        argmax = np.argmax(result, axis=0)
+        return (one_hot_encode(argmax, 10), self.cost(Y, result))
 
     def gradient_descent(self, Y, cache, alpha=0.05):
         """
