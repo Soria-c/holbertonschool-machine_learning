@@ -147,7 +147,7 @@ class DeepNeuralNetwork:
         # print(A.shape)
         # print("a")
         # print(Y.shape)
-        return np.mean(-(Y * np.log(A + 1e-8)))
+        return np.mean(-(Y * np.log(A)))
 
     def evaluate(self, X, Y):
         """
