@@ -183,7 +183,7 @@ class DeepNeuralNetwork:
         m = len(Y[0])
         for i in range(self.__L, 0, -1):
             if i == self.__L:
-                dz = cache[f"A{i}"] - Y
+                dz =  -Y * (1 - cache[f"A{i}"])
             else:
                 dz = np.matmul(prev_w.transpose(), prev_dz) *\
                     self.dzig(cache[f"A{i}"])

@@ -188,8 +188,6 @@ class DeepNeuralNetwork:
             contains input data
         Y: np.Array (1, m)
             contains the correct labels for the input data
-        A: np.Array (1, m)
-            containS the activated output of the neuron for each example
         alpha: float
             learning rate
         iterations: int
@@ -211,13 +209,14 @@ class DeepNeuralNetwork:
         epochs = []
         costs = []
         for i in range(iterations):
+            A ,_ = self.forward_prop(X)
+            self.gradient_descent(Y, self.__cache, alpha)
             if verbose and (i % step) == 0:
-                current_cost = self.cost(Y, self.__A)
+                current_cost = self.cost(Y, A)
                 costs.append(current_cost)
                 epochs.append(i)
                 print(f"Cost after {i} iterations: {current_cost}")
-            self.forward_prop(X)
-            self.gradient_descent(Y, self.__cache, alpha)
+            
         if graph is True:
             plt.plot(epochs, costs)
             plt.title("Training Cost")

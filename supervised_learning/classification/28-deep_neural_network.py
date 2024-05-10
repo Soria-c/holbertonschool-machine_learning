@@ -19,7 +19,7 @@ class DeepNeuralNetwork:
     weights: dict
         A dictionary to hold all weights and biased of the network.
     """
-    def __init__(self, nx, layers):
+    def __init__(self, nx, layers, activation='sig'):
         """
         Constructor
 
@@ -39,6 +39,11 @@ class DeepNeuralNetwork:
         if type(layers) is not list or len(layers) == 0 or min(layers) < 1\
                 or set(map(type, layers)) != {int}:
             raise TypeError("layers must be a list of positive integers")
+        if activation not in ["sig", "tanh"]:
+            raise ValueError("activation must be 'sig' or 'tanh'")
+        self.__activation = activation
+        self.__act_dict = {"sig": self.sig, "tanh": self.tanh}
+        self.__dact_dict = {"sig": self.dsig, "tanh": self.dtanh}
         self.__L = len(layers)
         self.__cache = {}
         self.__weights = {}
@@ -87,10 +92,18 @@ class DeepNeuralNetwork:
             Activated output applying sigmoid
         """
         return 1/(1 + np.exp(-x))
+    
+    def tanh(self, x):
+        return np.tanh(x)
+
+    def dtanh(self, x):
+        return 1 - (np.tanh(x)) ** 2
+
 
     def softmax(self, x):
         """Compute softmax values for each sets of scores in x."""
-        return np.exp(x) / np.sum(np.exp(x), axis=0)
+        expZ = np.exp(x - np.max(x, axis=0, keepdims=True))
+        return expZ / expZ.sum(axis=0, keepdims=True)
 
     def dzig(self, x):
         """
@@ -127,7 +140,8 @@ class DeepNeuralNetwork:
                 result = self.softmax(r)
                 # print(result)
             else:
-                result = self.sig(r)
+                result = self.sig(r) if self.__activation == "sig" else self.tanh(r)
+                # print(result)
             self.__cache[f"A{i+1}"] = result
         return result, self.__cache
 
@@ -183,10 +197,15 @@ class DeepNeuralNetwork:
         m = len(Y[0])
         for i in range(self.__L, 0, -1):
             if i == self.__L:
-                dz = cache[f"A{i}"] - Y
+                "for tanh take derivative of tanh instead of sig in the chain rule"
+                if self.__activation == "sig":
+                    dz = -Y / cache[f"A{i}"]  
+                else:
+                    dz = (((-Y) / cache[f"A{i}"]) * (1 - (cache[f"A{i}"]) ** 2))
+                # print(dz)
             else:
                 dz = np.matmul(prev_w.transpose(), prev_dz) *\
-                    self.dzig(cache[f"A{i}"])
+                    self.dzig(cache[f"A{i}"]) if self.__activation == "sig" else self.dtanh(cache[f"A{i}"])
             dw = np.matmul(dz, cache[f"A{i - 1}"].transpose()) / m
             db = dz.mean(axis=1, keepdims=True)
             prev_dz = dz
@@ -293,3 +312,10 @@ class DeepNeuralNetwork:
         Getter for __weights
         """
         return self.__weights
+
+    @property
+    def activation(self):
+        """
+        Getter for __activation
+        """
+        return self.__activation
