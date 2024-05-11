@@ -29,11 +29,12 @@ def train(X_train, Y_train, X_valid, Y_valid, layer_sizes,
         iterations is the number of iterations to train over
         save_path designates where to save the model
     """
-    x, y = create_placeholders(X_train.shape[1], y.train.shape[1])
-    y_pred = forward_prop(X_train, layer_sizes, activations)
-    accuracy = calculate_accuracy(Y_train, y_pred)
-    loss = calculate_loss(Y_train, y_pred)
+    x, y = create_placeholders(784, 10)
+    y_pred = forward_prop(x, layer_sizes, activations)
+    accuracy = calculate_accuracy(y, y_pred)
+    loss = calculate_loss(y, y_pred)
     train_op = create_train_op(loss, alpha)
+
     tf.add_to_collection("x", x)
     tf.add_to_collection("y", y)
     tf.add_to_collection("y_pred", y_pred)
@@ -57,10 +58,12 @@ def log_info(loss, accuracy, X_train, Y_train,
              X_valid, Y_valid, i, sess, x, y):
     """Logs training info"""
     print(f"After {i} iterations:")
+
     train_loss, train_accuracy = sess.run([loss, accuracy],
                                           feed_dict={x: X_train, y: Y_train})
     print(f"\tTraining Cost: {train_loss}")
     print(f"\tTraining Accuracy: {train_accuracy}")
+
     v_loss, v_accuracy = sess.run([loss, accuracy],
                                   feed_dict={x: X_valid, y: Y_valid})
     print(f"\tValidation Cost: {v_loss}")
