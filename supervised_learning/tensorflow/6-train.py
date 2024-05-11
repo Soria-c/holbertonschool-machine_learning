@@ -51,7 +51,7 @@ def train(X_train, Y_train, X_valid, Y_valid, layer_sizes,
             if not ((i + 1) % 100) or (i + 1) == iterations:
                 log_info(loss, accuracy, X_train, Y_train,
                          X_valid, Y_valid, i + 1, sess, x, y)
-    return tf.train.Saver().save(sess, save_path)
+        return tf.train.Saver().save(sess, save_path)
 
 
 def log_info(loss, accuracy, X_train, Y_train,
