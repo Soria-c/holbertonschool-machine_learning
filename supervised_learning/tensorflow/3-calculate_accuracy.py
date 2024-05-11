@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Calculate Accuracy"""
-# import tensorflow.compat.v1 as tf
-import tensorflow
-tf = tensorflow.compat.v1
+import tensorflow.compat.v1 as tf
 
 
 create_layer = __import__('1-create_layer').create_layer
