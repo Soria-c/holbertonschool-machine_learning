@@ -29,7 +29,7 @@ def train(X_train, Y_train, X_valid, Y_valid, layer_sizes,
         iterations is the number of iterations to train over
         save_path designates where to save the model
     """
-    x, y = create_placeholders(784, 10)
+    x, y = create_placeholders(X_train.shape[1], y.train.shape[1])
     y_pred = forward_prop(X_train, layer_sizes, activations)
     accuracy = calculate_accuracy(Y_train, y_pred)
     loss = calculate_loss(Y_train, y_pred)
