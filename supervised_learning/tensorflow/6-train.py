@@ -48,7 +48,7 @@ def train(X_train, Y_train, X_valid, Y_valid, layer_sizes,
                  X_valid, Y_valid, 0, sess, x, y)
         for i in range(iterations):
             sess.run(train_op, feed_dict={x: X_train, y: Y_train})
-            if not ((i + 1) % 100) and (i + 1) == iterations:
+            if not ((i + 1) % 100) or (i + 1) == iterations:
                 log_info(loss, accuracy, X_train, Y_train,
                          X_valid, Y_valid, i + 1, sess, x, y)
     return tf.train.Saver().save(sess, save_path)
