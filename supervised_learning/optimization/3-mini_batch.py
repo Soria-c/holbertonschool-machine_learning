@@ -27,6 +27,6 @@ def create_mini_batches(X, Y, batch_size):
     list of mini-batches containing tuples (X_batch, Y_batch)
     """
     X_batch, Y_batch = shuffle_data(X, Y)
-    chunk = math.ceil(len(X) / batch_size)
+    chunk = np.arange(batch_size, len(X), batch_size)
     return zip(np.array_split(X_batch, chunk, axis=0),
                np.array_split(Y_batch, chunk, axis=0))
