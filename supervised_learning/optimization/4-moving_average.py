@@ -24,4 +24,4 @@ def moving_average(data, beta):
         v = (beta * v) + ((1 - beta) * d[1])
         bias_corrected = v / (1 - (beta ** (d[0] + 1)))
         return bias_corrected
-    return tuple(map(compute_exp_avg, enumerate(data)))
+    return list(map(compute_exp_avg, enumerate(data)))
