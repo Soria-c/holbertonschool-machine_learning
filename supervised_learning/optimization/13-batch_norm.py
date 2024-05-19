@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Learning Rate Decay"""
+"""Batch Normalization"""
 import numpy as np
 
 
 def batch_norm(Z, gamma, beta, epsilon):
     """
-    Updates the learning rate using inverse time decay
+    Normalizes an unactivated output of a neural network using batch normalization
     ```
     Parameters:
     -----------
