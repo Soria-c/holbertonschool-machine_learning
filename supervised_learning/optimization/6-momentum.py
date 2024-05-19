@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Create Momemtum Op"""
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 
 
 def create_momentum_op(alpha, beta1):
