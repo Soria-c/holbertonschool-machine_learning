@@ -24,5 +24,5 @@ def batch_norm(Z, gamma, beta, epsilon):
     """
     mean = np.mean(Z, axis=0)
     variance = np.std(Z, axis=0)**2
-    Z_norm = (Z - mean) / ((variance + epsilon) ** (1 / 2.0))
+    Z_norm = (Z - mean) / ((variance + epsilon) ** 0.5)
     return gamma * Z_norm + beta
