@@ -16,6 +16,11 @@ def create_confusion_matrix(labels, logits):
         One-hot containing the predicted labels
         m is the number of data points
         classes is the number of classes
+    Returns:
+    --------
+    confusion numpy.ndarray of shape (classes, classes)
+    with row indices representing the correct labels
+    and column indices representing the predicted labels
     """
     labels_num = labels.shape[1]
     confusion_matrix = np.zeros(shape=(labels_num, labels_num))
