@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Sensitivity"""
+"""Precision"""
 import numpy as np
 
 
-def sensitivity(confusion):
+def precision(confusion):
     """
-    Calculates the sensitivity for each class in a confusion matrix
+    Calculates the precision for each class in a confusion matrix:
     Parameters:
     -----------
     confusion numpy.ndarray(classes, classes):
@@ -17,4 +17,4 @@ def sensitivity(confusion):
         numpy.ndarray(classes,) containing
         the sensitivity of each class
     """
-    return np.diag(confusion) / np.sum(confusion, axis=1)
+    return np.diag(confusion) / np.sum(confusion, axis=0)
