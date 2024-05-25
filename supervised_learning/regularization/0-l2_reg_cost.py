@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-import numpy as np
 """L2 Regularization Cost"""
+import numpy as np
+
 
 
 def l2_reg_cost(cost, lambtha, weights, L, m):
@@ -22,8 +23,8 @@ def l2_reg_cost(cost, lambtha, weights, L, m):
     -------
     cost of the network accounting for L2 regularization
     """
-    norm = 0
-    for i in weights.values():
-        norm += np.linalg.norm(i) ** 2
-    decay_w = (lambtha / (2 * m)) * norm
+    s_norm = 0
+    for i in range(L):
+        s_norm += np.linalg.norm(weights[f"W{i + 1}"]) ** 2
+    decay_w = (lambtha / (2 * m)) * s_norm
     return cost + decay_w
