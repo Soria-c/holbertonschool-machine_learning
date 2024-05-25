@@ -16,14 +16,11 @@ def dropout_create_layer(prev, n, activation, keep_prob, training=True):
     training is a boolean indicating whether the model is in training mode
     Returns: the output of the new layer
     """
+    regularizer = tf.keras.layers.Dropout(rate=keep_prob)
     weights = tf.keras.initializers.VarianceScaling(scale=2.0,
                                                     mode='fan_avg')
-    layer = tf.keras.Sequential(
-        [
-            tf.keras.layers.Dense(units=n,
+    layer = tf.keras.layers.Dense(units=n,
                                   activation=activation,
-                                  kernel_initializer=weights),
-            tf.keras.layers.Dropout(rate=keep_prob*n),
-        ]
-    )
-    return layer(inputs=prev, training=training)
+                                  kernel_initializer=weights)
+
+    return regularizer(inputs=layer(prev), training=training)
