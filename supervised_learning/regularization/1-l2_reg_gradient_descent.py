@@ -17,7 +17,7 @@ def dsoft(A, Y):
     return A - Y
 
 
-def dzig(A):
+def dtanh(A):
     """
     Function to apply the derivative tanh activation function
 
@@ -66,7 +66,7 @@ def l2_reg_gradient_descent(Y, weights, cache, alpha, lambtha, L):
             dz = dsoft(cache[f"A{i}"], Y)
         else:
             dz = np.matmul(prev_w.transpose(), prev_dz) *\
-                dzig(cache[f"A{i}"])
+                dtanh(cache[f"A{i}"])
         dw = (np.matmul(dz, cache[f"A{i - 1}"].transpose()) / m)\
             + l2_gradient_descent(lambtha, m, weights[f"W{i}"])
         db = dz.mean(axis=1, keepdims=True)
