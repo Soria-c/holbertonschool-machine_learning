@@ -29,16 +29,17 @@ def convolve_grayscale_padding(images, kernel, padding):
                                      (padding[0], padding[0]),
                                      (padding[1], padding[1])))
     input_dimensions = data.shape
-    kernel_size = kernel.shape[0]
+    kernel_size_v = kernel.shape[0]
+    kernel_size_h = kernel.shape[1]
     n_images = input_dimensions[0]
-    fm_v = input_dimensions[1] - kernel_size + 1
-    fm_h = input_dimensions[2] - kernel_size + 1
+    fm_v = input_dimensions[1] - kernel_size_v + 1
+    fm_h = input_dimensions[2] - kernel_size_h + 1
     map_dimensions = (n_images, fm_v, fm_h)
     feature_maps = np.zeros(shape=map_dimensions)
     for h_index in range(fm_h):
         for v_index in range(fm_v):
-            slice_2d = data[:, v_index:kernel_size+v_index,
-                            h_index:kernel_size+h_index]
+            slice_2d = data[:, v_index:kernel_size_v+v_index,
+                            h_index:kernel_size_h+h_index]
             feature_maps[:, v_index, h_index] = np.sum(slice_2d
                                                        * kernel, axis=(1, 2))
     return feature_maps
