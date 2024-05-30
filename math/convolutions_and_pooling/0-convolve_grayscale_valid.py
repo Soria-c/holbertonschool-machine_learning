@@ -29,11 +29,10 @@ def convolve_grayscale_valid(images, kernel):
     fm_h = input_dimensions[2] - kernel_size + 1
     map_dimensions = (n_images, fm_v, fm_h)
     feature_maps = np.zeros(shape=map_dimensions)
-    for i in range(n_images):
-        for j in range(fm_v * fm_h):
-            h_index = j % fm_h
-            v_index = j // fm_h
-            slice_2d = images[i][v_index:kernel_size+v_index,
-                                 h_index:kernel_size+h_index]
-            feature_maps[i][v_index, h_index] = np.sum(slice_2d * kernel)
+    for h_index in range(fm_h):
+        for v_index in range(fm_v):
+            slice_2d = images[:, v_index:kernel_size+v_index,
+                              h_index:kernel_size+h_index]
+            feature_maps[:, v_index, h_index] = np.sum(slice_2d
+                                                       * kernel, axis=(1, 2))
     return feature_maps
