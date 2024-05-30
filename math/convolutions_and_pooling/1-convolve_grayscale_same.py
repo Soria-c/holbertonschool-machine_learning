@@ -32,13 +32,14 @@ def convolve_grayscale_same(images, kernel):
         padding_h = kernel_size_h // 2
     data = np.pad(images, pad_width=((0, 0),
                                      (padding_v, padding_v),
-                                     (padding_h, padding_h)),
-                                     mode="constant")
+                                     (padding_h, padding_h)))
     input_dimensions = data.shape
     n_images = input_dimensions[0]
-    fm_v = input_dimensions[1] - kernel_size_v + 1
-    fm_h = input_dimensions[2] - kernel_size_h + 1
+    print(kernel_size_h, kernel_size_v)
+    fm_v = images.shape[1]
+    fm_h = images.shape[2]
     map_dimensions = (n_images, fm_v, fm_h)
+    print(map_dimensions)
     feature_maps = np.zeros(shape=map_dimensions)
     for h_index in range(fm_h):
         for v_index in range(fm_v):
