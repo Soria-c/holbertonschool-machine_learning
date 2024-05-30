@@ -5,7 +5,7 @@ import numpy as np
 
 def convolve_grayscale_same(images, kernel):
     """
-    Performs a valid convolution on grayscale images
+    Performs a same convolution on grayscale images
     ```
     Parameters:
     -----------
