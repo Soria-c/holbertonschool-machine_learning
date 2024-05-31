@@ -22,5 +22,5 @@ def train_model(network, data, labels, batch_size, epochs,
             K.callbacks.EarlyStopping(
                 patience=patience
             )
-        ] if validation_data else None
+        ] if early_stopping and validation_data else None
     )
