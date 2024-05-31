@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convolution with Channels"""
+"""Multiple Kernels"""
 import numpy as np
 
 
@@ -45,9 +45,9 @@ def convolve(images, kernels, padding='same', stride=(1, 1)):
              (2 * padding[0])) // stride[0]) + 1
     fm_h = ((images.shape[2] - kernel_size_h +
              (2 * padding[1])) // stride[1]) + 1
-    map_dimensions = (n_images, fm_v, fm_h, images.shape[3])
+    map_dimensions = (n_images, fm_v, fm_h, kernels.shape[3])
     feature_maps = np.zeros(shape=map_dimensions)
-    for k in range(images.shape[3]):
+    for k in range(kernels.shape[3]):
         for h_index in range(fm_h):
             for v_index in range(fm_v):
                 slice_2d = data[:, (v_index*stride[0]):
