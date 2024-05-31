@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """One Hot"""
-# import tensorflow.keras as K
-import keras as K
+import tensorflow.keras as K
 
 
 def one_hot(labels, classes=None):
