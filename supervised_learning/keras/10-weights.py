@@ -7,7 +7,7 @@ def save_weights(network, filename, save_format='keras'):
     """
     Saves a model’s weights
     """
-    network.save_weights(filename + "." + save_format)
+    network.save_weights(filename, save_format=save_format)
 
 
 def load_weights(network, filename):
