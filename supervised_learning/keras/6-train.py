@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """Early Stopping"""
-# import tensorflow.keras as K
-import keras as K
 
 
 def train_model(network, data, labels, batch_size, epochs,
