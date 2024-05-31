@@ -25,8 +25,8 @@ def convolve(images, kernels, padding='same', stride=(1, 1)):
     --------
     numpy.ndarray containing the convolved images
     """
-    kernel_size_v = kernels[0].shape[0]
-    kernel_size_h = kernels[0].shape[1]
+    kernel_size_v = kernels.shape[0]
+    kernel_size_h = kernels.shape[1]
     if (padding == "valid"):
         padding = (0, 0)
     elif (padding == "same"):
