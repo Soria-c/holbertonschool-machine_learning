@@ -23,21 +23,13 @@ def build_model(nx, layers, activations, lambtha, keep_prob):
     """
     n_layers = len(layers)
     inputs = K.Input(shape=(nx,))
-    outputs = None
+    outputs = inputs
     for i in range(n_layers):
-        if not i:
-            layer_recur = K.layers.Dense(
-                layers[i],
-                activation=activations[i],
-                kernel_regularizer=K.regularizers.L2(lambtha)
-                )(inputs)
-        else:
-            layer_recur = K.layers.Dense(
-                layers[i],
-                activation=activations[i],
-                kernel_regularizer=K.regularizers.L2(lambtha)
-                )(layer_recur)
-            outputs = layer_recur
+        outputs = K.layers.Dense(
+            layers[i],
+            activation=activations[i],
+            kernel_regularizer=K.regularizers.L2(lambtha)
+            )(outputs)
         if n_layers > 1 and (i != n_layers - 1):
-            layer_recur = K.layers.Dropout(1 - keep_prob)(layer_recur)
+            outputs = K.layers.Dropout(1 - keep_prob)(outputs)
     return K.Model(inputs=inputs, outputs=outputs)
