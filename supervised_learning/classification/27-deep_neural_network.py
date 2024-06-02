@@ -3,7 +3,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
-one_hot_encode = __import__('24-one_hot_encode').one_hot_encode
 
 
 class DeepNeuralNetwork:
@@ -158,7 +157,8 @@ class DeepNeuralNetwork:
         """
         result = self.forward_prop(X)[0]
         argmax = np.argmax(result, axis=0)
-        return (one_hot_encode(argmax, 10), self.cost(Y, result))
+        p = np.identity(result.shape[0])[argmax].transpose()
+        return (p, self.cost(Y, result))
 
     def gradient_descent(self, Y, cache, alpha=0.05):
         """
