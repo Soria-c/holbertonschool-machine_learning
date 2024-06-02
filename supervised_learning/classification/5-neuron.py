@@ -127,8 +127,9 @@ class Neuron:
             learning rate
         """
         n_samples = len(A[0])
-        da = (-Y / A) + ((1 - Y) / (1 - A))
-        dz = da * self.dsig(A)
+        # da = (-Y / A) + ((1 - Y) / (1 - A))
+        # dz = da * self.dsig(A)
+        dz = A - Y
         dw = np.matmul(dz, X.transpose()) / n_samples
         db = dz.mean()
         self.__W = self.__W - (alpha * dw)
