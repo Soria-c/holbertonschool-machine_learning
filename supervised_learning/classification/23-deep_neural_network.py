@@ -210,13 +210,12 @@ class DeepNeuralNetwork:
         costs = []
         for i in range(iterations):
             A ,_ = self.forward_prop(X)
-            self.gradient_descent(Y, self.__cache, alpha)
             if verbose and (i % step) == 0:
                 current_cost = self.cost(Y, A)
                 costs.append(current_cost)
                 epochs.append(i)
                 print(f"Cost after {i} iterations: {current_cost}")
-            
+            self.gradient_descent(Y, self.__cache, alpha)
         if graph is True:
             plt.plot(epochs, costs)
             plt.title("Training Cost")
