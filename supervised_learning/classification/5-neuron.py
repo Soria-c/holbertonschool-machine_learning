@@ -50,6 +50,23 @@ class Neuron:
         """
         return 1/(1 + np.exp(-x))
 
+    def dsig(self, A):
+        """
+        Function to apply the derivative sigmoid activation function
+
+        ```
+        Parameters
+        ----------
+        x : np.Array
+            Unactivated output of the neuron
+
+        Returns
+        -------
+        np.Array
+            Activated output applying derivative sigmoid
+        """
+        return A * (1 - A)
+
     def forward_prop(self, X):
         """
         Calculates the forward propagation of the neuron
@@ -109,8 +126,10 @@ class Neuron:
         alpha: float
             learning rate
         """
-        dz = A - Y
-        dw = np.matmul(dz, X.transpose()) / len(A[0])
+        n_samples = len(A[0])
+        da = (-Y / A) + ((1 - Y) / (1 - A))
+        dz = da * self.dsig(A)
+        dw = np.matmul(dz, X.transpose()) / n_samples
         db = dz.mean()
         self.__W = self.__W - (alpha * dw)
         self.__b = self.__b - (alpha * db)
