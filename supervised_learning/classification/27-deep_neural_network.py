@@ -125,6 +125,7 @@ class DeepNeuralNetwork:
                 + self.__weights[f"b{i +1}"]
             if (i + 1 == self.__L):
                 result = self.softmax(r)
+                # print(result[:,0])
                 # print(result)
             else:
                 result = self.sig(r)
@@ -142,12 +143,7 @@ class DeepNeuralNetwork:
         A: np.Array (1, m)
             containS the activated output of the neuron for each example
         """
-        # print("asdsds")
-        # print(A)
-        # print(A.shape)
-        # print("a")
-        # print(Y.shape)
-        return np.mean(-(Y * np.log(A)))
+        return -np.mean(np.sum(Y * np.log(A), axis=0))
 
     def evaluate(self, X, Y):
         """
@@ -183,7 +179,7 @@ class DeepNeuralNetwork:
         m = len(Y[0])
         for i in range(self.__L, 0, -1):
             if i == self.__L:
-                dz =  -Y * (1 - cache[f"A{i}"])
+                dz = cache[f"A{i}"] - Y
             else:
                 dz = np.matmul(prev_w.transpose(), prev_dz) *\
                     self.dzig(cache[f"A{i}"])
@@ -229,13 +225,12 @@ class DeepNeuralNetwork:
         costs = []
         for i in range(iterations):
             a, _ = self.forward_prop(X)
-            self.gradient_descent(Y, self.__cache, alpha)
             if verbose and (i % step) == 0:
                 current_cost = self.cost(Y, a)
                 costs.append(current_cost)
                 epochs.append(i)
                 print(f"Cost after {i} iterations: {current_cost}")
-
+            self.gradient_descent(Y, self.__cache, alpha)
         if graph is True:
             plt.plot(epochs, costs)
             plt.title("Training Cost")
