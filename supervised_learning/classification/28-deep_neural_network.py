@@ -192,9 +192,12 @@ class DeepNeuralNetwork:
             if i == self.__L:
                 dz = cache[f"A{i}"] - Y
             else:
-                dz = np.matmul(prev_w.transpose(), prev_dz) *\
-                    (self.dzig(cache[f"A{i}"]) if self.__activation == "sig"
-                     else self.dtanh(cache[f"A{i}"]))
+                if self.__activation == "sig":
+                    dz = np.matmul(prev_w.transpose(), prev_dz) *\
+                        self.dzig(cache[f"A{i}"])
+                else:
+                    dz = np.matmul(prev_w.transpose(), prev_dz) *\
+                        self.dtanh(cache[f"A{i}"])
             dw = np.matmul(dz, cache[f"A{i - 1}"].transpose()) / m
             db = dz.mean(axis=1, keepdims=True)
             prev_dz = dz
