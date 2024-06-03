@@ -3,7 +3,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
-one_hot_encode = __import__('24-one_hot_encode').one_hot_encode
 
 
 class DeepNeuralNetwork:
@@ -42,8 +41,6 @@ class DeepNeuralNetwork:
         if activation not in ["sig", "tanh"]:
             raise ValueError("activation must be 'sig' or 'tanh'")
         self.__activation = activation
-        self.__act_dict = {"sig": self.sig, "tanh": self.tanh}
-        self.__dact_dict = {"sig": self.dsig, "tanh": self.dtanh}
         self.__L = len(layers)
         self.__cache = {}
         self.__weights = {}
@@ -92,13 +89,12 @@ class DeepNeuralNetwork:
             Activated output applying sigmoid
         """
         return 1/(1 + np.exp(-x))
-    
+
     def tanh(self, x):
         return np.tanh(x)
 
     def dtanh(self, x):
-        return 1 - (np.tanh(x)) ** 2
-
+        return 1 - (x ** 2)
 
     def softmax(self, x):
         """Compute softmax values for each sets of scores in x."""
@@ -140,8 +136,8 @@ class DeepNeuralNetwork:
                 result = self.softmax(r)
                 # print(result)
             else:
-                result = self.sig(r) if self.__activation == "sig" else self.tanh(r)
-                # print(result)
+                result = self.sig(r) if self.__activation == "sig"\
+                    else self.tanh(r)
             self.__cache[f"A{i+1}"] = result
         return result, self.__cache
 
@@ -156,12 +152,7 @@ class DeepNeuralNetwork:
         A: np.Array (1, m)
             containS the activated output of the neuron for each example
         """
-        # print("asdsds")
-        # print(A)
-        # print(A.shape)
-        # print("a")
-        # print(Y.shape)
-        return np.mean(-(Y * np.log(A)))
+        return -np.mean(np.sum(Y * np.log(A), axis=0))
 
     def evaluate(self, X, Y):
         """
@@ -176,7 +167,8 @@ class DeepNeuralNetwork:
         """
         result = self.forward_prop(X)[0]
         argmax = np.argmax(result, axis=0)
-        return (one_hot_encode(argmax, 10), self.cost(Y, result))
+        p = np.identity(result.shape[0])[argmax].transpose()
+        return (p, self.cost(Y, result))
 
     def gradient_descent(self, Y, cache, alpha=0.05):
         """
@@ -197,21 +189,17 @@ class DeepNeuralNetwork:
         m = len(Y[0])
         for i in range(self.__L, 0, -1):
             if i == self.__L:
-                "for tanh take derivative of tanh instead of sig in the chain rule"
-                if self.__activation == "sig":
-                    dz = -Y / cache[f"A{i}"]  
-                else:
-                    dz = (((-Y) / cache[f"A{i}"]) * (1 - (cache[f"A{i}"]) ** 2))
-                # print(dz)
+                dz = cache[f"A{i}"] - Y
             else:
                 dz = np.matmul(prev_w.transpose(), prev_dz) *\
-                    self.dzig(cache[f"A{i}"]) if self.__activation == "sig" else self.dtanh(cache[f"A{i}"])
+                    (self.dzig(cache[f"A{i}"]) if self.__activation == "sig"
+                     else self.dtanh(cache[f"A{i}"]))
             dw = np.matmul(dz, cache[f"A{i - 1}"].transpose()) / m
             db = dz.mean(axis=1, keepdims=True)
             prev_dz = dz
             prev_w = self.__weights[f"W{i}"]
-            self.__weights[f"W{i}"] = self.__weights[f"W{i}"] - (alpha * dw)
-            self.__weights[f"b{i}"] = self.__weights[f"b{i}"] - (alpha * db)
+            self.__weights[f"W{i}"] -= (alpha * dw)
+            self.__weights[f"b{i}"] -= (alpha * db)
 
     def train(self, X, Y, iterations=5000, alpha=0.05, verbose=True,
               graph=True, step=100):
@@ -248,12 +236,12 @@ class DeepNeuralNetwork:
         costs = []
         for i in range(iterations):
             a, _ = self.forward_prop(X)
-            self.gradient_descent(Y, self.__cache, alpha)
             if verbose and (i % step) == 0:
                 current_cost = self.cost(Y, a)
                 costs.append(current_cost)
                 epochs.append(i)
                 print(f"Cost after {i} iterations: {current_cost}")
+            self.gradient_descent(Y, self.__cache, alpha)
 
         if graph is True:
             plt.plot(epochs, costs)
