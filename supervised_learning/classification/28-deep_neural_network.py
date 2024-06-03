@@ -91,9 +91,11 @@ class DeepNeuralNetwork:
         return 1/(1 + np.exp(-x))
 
     def tanh(self, x):
+        """Tanh activation"""
         return np.tanh(x)
 
     def dtanh(self, x):
+        """Derivative of Tanh activation"""
         return 1 - (x ** 2)
 
     def softmax(self, x):
@@ -134,7 +136,6 @@ class DeepNeuralNetwork:
                 + self.__weights[f"b{i +1}"]
             if (i + 1 == self.__L):
                 result = self.softmax(r)
-                # print(result)
             else:
                 result = self.sig(r) if self.__activation == "sig"\
                     else self.tanh(r)
