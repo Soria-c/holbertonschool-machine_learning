@@ -16,10 +16,10 @@ def conv_backward(dZ, A_prev, W, b, padding="same", stride=(1, 1)):
     if (padding == "valid"):
         pad = (0, 0)
     elif (padding == "same"):
-        pad = ((sh * (h_prev - 1) -
-                h_prev + kh) // 2,
-               (sw * (w_prev - 1) -
-                w_prev + kw) // 2)
+        pad = (1 + (sh * (h_prev - 1) -
+               h_prev + kh) // 2,
+               1 + (sw * (w_prev - 1) -
+               w_prev + kw) // 2)
     images = np.pad(A_prev, pad_width=((0, 0),
                                        (pad[0], pad[0]),
                                        (pad[1], pad[1]),
