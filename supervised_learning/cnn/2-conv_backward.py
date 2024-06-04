@@ -26,7 +26,7 @@ def conv_backward(dZ, A_prev, W, b, padding="same", stride=(1, 1)):
                                        (0, 0)))
     dW = np.zeros(shape=W.shape)
     da = np.zeros(shape=A_prev.shape)
-    db = np.sum(dZ, axis=(0, 1, 2))
+    db = np.sum(dZ, axis=(0, 1, 2), keepdims=True)
 
     dA = np.pad(da, pad_width=((0, 0),
                                (pad[0], pad[0]),
