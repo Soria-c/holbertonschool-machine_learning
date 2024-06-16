@@ -19,7 +19,7 @@ def inception_network():
                                strides=(2, 2),
                                padding='same')(c1)
     c2 = K.layers.Conv2D(filters=64,
-                         kernel_size=(3, 3),
+                         kernel_size=(1, 1),
                          strides=(1, 1),
                          padding='same',
                          activation='relu')(p1)
