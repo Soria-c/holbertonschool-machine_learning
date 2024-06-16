@@ -9,26 +9,28 @@ def inception_network():
     builds the inception network
     as described in Going Deeper with Convolutions (2014)
     """
-    init = K.initializers.HeNormal()
     input_layer = K.Input(shape=(224, 224, 3))
     c1 = K.layers.Conv2D(filters=64,
                          padding='same',
                          activation='relu',
                          kernel_size=(7, 7),
-                         strides=(2, 2),
-                         kernel_initializer=init)(input_layer)
+                         strides=(2, 2),)(input_layer)
     p1 = K.layers.MaxPooling2D(pool_size=(3, 3),
                                strides=(2, 2),
                                padding='same')(c1)
-    c2 = K.layers.Conv2D(filters=192,
+    c2 = K.layers.Conv2D(filters=64,
                          kernel_size=(3, 3),
                          strides=(1, 1),
                          padding='same',
-                         kernel_initializer=init,
                          activation='relu')(p1)
+    c3 = K.layers.Conv2D(filters=192,
+                         kernel_size=(3, 3),
+                         strides=(1, 1),
+                         padding='same',
+                         activation='relu')(c2)
     p2 = K.layers.MaxPooling2D(pool_size=(3, 3),
                                strides=(2, 2),
-                               padding='same')(c2)
+                               padding='same')(c3)
     inc1 = inception_block(p2, (64, 96, 128, 16, 32, 32))
     inc2 = inception_block(inc1, (128, 128, 192, 32, 96, 64))
     p3 = K.layers.MaxPooling2D(pool_size=(3, 3),
@@ -49,10 +51,5 @@ def inception_network():
                                          padding='valid')(inc9)
     dropout = K.layers.Dropout(rate=(0.4))(avg_pool)
     fc = K.layers.Dense(units=(1000), activation='softmax',
-                        kernel_initializer=init)(dropout)
-
-    model = K.Model(inputs=input_layer, outputs=fc)
-    model.compile(optimizer=K.optimizers.Adam(),
-                  loss='categorical_crossentropy',
-                  metrics=['accuracy'])
-    return model
+                        )(dropout)
+    return K.Model(inputs=input_layer, outputs=fc)
