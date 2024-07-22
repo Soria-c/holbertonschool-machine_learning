@@ -32,3 +32,23 @@ def determinant(matrix):
     for c in range(len(matrix)):
         det += ((-1) ** c) * matrix[0][c] * determinant(minor_0(matrix, 0, c))
     return det
+
+
+def minor(matrix):
+    """
+    Calculates the minor matrix of a matrix
+    """
+    if not isinstance(matrix, list) or len(matrix) == 0:
+        raise TypeError("matrix must be a list of lists")
+    for row in matrix:
+        if not isinstance(row, list):
+            raise TypeError("matrix must be a list of lists")
+    if len(matrix) != len(matrix[0]):
+        raise ValueError("matrix must be a square matrix")
+
+    if len(matrix) == 1:
+        return [[1]]
+    length = len(matrix)
+    return [
+        [determinant(minor_0(matrix, i, j)) for j in range(length)]
+        for i in range(length)]
