@@ -22,6 +22,14 @@ class Normal:
             self.variance = sum((x - self.mean) ** 2 for x in data) / len(data)
             self.stddev = float(self.variance ** 0.5)
 
+    def erf(self, x):
+        """
+        Error function
+        """
+        return (2 / (self.pi ** 0.5)) *\
+            (x - ((x ** 3) / 3) + ((x ** 5) / 10) -
+             ((x ** 7) / 42) + ((x ** 9) / 216))
+
     def z_score(self, x):
         """
         Calculates the z-score of a given x-value.
@@ -40,3 +48,9 @@ class Normal:
         """
         return (1 / (self.stddev * (2 * self.pi) ** 0.5)) *\
             (self.e ** (-0.5 * ((x - self.mean) / self.stddev) ** 2))
+
+    def cdf(self, x):
+        """
+        Calculates the value of the CDF for a given x-value
+        """
+        return 0.5 * (1 + self.erf((x - self.mean) / (self.stddev * 2 ** 0.5)))
