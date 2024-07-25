@@ -9,7 +9,7 @@ class Normal:
         self.e = 2.7182818285
         if data is None:
             if stddev <= 0:
-                raise ValueError("lambtha must be a positive value")
+                raise ValueError("stddev must be a positive value")
             self.stddev = float(stddev)
             self.mean = float(mean)
         else:
