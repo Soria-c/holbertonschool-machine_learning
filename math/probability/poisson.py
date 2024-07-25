@@ -27,6 +27,7 @@ class Poisson:
 
     def pmf(self, k):
         """Calculates the value of the PMF for a given number of “successes”"""
-        return 0 if int(k) < 0 else\
+        k = int(k)
+        return 0 if k < 0 else\
             ((self.e ** (-1 * self.lambtha)) * (self.lambtha ** k))\
             / self.factorial(k)
