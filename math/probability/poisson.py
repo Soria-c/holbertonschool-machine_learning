@@ -6,6 +6,7 @@ class Poisson:
     """Class to define to Poisson distribution"""
     def __init__(self, data=None, lambtha=1.):
         """Constructor"""
+        self.e = 2.7182818285
         if data is None:
             if lambtha <= 0:
                 raise ValueError("lambtha must be a positive value")
@@ -16,3 +17,16 @@ class Poisson:
             if len(data) < 2:
                 raise ValueError('data must contain multiple values')
             self.lambtha = float(sum(data)/len(data))
+
+    def factorial(self, n):
+        """Function to compute factorial"""
+        if n < 2:
+            return 1
+        else:
+            return n * self.factorial(n-1)
+
+    def pmf(self, k):
+        """Calculates the value of the PMF for a given number of “successes”"""
+        return 0 if int(k) < 0 else\
+            ((self.e ** (-1 * self.lambtha)) * (self.lambtha ** k))\
+            / self.factorial(k)
