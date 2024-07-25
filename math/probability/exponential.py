@@ -22,6 +22,5 @@ class Exponential:
         """
         Calculates the value of the PDF for a given time period
         """
-        x = int(x)
         return 0 if x < 0 else\
             (self.lambtha * (self.e ** (-1 * self.lambtha * x)))
