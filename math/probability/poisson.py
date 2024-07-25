@@ -26,8 +26,19 @@ class Poisson:
             return n * self.factorial(n-1)
 
     def pmf(self, k):
-        """Calculates the value of the PMF for a given number of “successes”"""
+        """
+        Calculates the value of the PMF for a given number of “successes”
+        """
         k = int(k)
         return 0 if k < 0 else\
             ((self.e ** (-1 * self.lambtha)) * (self.lambtha ** k))\
             / self.factorial(k)
+
+    def cdf(self, k):
+        """
+        Calculates the value of the CDF for a given number of “successes”
+        """
+        k = int(k)
+        if k < 0:
+            return 0
+        return 0 if k < 0 else sum([self.pmf(i) for i in range(k + 1)])
