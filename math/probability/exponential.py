@@ -2,7 +2,7 @@
 """Initialize Exponential"""
 
 
-class Poisson:
+class Exponential:
     """Class to define the Exponential distribution"""
     def __init__(self, data=None, lambtha=1.):
         """Constructor"""
