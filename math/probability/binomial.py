@@ -32,6 +32,9 @@ class Binomial:
             return n * self.factorial(n-1)
 
     def nCk(self, k):
+        """
+        Compute combinatory
+        """
         return (self.factorial(self.n) /
                 (self.factorial(k) * self.factorial(self.n - k)))
 
