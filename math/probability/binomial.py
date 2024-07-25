@@ -23,3 +23,23 @@ class Binomial:
             self.p = 1 - variance / mean
             self.n = round(mean / self.p)
             self.p = mean / self.n
+
+    def factorial(self, n):
+        """Function to compute factorial"""
+        if n < 2:
+            return 1
+        else:
+            return n * self.factorial(n-1)
+
+    def nCk(self, k):
+        return (self.factorial(self.n) /
+                (self.factorial(k) * self.factorial(self.n - k)))
+
+    def pmf(self, k):
+        """
+        Calculates the value of the PMF for a given number of “successes”
+        """
+        k = int(k)
+        if k < 0 or k > self.n:
+            return 0
+        return self.nCk(k) * (self.p ** k) * ((1 - self.p) ** (self.n - k))
