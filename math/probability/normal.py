@@ -7,6 +7,7 @@ class Normal:
     def __init__(self, data=None, mean=0., stddev=1.):
         """Constructor"""
         self.e = 2.7182818285
+        self.pi = 3.1415926536
         if data is None:
             if stddev <= 0:
                 raise ValueError("stddev must be a positive value")
@@ -32,3 +33,10 @@ class Normal:
         Calculates the x-value of a given z-score.
         """
         return (z * self.stddev) + self.mean
+
+    def pdf(self, x):
+        """
+        Calculates the value of the PDF for a given x-value
+        """
+        return (1 / (self.stddev * (2 * self.pi) ** 0.5)) *\
+            (self.e ** (-0.5 * ((x - self.mean) / self.stddev) ** 2))
