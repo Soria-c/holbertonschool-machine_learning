@@ -7,6 +7,8 @@ def initialize(X, k):
     """
     Initializes cluster centroids for K-means
     """
+    if (len(X)) == 0:
+        return
     try:
         return np.random.uniform(
             np.min(X, axis=0), np.max(X, axis=0), size=(k, X.shape[1]))
