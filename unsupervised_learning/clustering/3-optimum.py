@@ -11,6 +11,18 @@ def optimum_k(X, kmin=1, kmax=None, iterations=1000):
     """
     Tests for the optimum number of clusters by variance
     """
+    if type(X) is not np.ndarray or X.ndim != 2:
+        return None, None
+    if type(kmin) is not int or kmin <= 0:
+        return None, None
+    if kmax is None:
+        kmax = X.shape[0]
+    if type(kmax) is not int or kmax <= 0:
+        return None, None
+    if kmax <= kmin:
+        return None, None
+    if type(iterations) is not int or iterations <= 0:
+        return None, None
     results, d_vars = [], []
     for i in range(kmin, kmax+1):
         centroids, indices = kmeans(X, i, iterations)
