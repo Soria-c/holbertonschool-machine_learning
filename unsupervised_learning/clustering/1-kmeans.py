@@ -53,4 +53,4 @@ def kmeans(X, k, iterations=1000):
         if (np.array_equal(ic_centroids, means)):
             return ic_centroids, index
         ic_centroids = means
-    return ic_centroids, index
+    return ic_centroids, get_min_index(X, ic_centroids)
