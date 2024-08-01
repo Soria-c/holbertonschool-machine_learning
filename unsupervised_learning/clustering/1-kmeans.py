@@ -40,7 +40,7 @@ def kmeans(X, k, iterations=1000):
         re_init = initialize(X, 1)
         if (len(miss) > 0):
             means[miss] = re_init[0]
-        if (ic_centroids == means):
+        if (np.array_equal(ic_centroids, means)):
             return ic_centroids, index
         ic_centroids = means
     return ic_centroids, index
