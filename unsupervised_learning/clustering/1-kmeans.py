@@ -22,8 +22,6 @@ def kmeans(X, k, iterations=1000):
     """
     if type(iterations) is not int or iterations <= 0:
         return None, None
-    if k == 1:
-        return np.mean(X, axis=0), np.zeros((X.shape[0],))
     ic_centroids = initialize(X, k)
     if ic_centroids is None:
         return None, None
