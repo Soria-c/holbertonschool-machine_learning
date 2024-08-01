@@ -20,6 +20,8 @@ def kmeans(X, k, iterations=1000):
     """
     Performs K-means on a dataset
     """
+    if type(iterations) is not int or iterations <= 0:
+        return None, None
     ic_centroids = initialize(X, k)
     if ic_centroids is None:
         return None, None
