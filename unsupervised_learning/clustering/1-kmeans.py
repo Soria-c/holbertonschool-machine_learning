@@ -26,13 +26,19 @@ def kmeans(X, k, iterations=1000):
     if ic_centroids is None:
         return None, None
     for _ in range(iterations):
-        ric_c = np.repeat(ic_centroids, X.shape[0], axis=0)
-        b = np.vsplit(ric_c, k)
-        d = []
-        for i in range(k):
-            dis = np.linalg.norm(X-b[i], axis=1)
-            d.append(dis)
-        index = np.array(d).argmin(axis=0)
+        # ric_c = np.repeat(ic_centroids, X.shape[0], axis=0)
+        # b = np.vsplit(ric_c, k)
+        # d = []
+        # for i in range(k):
+        #     dis = np.linalg.norm(X-b[i], axis=1)
+        #     d.append(dis)
+        # index = np.array(d).argmin(axis=0)
+        points, dims = X.shape
+        x = X.reshape(points, 1, dims)
+        r = np.repeat(ic_centroids[np.newaxis, ...], points, axis=0)
+        dist = np.linalg.norm(x - r, axis=2)
+        index = np.argmin(dist, axis=1)
+        
         sort_index_i = np.unique(np.sort(index), return_index=True)
         s = np.split(X[np.argsort(index)], sort_index_i[1])
         miss = np.setdiff1d(np.arange(k), sort_index_i[0])
