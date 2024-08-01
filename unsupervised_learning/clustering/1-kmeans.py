@@ -38,7 +38,7 @@ def kmeans(X, k, iterations=1000):
         r = np.repeat(ic_centroids[np.newaxis, ...], points, axis=0)
         dist = np.linalg.norm(x - r, axis=2)
         index = np.argmin(dist, axis=1)
-        
+
         sort_index_i = np.unique(np.sort(index), return_index=True)
         s = np.split(X[np.argsort(index)], sort_index_i[1])
         miss = np.setdiff1d(np.arange(k), sort_index_i[0])
