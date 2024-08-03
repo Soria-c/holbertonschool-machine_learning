@@ -2,6 +2,8 @@
 """Initialize Yolo"""
 import numpy as np
 import tensorflow.keras as K
+import os
+import cv2
 
 
 class Yolo:
@@ -110,15 +112,15 @@ class Yolo:
         nms_classes = []
         nms_scores = []
 
-        for u_cls in unique_classes:
-            cls_indices = np.where(box_classes == u_cls)[0]
+        for cls in unique_classes:
+            cls_indices = np.where(box_classes == cls)[0]
             cls_boxes = filtered_boxes[cls_indices]
             cls_scores = box_scores[cls_indices]
 
             while len(cls_boxes) > 0:
                 max_score_index = np.argmax(cls_scores)
                 nms_boxes.append(cls_boxes[max_score_index])
-                nms_classes.append(u_cls)
+                nms_classes.append(cls)
                 nms_scores.append(cls_scores[max_score_index])
 
                 if len(cls_boxes) == 1:
@@ -152,3 +154,21 @@ class Yolo:
         union_area = box1_area + box2_area - inter_area
 
         return inter_area / union_area
+    
+    @staticmethod
+    def load_images(folder_path):
+        """
+        Load images
+        """
+        images = []
+        image_paths = []
+
+        for filename in os.listdir(folder_path):
+            if filename.endswith(('.jpg', '.jpeg', '.png')):
+                img_path = os.path.join(folder_path, filename)
+                image = cv2.imread(img_path)
+                if image is not None:
+                    images.append(image)
+                    image_paths.append(img_path)
+
+        return images, image_paths
