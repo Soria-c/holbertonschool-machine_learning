@@ -13,6 +13,8 @@ def expectation(X, pi, m, S):
     """
     if not (isinstance(pi, np.ndarray)) or pi.ndim != 1:
         return None, None
+    if not np.isclose([np.sum(pi)], [1])[0]:
+        return None, None
 
     probs = []
     for i, v in enumerate(S):
