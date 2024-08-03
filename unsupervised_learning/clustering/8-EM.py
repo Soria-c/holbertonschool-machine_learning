@@ -12,6 +12,8 @@ def expectation_maximization(X, k, iterations=1000, tol=1e-5, verbose=False):
     """
     Performs the expectation maximization for a GMM
     """
+    if type(iterations) is not int or iterations <= 0:
+        return None, None, None, None, None
     pi, m, S = initialize(X, k)
     if pi is None:
         return None, None, None, None, None
