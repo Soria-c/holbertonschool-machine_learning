@@ -11,6 +11,8 @@ def expectation(X, pi, m, S):
     Calculates the expectation
     step in the EM algorithm for a GMM
     """
+    if not (isinstance(pi, np.ndarray)) or pi.ndim != 1:
+        return None, None
 
     probs = []
     for i, v in enumerate(S):
