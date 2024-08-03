@@ -154,7 +154,7 @@ class Yolo:
         union_area = box1_area + box2_area - inter_area
 
         return inter_area / union_area
-    
+
     @staticmethod
     def load_images(folder_path):
         """
