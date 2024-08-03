@@ -7,6 +7,12 @@ def pdf(X, m, S):
     """
     Calculates the probability density function of a Gaussian distribution
     """
+    if not(isinstance(X, np.ndarray) or X.ndim != 2):
+        return None
+    if not(isinstance(m, np.ndarray) or m.ndim != 1):
+        return None
+    if not(isinstance(S, np.ndarray) or S.ndim != 2):
+        return None
     k = len(m)
     det_s = np.linalg.det(S)
     inv_s = np.linalg.inv(S)
