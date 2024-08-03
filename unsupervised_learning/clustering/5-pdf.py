@@ -7,11 +7,11 @@ def pdf(X, m, S):
     """
     Calculates the probability density function of a Gaussian distribution
     """
-    if not(isinstance(X, np.ndarray)) or X.ndim != 2:
+    if not (isinstance(X, np.ndarray)) or X.ndim != 2:
         return None
-    if not(isinstance(m, np.ndarray)) or m.ndim != 1:
+    if not (isinstance(m, np.ndarray)) or m.ndim != 1:
         return None
-    if not(isinstance(S, np.ndarray)) or S.ndim != 2:
+    if not (isinstance(S, np.ndarray)) or S.ndim != 2:
         return None
     if (X.shape[1] != m.shape[0] or S.shape[0] != S.shape[1] or
             S.shape[0] != m.shape[0]):
