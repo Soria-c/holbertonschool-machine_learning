@@ -8,7 +8,8 @@ def maximization(X, g):
     Calculates the maximization step in the EM algorithm for a GMM
     """
     if (not (isinstance(X, np.ndarray)) or X.ndim != 2) or\
-       (not (isinstance(g, np.ndarray)) or X.ndim != 2):
+       (not (isinstance(g, np.ndarray)) or X.ndim != 2) or\
+        (g.shape[1] != X.shape[0]):
         return None, None, None
     pi = []
     m = []
