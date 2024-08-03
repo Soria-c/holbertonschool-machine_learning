@@ -12,6 +12,8 @@ def initialize(X, k):
     """
     if not(isinstance(X, np.ndarray)) or X.ndim != 2:
         return None, None, None
+    if not(isinstance(k, int)):
+        return None, None, None
     n, d = X.shape
     pi = np.array([1 / k]).repeat(k)
     if ((k_m := kmeans(X, k))[0] is not None):
