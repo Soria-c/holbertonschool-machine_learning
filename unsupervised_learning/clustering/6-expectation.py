@@ -15,6 +15,8 @@ def expectation(X, pi, m, S):
         return None, None
     if not (isinstance(S, np.ndarray)) or S.ndim != 3:
         return None
+    if (pi.shape[0] != S.shape[0]):
+        return None, None
     if not np.isclose([np.sum(pi)], [1])[0]:
         return None, None
 
