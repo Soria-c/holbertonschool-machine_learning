@@ -13,10 +13,5 @@ def pdf(X, m, S):
     a = 1 / (np.sqrt(((2 * np.pi) ** k) * det_s))
 
     x_u = X - m
-    print(x_u.shape)
-    print(x_u.T.shape)
-    print(np.matmul(x_u, inv_s).shape)
-    print(inv_s.shape)
     b = -0.5 * np.sum(np.matmul(x_u, inv_s) * x_u, axis=1)
-
     return np.maximum(a * np.exp(b), 1e-300)
