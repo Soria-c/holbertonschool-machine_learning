@@ -10,6 +10,8 @@ def initialize(X, k):
     """
     Initializes variables for a Gaussian Mixture Model
     """
+    if not(isinstance(X, np.ndarray)):
+        return None, None, None
     n, d = X.shape
     pi = np.array([1 / k]).repeat(k)
     if ((k_m := kmeans(X, k))[0] is not None):
