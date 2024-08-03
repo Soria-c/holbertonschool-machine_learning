@@ -35,8 +35,7 @@ def expectation_maximization(X, k, iterations=1000, tol=1e-5, verbose=False):
         else:
             return None, None, None, None, None
         likelihood = log_l
-        E = expectation(X, pi, m, S)
-        M = maximization(X, E[0])
+        g, log_l = expectation(X, pi, m, S)
     if verbose:
         print(f"Log Likelihood after {iterations} iterations: {log_l:.5f}")
-    return E, M
+    return pi, m, S, g, log_l
