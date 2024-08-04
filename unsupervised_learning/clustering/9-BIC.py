@@ -26,8 +26,7 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     using the Bayesian Information Criterion
     """
 
-    if kmax <= kmin:
-        return None, None, None, None
+
 
     pi, m, S, g, l_log = expectation_maximization(
         X, kmin, iterations, tol, verbose)
@@ -41,6 +40,8 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     bics = [__bic(__parameters(kmin, d), n, l_log)]
 
     kmax = n if kmax is None else kmax
+    if kmax <= kmin:
+        return None, None, None, None
 
     for i, ki in enumerate(range(kmin + 1, kmax + 1), 1):
         pi, m, S, g, l_log = expectation_maximization(
