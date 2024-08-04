@@ -42,4 +42,5 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
         bics.append(bic)
         if bics[best_i] >= bic:
             best_i = i
-    return ks[best_i], results[best_i], likelihoods, bics
+    return ks[best_i], results[best_i],\
+        np.array(likelihoods), np.array(bics)
