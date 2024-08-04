@@ -12,6 +12,7 @@ def __bic(p, n, likelihood):
     """
     return p * np.log(n) - 2 * likelihood
 
+
 def __parameters(k, d):
     """
     Compute number of parameters
@@ -24,6 +25,9 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     Finds the best number of clusters for a GMM
     using the Bayesian Information Criterion
     """
+
+    if kmax <= kmin:
+        return None, None, None, None
 
     pi, m, S, g, l_log = expectation_maximization(
         X, kmin, iterations, tol, verbose)
@@ -48,5 +52,5 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
         bics.append(bic)
         if bics[best_i] > bic:
             best_i = i
-    return ks[best_i], results[best_i],\
+    return ks[best_i], results[best_i], \
         np.array(likelihoods), np.array(bics)
