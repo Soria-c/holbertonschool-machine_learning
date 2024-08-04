@@ -28,13 +28,13 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
 
     pi, m, S, g, l_log = expectation_maximization(
         X, kmin, iterations, tol, verbose)
+    if pi is None:
+        return None, None, None, None
     n, d = X.shape
     kmax = n if kmax is None else kmax
     if not isinstance(kmin, int) or not isinstance(kmax, int):
         return None, None, None, None
     if kmax <= kmin:
-        return None, None, None, None
-    if pi is None:
         return None, None, None, None
 
     best_i = 0
