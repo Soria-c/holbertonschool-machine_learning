@@ -12,6 +12,12 @@ def __bic(p, n, likelihood):
     """
     return p * np.log(n) - 2 * likelihood
 
+def __parameters(k, d):
+    """
+    Compute number of parameters
+    """
+    return k-1+(k*d)+(k*(d * (d+1))/2)
+
 
 def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     """
@@ -28,14 +34,14 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     ks = [kmin]
     results = [(pi, m, S)]
     likelihoods = [l_log]
-    bics = [__bic(1+(kmin*d)+(kmin*d), n, l_log)]
+    bics = [__bic(__parameters(kmin, d), n, l_log)]
 
     kmax = n if kmax is None else kmax
 
     for i, ki in enumerate(range(kmin + 1, kmax + 1), 1):
         pi, m, S, g, l_log = expectation_maximization(
             X, ki, iterations, tol, verbose)
-        bic = __bic(1+(ki*d)+(ki*d), n, l_log)
+        bic = __bic(__parameters(ki, d), n, l_log)
         ks.append(ki)
         results.append((pi, m, S))
         likelihoods.append(l_log)
