@@ -26,8 +26,6 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     using the Bayesian Information Criterion
     """
 
-
-
     pi, m, S, g, l_log = expectation_maximization(
         X, kmin, iterations, tol, verbose)
     if pi is None:
