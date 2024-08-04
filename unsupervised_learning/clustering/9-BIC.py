@@ -28,6 +28,11 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
 
     pi, m, S, g, l_log = expectation_maximization(
         X, kmin, iterations, tol, verbose)
+    kmax = n if kmax is None else kmax
+    if not isinstance(kmin, int) or not isinstance(kmax, int):
+        return None, None, None, None
+    if kmax <= kmin:
+        return None, None, None, None
     if pi is None:
         return None, None, None, None
     n, d = X.shape
@@ -36,10 +41,6 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
     results = [(pi, m, S)]
     likelihoods = [l_log]
     bics = [__bic(__parameters(kmin, d), n, l_log)]
-
-    kmax = n if kmax is None else kmax
-    if kmax <= kmin:
-        return None, None, None, None
 
     for i, ki in enumerate(range(kmin + 1, kmax + 1), 1):
         pi, m, S, g, l_log = expectation_maximization(
