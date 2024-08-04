@@ -40,7 +40,7 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
         results.append((pi, m, S))
         likelihoods.append(l_log)
         bics.append(bic)
-        if bics[best_i] >= bic:
+        if bics[best_i] > bic:
             best_i = i
     return ks[best_i], results[best_i],\
         np.array(likelihoods), np.array(bics)
