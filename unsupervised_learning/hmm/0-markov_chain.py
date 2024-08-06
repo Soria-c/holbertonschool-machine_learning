@@ -17,7 +17,4 @@ def markov_chain(P, s, t=1):
     if t < 1:
         return None
 
-    prob_dis = s
-    for i in range(t):
-        prob_dis = prob_dis @ P
-    return prob_dis
+    return s @ np.linalg.matrix_power(P, t)
