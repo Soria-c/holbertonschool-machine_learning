@@ -17,6 +17,6 @@ def regular(P):
     e_vec1 = e_vecs[:, np.isclose(e_vals, 1)]
     if (len(e_vec1[0]) != 1):
         return None
-    e_vec1 = e_vec1[:, 0]
+    e_vec1 = e_vec1.reshape((1, len(P)))
     stationary = e_vec1 / e_vec1.sum()
     return stationary.real
