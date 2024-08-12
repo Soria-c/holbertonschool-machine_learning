@@ -17,6 +17,8 @@ def absorbing(P):
         return False
 
     reachability = np.linalg.matrix_power(P, n)
+    print(reachability)
+    print(P)
     for i in range(n):
         if i not in absorbing:
             if not np.any(reachability[i, absorbing]):
