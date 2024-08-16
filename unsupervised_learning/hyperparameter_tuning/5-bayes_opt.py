@@ -69,10 +69,10 @@ class BayesianOptimization:
             mu_sample_opt = np.max(self.gp.Y)
             imp = mu - mu_sample_opt - self.xsi
 
-        with np.errstate(divide='warn'):
-            Z = imp / sigma
-            EI = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
-            EI[sigma == 0.0] = 0.0  # Handle the case where sigma is zero
+        # with np.errstate(divide='warn'):
+        Z = imp / sigma
+        EI = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
+        EI[sigma == 0.0] = 0.0  # Handle the case where sigma is zero
 
         X_next = self.X_s[np.argmax(EI)].reshape(1, 1)
         return X_next, EI
