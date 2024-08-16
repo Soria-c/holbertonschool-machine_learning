@@ -24,4 +24,4 @@ class GaussianProcess:
         Calculates the covariance kernel matrix between two matrices
         """
         return (self.sigma_f ** 2) *\
-            np.exp(-((X1-X2.T) ** 2) / (2*(self.l ** 2)))
+            np.exp(-((X1 - X2.T) ** 2) / (2 * (self.l ** 2)))
