@@ -48,3 +48,23 @@ class GaussianProcess:
         sigma = np.diag(cov_s)
 
         return mu, sigma
+
+    def update(self, X_new, Y_new):
+        """
+        Updates the Gaussian Process with a new data point
+
+        Parameters:
+        - X_new: numpy.ndarray of shape (1,), new sample point
+        - Y_new: numpy.ndarray of shape (1,), new sample function value
+
+        Updates:
+        - X_train: Updated training input data with X_new
+        - Y_train: Updated training output data with Y_new
+        - K: Updated kernel matrix with the new data
+        """
+        # Update the training data with the new sample
+        self.X_train = np.vstack((self.X_train, X_new.reshape(1, -1)))
+        self.Y_train = np.vstack((self.Y_train, Y_new.reshape(1, -1)))
+
+        # Recompute the covariance matrix with the new data
+        self.K = self.kernel(self.X_train, self.X_train) + 1e-8 * np.eye(len(self.X_train))

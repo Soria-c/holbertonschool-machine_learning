@@ -48,3 +48,30 @@ class BayesianOptimization:
 
         # Generate acquisition sample points (X_s)
         self.X_s = np.linspace(bounds[0], bounds[1], ac_samples).reshape(-1, 1)
+
+    def acquisition(self):
+        """
+        Calculates the next best sample location using the
+        Expected Improvement (EI) acquisition function.
+
+        Returns:
+        - X_next: numpy.ndarray of shape (1,), the next best point to sample
+        - EI: numpy.ndarray of shape (ac_samples,),
+            the expected improvement for each potential sample
+        """
+        mu, sigma = self.gp.predict(self.X_s)
+
+        if self.minimize:
+            mu_sample_opt = np.min(self.gp.Y)
+            imp = mu_sample_opt - mu - self.xsi
+        else:
+            mu_sample_opt = np.max(self.gp.Y)
+            imp = mu - mu_sample_opt - self.xsi
+
+        with np.errstate(divide='warn'):
+            Z = imp / sigma
+            EI = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
+            EI[sigma == 0.0] = 0.0  # Handle the case where sigma is zero
+
+        X_next = self.X_s[np.argmax(EI)].reshape(1, 1)
+        return X_next, EI
