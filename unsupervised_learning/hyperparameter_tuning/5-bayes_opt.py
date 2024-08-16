@@ -3,8 +3,8 @@
 
 
 import numpy as np
-from scipy.stats import norm
 GP = __import__('2-gp').GaussianProcess
+from scipy.stats import norm
 
 
 class BayesianOptimization:
