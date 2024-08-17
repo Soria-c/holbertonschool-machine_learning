@@ -75,7 +75,7 @@ class BayesianOptimization:
         EI[sigma == 0.0] = 0.0  # Handle the case where sigma is zero
 
         X_next = self.X_s[np.argmax(EI)].reshape(1, 1)
-        return X_next, EI
+        return X_next[0], EI
 
     def optimize(self, iterations=100):
         """
