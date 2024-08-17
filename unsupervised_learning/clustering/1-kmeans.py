@@ -37,9 +37,14 @@ def kmeans(X, k, iterations=1000):
     if ic_centroids is None:
         return None, None
     for _ in range(iterations):
-        index = get_min_index(X, ic_centroids)
+        ric_c = np.repeat(ic_centroids, X.shape[0], axis=0)
+        b = np.vsplit(ric_c, k)
+        d = []
+        for i in range(k):
+            dis = np.linalg.norm(X-b[i], axis=1)
+            d.append(dis)
         means = np.zeros(ic_centroids.shape)
-
+        index = np.array(d).argmin(axis=0)
         sort_index_i = np.unique(np.sort(index), return_index=True)
         s = np.split(X[np.argsort(index)], sort_index_i[1])
 

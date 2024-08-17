@@ -31,7 +31,7 @@ def optimum_k(X, kmin=1, kmax=None, iterations=1000):
             results.append((centroids, indices))
             d_vars.append(0.0)
             continue
-        variance_diff = abs(current_variance-variance(X, centroids))
+        variance_diff = current_variance-variance(X, centroids)
         results.append((centroids, indices))
         d_vars.append(variance_diff)
     return results, d_vars

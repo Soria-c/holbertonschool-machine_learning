@@ -13,6 +13,9 @@ def two():
     y1 = np.exp((r / t1) * x)
     y2 = np.exp((r / t2) * x)
     plt.figure(figsize=(6.4, 4.8))
+    
+    # your code here
+    
     plt.title("Exponential Decay of Radioactive Elements")
     plt.ylabel("Fraction Remaining")
     plt.xlabel("Time (years)")
