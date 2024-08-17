@@ -58,7 +58,7 @@ The first two numbers of the array are: [9, 8]
 The last five numbers of the array are: [9, 4, 1, 0, 3]
 The 2nd through 6th numbers of the array are: [8, 2, 3, 9, 4]
 ```
-### 1. Trim Me Down
+### [1. Trim Me Down](./1-main.ipynb)
 Complete the following source code:
 ```python
 #!/usr/bin/env python3
@@ -74,7 +74,7 @@ print("The middle columns of the matrix are: {}".format(the_middle))
 ```python
 The middle columns of the matrix are: [[9, 4], [7, 3], [4, 6]]
 ```
-### 2. Size Me Please
+### [2. Size Me Please](./2-main.ipynb)
 Write a function **def matrix_shape(matrix):** that calculates the shape of a matrix:
 
 * You can assume all elements in the same dimension are of the same type/shape
@@ -93,7 +93,7 @@ print(matrix_shape(mat2))
 [2, 2]
 [2, 3, 5]
 ```
-### 3. Flip Me Over
+### [3. Flip Me Over](./3-main.ipynb)
 Write a function **def matrix_transpose(matrix):** that returns the transpose of a 2D matrix, **matrix**:
 * You must return a new matrix
 * You can assume that **matrix** is never empty
@@ -116,7 +116,7 @@ print(matrix_transpose(mat2))
 [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25], [26, 27, 28, 29, 30]]
 [[1, 6, 11, 16, 21, 26], [2, 7, 12, 17, 22, 27], [3, 8, 13, 18, 23, 28], [4, 9, 14, 19, 24, 29], [5, 10, 15, 20, 25, 30]]
 ```
-### 4. Line Up
+### [4. Line Up](./4-main.ipynb)
 Write a function **def add_arrays(arr1, arr2):** that adds two arrays element-wise:
 * You can assume that **arr1** and **arr2** are lists of ints/floats
 * You must return a new list
@@ -139,7 +139,7 @@ print(add_arrays(arr1, [1, 2, 3]))
 [5, 6, 7, 8]
 None
 ```
-### 5. Across The Planes
+### [5. Across The Planes](./5-main.ipynb)
 Write a function **def add_matrices2D(mat1, mat2):** that adds two matrices element-wise:
 * You can assume that **mat1** and **mat2** are 2D matrices containing ints/floats
 * You can assume all elements in the same dimension are of the same type/shape
@@ -163,7 +163,7 @@ print(add_matrices2D(mat1, [[1, 2, 3], [4, 5, 6]]))
 [[5, 6], [7, 8]]
 None
 ```
-### 6. Howdy Partner
+### [6. Howdy Partner](./6-main.ipynb)
 Write a function **def cat_arrays(arr1, arr2):** that concatenates two arrays:
 * You can assume that **arr1** and **arr2** are lists of ints/floats
 * You must return a new list
@@ -183,7 +183,7 @@ print(arr2)
 [1, 2, 3, 4, 5]
 [6, 7, 8]
 ```
-### 7. Gettin’ Cozy
+### [7. Gettin’ Cozy](./7-main.ipynb)
 Write a function **def cat_matrices2D(mat1, mat2, axis=0):** that concatenates two matrices along a specific axis:
 * You can assume that **mat1** and **mat2** are 2D matrices containing ints/floats
 * You can assume all elements in the same dimension are of the same type/shape
@@ -214,7 +214,7 @@ print(mat5)
 [[1, 2], [3, 4], [5, 6]]
 [[1, 2, 7], [3, 4, 8]]
 ```
-### 8. Ridin’ Bareback
+### [8. Ridin’ Bareback](./8-main.ipynb)
 Write a function **def mat_mul(mat1, mat2):** that performs matrix multiplication:
 * You can assume that **mat1** and **mat2** are 2D matrices containing ints/floats
 * You can assume all elements in the same dimension are of the same type/shape
@@ -235,7 +235,7 @@ print(mat_mul(mat1, mat2))
 ```python
 [[11, 14, 17, 20], [23, 30, 37, 44], [35, 46, 57, 68]]
 ```
-### 9. Let The Butcher Slice It
+### [9. Let The Butcher Slice It](./9-main.ipynb)
 Complete the following source code (found below):
 * **mat1** should be the middle two rows of **matrix**
 * **mat2** should be the middle two columns of **matrix**
@@ -268,7 +268,7 @@ The bottom-right, square, 3x3 matrix is:
  [16 17 18]
  [22 23 24]]
 ```
-### 10. I’ll Use My Scale
+### [10. I’ll Use My Scale](./10-main.ipynb)
 Write a function **def np_shape(matrix):** that calculates the shape of a **numpy.ndarray**:
 * You are not allowed to use any loops or conditional statements
 * You are not allowed to use **try/except** statements
@@ -292,7 +292,7 @@ print(np_shape(mat3))
 (0,)
 (2, 2, 5)
 ```
-### 11. The Western Exchange
+### [11. The Western Exchange](./11-main.ipynb)
 Write a function **def np_transpose(matrix):** that transposes **matrix**:
 * You can assume that **matrix** can be interpreted as a **numpy.ndarray**
 * You are not allowed to use any loops or conditional statements
@@ -339,7 +339,7 @@ print(mat3)
  [[11 12 13 14 15]
   [16 17 18 19 20]]]
 ```
-### 12. Bracing The Elements
+### [12. Bracing The Elements](./12-main.ipynb)
 Write a function **def np_elementwise(mat1, mat2):** that performs element-wise addition, subtraction, multiplication, and division:
 * You can assume that **mat1** and **mat2** can be interpreted as numpy.ndarrays
 * You should return a tuple containing the element-wise sum, difference, product, and quotient, respectively
@@ -391,7 +391,7 @@ Div:
  [[ 5.5 11.  16.5]
  [22.  27.5 33. ]]
 ```
-### 13. Cat's Got Your Tongue
+### [13. Cat's Got Your Tongue](./13-main.ipynb)
 Write a function **def np_cat(mat1, mat2, axis=0):** that concatenates two matrices along a specific axis:
 * You can assume that **mat1** and **mat2** can be interpreted as numpy.ndarrays
 * You must return a new **numpy.ndarray**
@@ -421,7 +421,7 @@ print(np_cat(mat1, mat3, axis=1))
 [[11 22 33  7]
  [44 55 66  8]]
 ```
-### 14. Saddle Up
+### [14. Saddle Up](./14-main.ipynb)
 Write a function **def np_matmul(mat1, mat2):** that performs matrix multiplication:
 * You can assume that **mat1** and **mat2** are numpy.ndarrays
 * You are not allowed to use any loops or conditional statements
@@ -445,7 +445,7 @@ print(np_matmul(mat1, mat3))
 [[ 550]
  [1342]]
 ```
-### 15. Slice Like A Ninja
+### [15. Slice Like A Ninja](./100-main%20.ipynb)
 Write a function **def np_slice(matrix, axes={}):** that slices a matrix along specific axes:
 * You can assume that matrix is a numpy.ndarray
 * You must return a new numpy.ndarray
@@ -486,7 +486,7 @@ print(mat2)
  [[21 22 23 24 25]
   [26 27 28 29 30]]]
 ```
-### 16. The Whole Barn
+### [16. The Whole Barn](./101-main.ipynb)
 Write a function **def add_matrices(mat1, mat2):** that adds two matrices:
 * You can assume that **mat1** and **mat2** are matrices containing ints/floats
 * You can assume all elements in the same dimension are of the same type/shape
@@ -529,7 +529,7 @@ print(add_matrices(mat1, mat3))
 [[[[12, 14, 16, 18], [20, 22, 24, 26]], [[28, 120, 122, 124], [126, 128, 130, 132]], [[134, 136, 138, 140], [142, 144, 146, 148]]], [[[150, 152, 154, 156], [158, 160, 162, 164]], [[166, 168, 170, 172], [174, 176, 178, 180]], [[182, 184, 186, 188], [190, 192, 194, 196]]]]
 None
 ```
-### 17. Squashed Like Sardines
+### [17. Squashed Like Sardines](./102-main.ipynb)
 Write a function **def cat_matrices(mat1, mat2, axis=0):** that concatenates two matrices along a specific axis:
 * You can assume that **mat1** and **mat2** are matrices containing ints/floats
 * You can assume all elements in the same dimension are of the same type/shape
