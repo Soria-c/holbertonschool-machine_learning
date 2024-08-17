@@ -3,8 +3,8 @@
 
 
 import numpy as np
-GP = __import__('2-gp').GaussianProcess
 from scipy.stats import norm
+GP = __import__('2-gp').GaussianProcess
 
 
 class BayesianOptimization:
@@ -69,7 +69,9 @@ class BayesianOptimization:
             mu_sample_opt = np.max(self.gp.Y)
             imp = mu - mu_sample_opt - self.xsi
 
-        # with np.errstate(divide='warn'):
+        # with np.errstate(divide='ignore'):
+        # Z = np.divide(imp, sigma, out=np.zeros_like(sigma), where=sigma!=0)
+
         Z = imp / sigma
         EI = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
         EI[sigma == 0.0] = 0.0  # Handle the case where sigma is zero
