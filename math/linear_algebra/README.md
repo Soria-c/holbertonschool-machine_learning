@@ -36,7 +36,7 @@
 * What is broadcasting?
 
 ## Tasks
-### 0. Slice Me Up
+### [0. Slice Me Up](./0-main.ipynb)
 Complete the following source code:
 ```python
 #!/usr/bin/env python3
