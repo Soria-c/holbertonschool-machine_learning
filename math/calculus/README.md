@@ -102,13 +102,13 @@ $\frac{\partial^2}{\partial y\partial x}(e^{x^2y})$ where $\frac{\partial x}{\pa
 2. $2xe^{2x}$
 3. $\boldsymbol{2x(1+x^2y)e^{x^2y}}$ ✅
 4. $e^{2x}$
-### 9. Our life is the sum total of all the decisions we make every day, and those decisions are determined by our priorities
+### [9. Our life is the sum total of all the decisions we make every day, and those decisions are determined by our priorities](./9-sum_total.ipynb)
 Write a function def summation_i_squared(n): that calculates $\sum_{i=1}^{n} i^2$  :
 * n is the stopping condition
 * Return the integer value of the sum
 * If n is not a valid number, return None
 * You are not allowed to use any loops
-### 10. Derive happiness in oneself from a good day's work
+### [10. Derive happiness in oneself from a good day's work](./10-matisse.ipynb)
 Write a function def poly_derivative(poly): that calculates the derivative of a polynomial:
 
 * poly is a list of coefficients representing a polynomial
@@ -154,7 +154,7 @@ $\int_{1}^{2}\int_{0}^{3} x^2y^-1 \,dxdy$
 2. $9$
 3. $27ln(2)$
 4. $27$
-### 17. Integrate
+### [17. Integrate](./17-integrate.ipynb)
 Write a function def poly_integral(poly, C=0): that calculates the integral of a polynomial:
 
 * poly is a list of coefficients representing a polynomial

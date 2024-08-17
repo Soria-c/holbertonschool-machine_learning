@@ -33,19 +33,19 @@
 * How to scale an axis
 * How to plot multiple sets of data at the same time
 ## Tasks
-### 0. Line Graph
+### [0. Line Graph](./0-line.ipynb)
 Complete the following source code to plot y as a line graph:
 
 * y should be plotted as a solid red line
 * The x-axis should range from 0 to 10
-### 1. Scatter
+### [1. Scatter](./1-scatter.ipynb)
 Complete the following source code to plot x ↦ y as a scatter plot:
 
 * The x-axis should be labeled Height (in)
 * The y-axis should be labeled Weight (lbs)
 * The title should be Men's Height vs Weight
 * The data should be plotted as magenta points
-### 2. Change of scale
+### [2. Change of scale](./2-change_scale.ipynb)
 Complete the following source code to plot x ↦ y as a line graph:
 
 * The x-axis should be labeled Time (years)
@@ -53,7 +53,7 @@ Complete the following source code to plot x ↦ y as a line graph:
 * The title should be Exponential Decay of C-14
 * The y-axis should be logarithmically scaled
 * The x-axis should range from 0 to 28650
-### 3. Two is better than one
+### [3. Two is better than one](./3-two.ipynb)
 Complete the following source code to plot x ↦ y1 and x ↦ y2 as line graphs:
 
 * The x-axis should be labeled Time (years)
@@ -64,7 +64,7 @@ Complete the following source code to plot x ↦ y1 and x ↦ y2 as line graphs:
 * x ↦ y1 should be plotted with a dashed red line
 * x ↦ y2 should be plotted with a solid green line
 * A legend labeling x ↦ y1 as C-14 and x ↦ y2 as Ra-226 should be placed in the upper right hand corner of the plot
-### 4. Frequency
+### [4. Frequency](./4-frequency.ipynb)
 Complete the following source code to plot a histogram of student scores for a project:
 
 * The x-axis should be labeled Grades
@@ -72,14 +72,14 @@ Complete the following source code to plot a histogram of student scores for a p
 * The x-axis should have bins every 10 units
 * The title should be Project A
 * The bars should be outlined in black
-### 5. All in One
+### [5. All in One](./5-all_in_one.ipynb)
 Complete the following source code to plot all 5 previous graphs in one figure:
 
 * All axis labels and plot titles should have a font size of x-small (to fit nicely in one figure)
 * The plots should make a 3 x 2 grid
 * The last plot should take up two column widths (see below)
 * The title of the figure should be All in One
-### 6. Stacking Bars
+### [6. Stacking Bars](./6-bars.ipynb)
 Complete the following source code to plot a stacked bar graph:
 
 * fruit is a matrix representing the number of fruit various people possess
@@ -98,7 +98,7 @@ Complete the following source code to plot a stacked bar graph:
 * The y-axis should be labeled Quantity of Fruit
 * The y-axis should range from 0 to 80 with ticks every 10 units
 * The title should be Number of Fruit per Person
-### 7. Gradient
+### [7. Gradient](./100-gradient.ipynb)
 Complete the following source code to create a scatter plot of sampled elevations on a mountain:
 
 * The x-axis should be labeled x coordinate (m)
@@ -106,7 +106,7 @@ Complete the following source code to create a scatter plot of sampled elevation
 * The title should be Mountain Elevation
 * A colorbar should be used to display elevation
 * The colorbar should be labeled elevation (m)
-### 8. PCA
+### [8. PCA](./101-pca.ipynb)
 Principle Component Analysis (PCA) is a vital procedure used in data science for reducing the dimensionality of data (in turn, decreasing computation cost). It is also largely used for visualizing high dimensional data in 2 or 3 dimensions. For this task, you will be visualizing the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) . You will need to download the file pca.npz to test your code. You do not need to push this dataset to github. Complete the following source code to visualize the data in 3D:
 * The title of the plot should be PCA of Iris Dataset
 * data is a np.ndarray of shape (150, 4)
