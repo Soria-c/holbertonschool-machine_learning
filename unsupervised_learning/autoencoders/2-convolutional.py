@@ -12,7 +12,6 @@ def autoencoder(input_dims, filters, latent_dims):
     """
     Input = keras.Input
     Model = keras.models.Model
-    Adam = keras.optimizers.Adam
     Conv2D = keras.layers.Conv2D
     MaxPooling2D = keras.layers.MaxPool2D
     UpSampling2D = keras.layers.UpSampling2D
@@ -67,6 +66,6 @@ def autoencoder(input_dims, filters, latent_dims):
     autoencoder = Model(inputs=input_layer, outputs=output_layer)
 
     # Compile the autoencoder model
-    autoencoder.compile(optimizer=Adam(), loss='binary_crossentropy')
+    autoencoder.compile(optimizer="adam", loss='binary_crossentropy')
 
     return encoder, decoder, autoencoder
