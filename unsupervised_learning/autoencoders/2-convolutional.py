@@ -18,46 +18,38 @@ def autoencoder(input_dims, filters, latent_dims):
     UpSampling2D = keras.layers.UpSampling2D
 
     input_layer = Input(shape=input_dims)
-    x = input_layer
+    output_layer = Input(shape=latent_dims)
 
-    # Encoder
-    for f in filters:
-        x = Conv2D(f, (3, 3), activation='relu', padding='same')(x)
-        x = MaxPooling2D((2, 2), padding='same')(x)
+    encoded_layer = input_layer
+    decoded_layer = output_layer
 
-    # Latent space representation
-    latent = Conv2D(filters[-1], (3, 3), activation='relu', padding='same')(x)
+    for filter in filters:
+        encoded_layer = Conv2D(
+            filter, (3, 3), padding="same", activation="relu")(encoded_layer)
+        encoded_layer = MaxPooling2D((2, 2), padding="same")(encoded_layer)
 
-    # Decoder
-    x = latent
+    for x, filter in enumerate(reversed(filters)):
+        if x == len(filters) - 1:
+            decoded_layer = Conv2D(
+                filter, (3, 3), padding="valid",
+                activation="relu")(decoded_layer)
+        else:
+            decoded_layer = Conv2D(
+                filter, (3, 3), padding="same",
+                activation="relu")(decoded_layer)
 
-    for f in reversed(filters[:-1]):
-        x = Conv2D(f, (3, 3), activation='relu', padding='same')(x)
-        x = UpSampling2D((2, 2))(x)
+        decoded_layer = UpSampling2D((2, 2))(decoded_layer)
 
-    # The second to last convolution with 'valid' padding
-    x = Conv2D(filters[0], (3, 3), activation='relu', padding='valid')(x)
+    decoded_layer = Conv2D(
+        input_dims[-1], (3, 3), padding="same", activation="sigmoid"
+        )(decoded_layer)
 
-    # Adding one more upsampling layer to match the original dimensions
-    x = UpSampling2D((2, 2))(x)
+    encoder = Model(input_layer, encoded_layer)
 
-    # Final convolution to match the input dimensions
-    decoder_output = Conv2D(input_dims[-1], (3, 3), activation='sigmoid',
-                            padding='same')(x)
+    decoder = Model(output_layer, decoded_layer)
 
-    # Encoder model
-    encoder = Model(inputs=input_layer, outputs=latent)
+    full_autoencoder = Model(input_layer, decoder(encoder(input_layer)))
 
-    # Decoder model
-    decoder_input = Input(shape=latent_dims)
-    x = decoder_input
+    full_autoencoder.compile(optimizer=Adam(), loss="binary_crossentropy")
 
-    decoder = Model(decoder_input, decoder_output)
-
-    # Full autoencoder model
-    autoencoder = Model(inputs=input_layer, outputs=decoder_output)
-
-    # Compile the autoencoder model
-    autoencoder.compile(optimizer="Adam()", loss='binary_crossentropy')
-
-    return encoder, decoder, autoencoder
+    return encoder, decoder, full_autoencoder
