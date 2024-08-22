@@ -3,8 +3,7 @@
 Vanilla Autoencoder
 """
 
-# import tensorflow.keras as keras
-import keras
+import tensorflow.keras as keras
 
 
 def autoencoder(input_dims, hidden_layers, latent_dims):
