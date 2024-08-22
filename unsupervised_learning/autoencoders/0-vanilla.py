@@ -3,40 +3,46 @@
 Vanilla Autoencoder
 """
 
-import tensorflow.keras as keras
+# import tensorflow.keras as keras
+import keras
 
 
 def autoencoder(input_dims, hidden_layers, latent_dims):
     """
     Creates an autoencoder
     """
-    # Encoder
-    Sequential = keras.Sequential
+    Input = keras.Input
+    Model = keras.models.Model
     Dense = keras.layers.Dense
     Adam = keras.optimizers.Adam
 
-    encoder = Sequential()
-    encoder.add(Dense(hidden_layers[0], input_shape=(input_dims,),
-                      activation='relu'))
+    input_layer = Input(shape=(input_dims,))
+    encoded = input_layer
 
-    for units in hidden_layers[1:]:
-        encoder.add(Dense(units, activation='relu'))
+    for units in hidden_layers:
+        encoded = Dense(units, activation='relu')(encoded)
 
-    encoder.add(Dense(latent_dims, activation='relu'))
+    latent_layer = Dense(latent_dims, activation='relu')(encoded)
 
-    # Decoder
-    decoder = Sequential()
-    decoder.add(Dense(hidden_layers[-1], input_shape=(latent_dims,),
-                      activation='relu'))
+    decoded = latent_layer
 
-    for units in reversed(hidden_layers[:-1]):
-        decoder.add(Dense(units, activation='relu'))
+    for units in reversed(hidden_layers):
+        decoded = Dense(units, activation='relu')(decoded)
 
-    decoder.add(Dense(input_dims, activation='sigmoid'))
+    output_layer = Dense(input_dims, activation='sigmoid')(decoded)
 
-    # Autoencoder
-    autoencoder = Sequential([encoder, decoder])
+    encoder = Model(input_layer, latent_layer)
+    decoder_input = Input(shape=(latent_dims,))
+    decoder_output = decoder_input
 
-    autoencoder.compile(optimizer=Adam(), loss='binary_crossentropy')
+    for units in reversed(hidden_layers):
+        decoder_output = Dense(units, activation='relu')(decoder_output)
 
-    return encoder, decoder, autoencoder
+    decoder_output = Dense(input_dims, activation='sigmoid')(decoder_output)
+    decoder = Model(decoder_input, decoder_output)
+
+    full_autoencoder = Model(input_layer, decoder(encoder(input_layer)))
+
+    full_autoencoder.compile(optimizer=Adam(), loss='binary_crossentropy')
+
+    return encoder, decoder, full_autoencoder
