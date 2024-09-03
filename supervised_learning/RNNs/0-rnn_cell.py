@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import numpy as np
 """RNN Cell Implementation"""
+import numpy as np
 
 
 class RNNCell:
