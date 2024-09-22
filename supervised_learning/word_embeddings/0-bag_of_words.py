@@ -21,9 +21,13 @@ def bag_of_words(sentences, vocab=None):
                   and f is the number of features.
     - features: List of the features used for embeddings (words).
     """
+    # Preprocess: remove punctuation and lowercase
+    def preprocess(sentence):
+        # Remove punctuation and lowercase
+        return re.sub(r'[^\w\s]', '', sentence.lower())
 
-    # Tokenize sentences into words
-    tokenized_sentences = [sentence.lower().split() for sentence in sentences]
+    tokenized_sentences = [preprocess(sentence).split()
+                           for sentence in sentences]
 
     # If no vocabulary is provided, build vocab from all words in the sentences
     if vocab is None:
