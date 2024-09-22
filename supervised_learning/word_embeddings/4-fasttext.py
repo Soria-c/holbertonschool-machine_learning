@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-
+"""
+Fast Text
+"""
 
 import gensim
 
