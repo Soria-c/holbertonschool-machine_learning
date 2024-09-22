@@ -50,4 +50,4 @@ def bag_of_words(sentences, vocab=None):
                 # Fill in word frequency
                 embeddings[i, vocab_dict[word]] = count
 
-    return embeddings, vocab
+    return embeddings, np.array(vocab)
