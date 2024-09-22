@@ -3,6 +3,7 @@
 Bag of Words
 """
 import numpy as np
+import re
 from collections import Counter
 
 
