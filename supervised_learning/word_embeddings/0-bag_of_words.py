@@ -25,9 +25,9 @@ def bag_of_words(sentences, vocab=None):
     # Preprocess: remove punctuation and lowercase
     def preprocess(sentence):
         # Remove punctuation and lowercase
-        return re.sub(r'[^\w\s]', '', sentence.lower())
+        return re.findall(r'\b[a-zA-Z]{2,}\b', sentence.lower())
 
-    tokenized_sentences = [preprocess(sentence).split()
+    tokenized_sentences = [preprocess(sentence)
                            for sentence in sentences]
 
     # If no vocabulary is provided, build vocab from all words in the sentences
