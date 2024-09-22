@@ -39,7 +39,7 @@ def bag_of_words(sentences, vocab=None):
     vocab_dict = {word: idx for idx, word in enumerate(vocab)}
 
     # Initialize the embeddings matrix (s sentences, f features/words in vocab)
-    embeddings = np.zeros((len(sentences), len(vocab)))
+    embeddings = np.zeros((len(sentences), len(vocab)), dtype=int)
 
     # Populate the embeddings matrix
     for i, sentence in enumerate(tokenized_sentences):
