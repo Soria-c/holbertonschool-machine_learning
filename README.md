@@ -6,3 +6,4 @@
 * [Classification Using Neural Networks](/supervised_learning/classification/README.md)
 * [Tensorflow](./supervised_learning/tensorflow/README.md)
 * [Tensorflow 2 & Keras](./supervised_learning/keras/README.md)
+* [Optimization](./supervised_learning/optimization/README.md)
