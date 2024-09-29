@@ -91,17 +91,19 @@ class RNNDecoder(tf.keras.layers.Layer):
         # Convert input word (x) to embedding
         x = self.embedding(x)
 
-        # Concatenate the context vector and the input 
-        # embedding 
+        # Concatenate the context vector and the input
+        # embedding
         # (in this order)
         x = tf.concat([tf.expand_dims(context, 1), x], axis=-1)
 
         # Pass the concatenated vector through the GRU
-        output, s = self.gru(x, initial_state=s_prev)
+        output, s = self.gru(x)
+
+        output = tf.squeeze(output, axis=1)  # Remove the time dimension
 
         # Generate output word as a one-hot vector in the target vocabulary
         y = self.F(output)
 
         # Return output word and updated hidden state
-        y = tf.squeeze(y, axis=1)  # Remove the time dimension
+
         return y, s
