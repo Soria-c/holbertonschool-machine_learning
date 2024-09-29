@@ -65,7 +65,7 @@ class Decoder(tf.keras.layers.Layer):
         seq_len = tf.shape(x)[1]
         # Create positional encodings
         x *= tf.math.sqrt(tf.cast(self.dm, tf.float32))  # Scaling
-        x += self.positional_encoding[:seq_len, :]
+        x += self.positional_encoding[:seq_len]
         x = self.dropout(x, training=training)
 
         # Pass through decoder blocks
