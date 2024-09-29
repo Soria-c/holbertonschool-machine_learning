@@ -57,6 +57,7 @@ class Encoder(tf.keras.layers.Layer):
         # Apply embedding
         x = self.embedding(x)
         # Add positional encodings
+        x *= tf.math.sqrt(tf.cast(self.dm, tf.float32))  # Scaling
         x += self.positional_encoding[:seq_len, :]
         x = self.dropout(x, training=training)
 
