@@ -5,6 +5,7 @@ Dataset class for machine translation with Portuguese-English tokenization.
 
 import transformers
 import tensorflow_datasets as tfds
+import tensorflow as tf
 
 
 class Dataset:
