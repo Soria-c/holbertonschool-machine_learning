@@ -27,8 +27,10 @@ class Dataset:
             self.data_train)
 
         # Apply the tokenization to the dataset using tf_encode
-        self.data_train = self.data_train.map(self.tf_encode)
-        self.data_valid = self.data_valid.map(self.tf_encode)
+        self.data_train = self.data_train.map(
+                self.tf_encode, num_parallel_calls=tf.data.AUTOTUNE)
+        self.data_valid = self.data_valid.map(
+                self.tf_encode, num_parallel_calls=tf.data.AUTOTUNE)
 
     def tokenize_dataset(self, data):
         """
@@ -105,9 +107,9 @@ class Dataset:
         pt_tokens = [pt_start_token] + pt_tokens + [pt_end_token]
         en_tokens = [en_start_token] + en_tokens + [en_end_token]
 
-        # Convert the tokens to NumPy arrays
-        pt_tokens = np.array(pt_tokens, dtype=np.int32)
-        en_tokens = np.array(en_tokens, dtype=np.int32)
+        # # Convert the tokens to NumPy arrays
+        # pt_tokens = np.array(pt_tokens, dtype=np.int32)
+        # en_tokens = np.array(en_tokens, dtype=np.int32)
 
         return pt_tokens, en_tokens
 
