@@ -42,10 +42,12 @@ class Dataset:
         """
         # Load pre-trained tokenizer models from Hugging Face transformers
         tokenizer_pt = transformers.AutoTokenizer.from_pretrained(
-            "neuralmind/bert-base-portuguese-cased"
+            "neuralmind/bert-base-portuguese-cased",
+            clean_up_tokenization_spaces=True
         )
         tokenizer_en = transformers.AutoTokenizer.from_pretrained(
-            "bert-base-uncased"
+            "bert-base-uncased",
+            clean_up_tokenization_spaces=True
         )
 
         # Train both tokenizers (adjust if necessary)
