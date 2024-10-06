@@ -129,9 +129,12 @@ class Dataset:
             en_tensor: TensorFlow tensor containing the English
                         tokens with defined shape.
         """
-        pt_tokens, en_tokens = tf.py_function(func=self.encode,
-                                              inp=[pt, en],
-                                              Tout=[tf.int64, tf.int64])
+        # Encode the sentences using the encode method
+        pt_tokens, en_tokens = self.encode(pt, en)
+
+        # Convert them into TensorFlow tensors
+        pt_tensor = tf.convert_to_tensor(pt_tokens)
+        en_tensor = tf.convert_to_tensor(en_tokens)
 
         # Set the shape of the tensors dynamically
         pt_tensor.set_shape([None])
