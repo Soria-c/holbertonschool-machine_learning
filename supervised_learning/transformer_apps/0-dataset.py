@@ -50,7 +50,7 @@ class Dataset:
         tokenizer_pt = transformers.AutoTokenizer.from_pretrained(
             "neuralmind/bert-base-portuguese-cased",
             clean_up_tokenization_spaces=True,
-            use_fast=True,
+            use_fast=True
         )
         tokenizer_en = transformers.AutoTokenizer.from_pretrained(
             "bert-base-uncased",
@@ -67,4 +67,4 @@ class Dataset:
         tokenizer_en = tokenizer_en.train_new_from_iterator(en_sentences,
                                                             vocab_size=2**13)
 
-        return self.tokenizer_pt, self.tokenizer_en
+        return tokenizer_pt, tokenizer_en
