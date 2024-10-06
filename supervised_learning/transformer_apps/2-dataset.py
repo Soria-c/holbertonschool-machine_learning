@@ -27,10 +27,8 @@ class Dataset:
             self.data_train)
 
         # Apply the tokenization to the dataset using tf_encode
-        self.data_train = self.data_train.map(
-                self.tf_encode, num_parallel_calls=tf.data.AUTOTUNE)
-        self.data_valid = self.data_valid.map(
-                self.tf_encode, num_parallel_calls=tf.data.AUTOTUNE)
+        self.data_train = self.data_train.map(self.tf_encode)
+        self.data_valid = self.data_valid.map(self.tf_encode)
 
     def tokenize_dataset(self, data):
         """
