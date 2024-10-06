@@ -40,6 +40,12 @@ class Dataset:
             tokenizer_pt: Portuguese tokenizer.
             tokenizer_en: English tokenizer.
         """
+        pt_sentences = []
+        en_sentences = []
+        for pt, en in data.as_numpy_iterator():
+            pt_sentences.append(pt.decode('utf-8'))
+            en_sentences.append(en.decode('utf-8'))
+
         # Load pre-trained tokenizer models from Hugging Face transformers
         tokenizer_pt = transformers.AutoTokenizer.from_pretrained(
             "neuralmind/bert-base-portuguese-cased",
@@ -54,8 +60,9 @@ class Dataset:
         # Tokenizers have already been pre-trained, no need for
         # additional vocabulary
         # training, hence no need to call any 'train' method.
-
-        self.tokenizer_pt = tokenizer_pt
-        self.tokenizer_en = tokenizer_en
+        tokenizer_pt = tokenizer_pt.train_new_from_iterator(pt_sentences,
+                                                            vocab_size=2**13)
+        tokenizer_en = tokenizer_en.train_new_from_iterator(en_sentences,
+                                                            vocab_size=2**13)
 
         return self.tokenizer_pt, self.tokenizer_en
