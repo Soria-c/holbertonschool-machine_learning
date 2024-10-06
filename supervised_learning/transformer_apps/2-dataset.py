@@ -100,8 +100,12 @@ class Dataset:
         en_end_token = vocab_size_en + 1
 
         # Tokenize the sentences
-        pt_tokens = self.tokenizer_pt.encode(pt.numpy().decode('utf-8'))
-        en_tokens = self.tokenizer_en.encode(en.numpy().decode('utf-8'))
+        pt_tokens = self.tokenizer_pt.encode(
+            pt.numpy().decode('utf-8'),
+            add_special_tokens=False)
+        en_tokens = self.tokenizer_en.encode(
+            en.numpy().decode('utf-8'),
+            add_special_tokens=False)
 
         # Append the start and end tokens to the tokenized sentences
         pt_tokens = [pt_start_token] + pt_tokens + [pt_end_token]
