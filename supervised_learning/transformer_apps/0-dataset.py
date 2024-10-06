@@ -22,9 +22,9 @@ class Dataset:
                                     split='validation',
                                     as_supervised=True)
 
-        # Tokenizers (will be initialized in tokenize_dataset method)
-        self.tokenizer_pt = None
-        self.tokenizer_en = None
+        self.tokenizer_pt, self.tokenizer_en = self.tokenize_dataset(
+                self.data_train
+            )
 
     def tokenize_dataset(self, data):
         """
@@ -49,11 +49,13 @@ class Dataset:
         # Load pre-trained tokenizer models from Hugging Face transformers
         tokenizer_pt = transformers.AutoTokenizer.from_pretrained(
             "neuralmind/bert-base-portuguese-cased",
-            clean_up_tokenization_spaces=True
+            clean_up_tokenization_spaces=True,
+            use_fast=True,
         )
         tokenizer_en = transformers.AutoTokenizer.from_pretrained(
             "bert-base-uncased",
-            clean_up_tokenization_spaces=True
+            clean_up_tokenization_spaces=True,
+            use_fast=True
         )
 
         # Train both tokenizers (adjust if necessary)
