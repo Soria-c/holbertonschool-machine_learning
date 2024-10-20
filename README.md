@@ -8,3 +8,4 @@
 * [Tensorflow 2 & Keras](./supervised_learning/keras/README.md)
 * [Optimization](./supervised_learning/optimization/README.md)
 * [Error Analysis](./supervised_learning/error_analysis/README.md)
+* [Regularization](./supervised_learning/regularization/README.md)
