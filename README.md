@@ -9,3 +9,4 @@
 * [Optimization](./supervised_learning/optimization/README.md)
 * [Error Analysis](./supervised_learning/error_analysis/README.md)
 * [Regularization](./supervised_learning/regularization/README.md)
+* [Convolutions and Pooling](./math/convolutions_and_pooling/README.md)
