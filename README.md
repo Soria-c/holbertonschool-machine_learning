@@ -10,3 +10,4 @@
 * [Error Analysis](./supervised_learning/error_analysis/README.md)
 * [Regularization](./supervised_learning/regularization/README.md)
 * [Convolutions and Pooling](./math/convolutions_and_pooling/README.md)
+* [Convolutional Neural Networks](./supervised_learning/cnn/README.md)
