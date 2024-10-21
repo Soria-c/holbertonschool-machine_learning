@@ -313,7 +313,7 @@ if __name__ == '__main__':
 ![alt text](./data/6add724c812e8dcddb21.png)
 ![alt text](./data/6d6319bb470e3566e885.png)
 ![alt text](./data/1370dd6200e942eee8f9.png)
-![alt text](./data/1370dd6200e942eee8f9.png)
+![alt text](./data/a24b7d741b3c378f9f89.png)
 ## 6. Pooling
 Write a function `def pool(images, kernel_shape, stride, mode='max'):` that performs pooling on images:
 
