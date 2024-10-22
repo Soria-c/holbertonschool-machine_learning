@@ -11,3 +11,4 @@
 * [Regularization](./supervised_learning/regularization/README.md)
 * [Convolutions and Pooling](./math/convolutions_and_pooling/README.md)
 * [Convolutional Neural Networks](./supervised_learning/cnn/README.md)
+* [Deep Convolutional Architectures](./supervised_learning/deep_cnns/README.md)
