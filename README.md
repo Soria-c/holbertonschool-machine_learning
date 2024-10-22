@@ -12,3 +12,4 @@
 * [Convolutions and Pooling](./math/convolutions_and_pooling/README.md)
 * [Convolutional Neural Networks](./supervised_learning/cnn/README.md)
 * [Deep Convolutional Architectures](./supervised_learning/deep_cnns/README.md)
+* [Transfer Learning](./supervised_learning/transfer_learning/README.md)
