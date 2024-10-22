@@ -2578,4 +2578,122 @@ ________________________________________________________________________________
  atchNormalization)                                                                               
 
  activation_108 (Activation  (None, 7, 7, 832)            0         ['batch_normalization_108[0]
+  conv2d_108 (Conv2D)         (None, 7, 7, 128)            106624    ['activation_108[0][0]']      
+
+ batch_normalization_109 (B  (None, 7, 7, 128)            512       ['conv2d_108[0][0]']          
+ atchNormalization)                                                                               
+
+ activation_109 (Activation  (None, 7, 7, 128)            0         ['batch_normalization_109[0][0
+ )                                                                  ]']                           
+
+ conv2d_109 (Conv2D)         (None, 7, 7, 32)             36896     ['activation_109[0][0]']      
+
+ concatenate_52 (Concatenat  (None, 7, 7, 864)            0         ['concatenate_51[0][0]',      
+ e)                                                                  'conv2d_109[0][0]']          
+
+ batch_normalization_110 (B  (None, 7, 7, 864)            3456      ['concatenate_52[0][0]']      
+ atchNormalization)                                                                               
+
+ activation_110 (Activation  (None, 7, 7, 864)            0         ['batch_normalization_110[0][0
+ )                                                                  ]']                           
+
+ conv2d_110 (Conv2D)         (None, 7, 7, 128)            110720    ['activation_110[0][0]']      
+
+ batch_normalization_111 (B  (None, 7, 7, 128)            512       ['conv2d_110[0][0]']          
+ atchNormalization)                                                                               
+
+ activation_111 (Activation  (None, 7, 7, 128)            0         ['batch_normalization_111[0][0
+ )                                                                  ]']                           
+
+ conv2d_111 (Conv2D)         (None, 7, 7, 32)             36896     ['activation_111[0][0]']      
+
+ concatenate_53 (Concatenat  (None, 7, 7, 896)            0         ['concatenate_52[0][0]',      
+ e)                                                                  'conv2d_111[0][0]']          
+
+ batch_normalization_112 (B  (None, 7, 7, 896)            3584      ['concatenate_53[0][0]']      
+ atchNormalization)                                                                               
+
+ activation_112 (Activation  (None, 7, 7, 896)            0         ['batch_normalization_112[0][0
+ )                                                                  ]']                           
+
+ conv2d_112 (Conv2D)         (None, 7, 7, 128)            114816    ['activation_112[0][0]']      
+
+ batch_normalization_113 (B  (None, 7, 7, 128)            512       ['conv2d_112[0][0]']          
+ atchNormalization)                                                                               
+
+ activation_113 (Activation  (None, 7, 7, 128)            0         ['batch_normalization_113[0][0
+ )                                                                  ]']                           
+
+ conv2d_113 (Conv2D)         (None, 7, 7, 32)             36896     ['activation_113[0][0]']      
+
+ concatenate_54 (Concatenat  (None, 7, 7, 928)            0         ['concatenate_53[0][0]',      
+ e)                                                                  'conv2d_113[0][0]']          
+
+ batch_normalization_114 (B  (None, 7, 7, 928)            3712      ['concatenate_54[0][0]']      
+ atchNormalization)                                                                               
+
+ activation_114 (Activation  (None, 7, 7, 928)            0         ['batch_normalization_114[0][0
+ )                                                                  ]']                           
+
+ conv2d_114 (Conv2D)         (None, 7, 7, 128)            118912    ['activation_114[0][0]']      
+
+ batch_normalization_115 (B  (None, 7, 7, 128)            512       ['conv2d_114[0][0]']          
+ atchNormalization)                                                                               
+
+ activation_115 (Activation  (None, 7, 7, 128)            0         ['batch_normalization_115[0][0
+ )                                                                  ]']                           
+
+ conv2d_115 (Conv2D)         (None, 7, 7, 32)             36896     ['activation_115[0][0]']      
+
+ concatenate_55 (Concatenat  (None, 7, 7, 960)            0         ['concatenate_54[0][0]',      
+ e)                                                                  'conv2d_115[0][0]']          
+
+ batch_normalization_116 (B  (None, 7, 7, 960)            3840      ['concatenate_55[0][0]']      
+ atchNormalization)                                                                               
+
+ activation_116 (Activation  (None, 7, 7, 960)            0         ['batch_normalization_116[0][0
+ )                                                                  ]']                           
+
+ conv2d_116 (Conv2D)         (None, 7, 7, 128)            123008    ['activation_116[0][0]']      
+
+ batch_normalization_117 (B  (None, 7, 7, 128)            512       ['conv2d_116[0][0]']          
+ atchNormalization)                                                                               
+
+ activation_117 (Activation  (None, 7, 7, 128)            0         ['batch_normalization_117[0][0
+ )                                                                  ]']                           
+
+ conv2d_117 (Conv2D)         (None, 7, 7, 32)             36896     ['activation_117[0][0]']      
+
+ concatenate_56 (Concatenat  (None, 7, 7, 992)            0         ['concatenate_55[0][0]',      
+ e)                                                                  'conv2d_117[0][0]']          
+
+ batch_normalization_118 (B  (None, 7, 7, 992)            3968      ['concatenate_56[0][0]']      
+ atchNormalization)                                                                               
+
+ activation_118 (Activation  (None, 7, 7, 992)            0         ['batch_normalization_118[0][0
+ )                                                                  ]']                           
+
+ conv2d_118 (Conv2D)         (None, 7, 7, 128)            127104    ['activation_118[0][0]']      
+
+ batch_normalization_119 (B  (None, 7, 7, 128)            512       ['conv2d_118[0][0]']          
+ atchNormalization)                                                                               
+
+ activation_119 (Activation  (None, 7, 7, 128)            0         ['batch_normalization_119[0][0
+ )                                                                  ]']                           
+
+ conv2d_119 (Conv2D)         (None, 7, 7, 32)             36896     ['activation_119[0][0]']      
+
+ concatenate_57 (Concatenat  (None, 7, 7, 1024)           0         ['concatenate_56[0][0]',      
+ e)                                                                  'conv2d_119[0][0]']          
+
+ average_pooling2d_3 (Avera  (None, 1, 1, 1024)           0         ['concatenate_57[0][0]']      
+ gePooling2D)                                                                                     
+
+ dense (Dense)               (None, 1, 1, 1000)           1025000   ['average_pooling2d_3[0][0]'] 
+
+==================================================================================================
+Total params: 8068404 (30.78 MB)
+Trainable params: 7986926 (30.47 MB)
+Non-trainable params: 81478 (318.27 KB)
+__________________________________________________________________________________________________
 ```
