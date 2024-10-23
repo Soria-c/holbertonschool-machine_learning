@@ -13,3 +13,4 @@
 * [Convolutional Neural Networks](./supervised_learning/cnn/README.md)
 * [Deep Convolutional Architectures](./supervised_learning/deep_cnns/README.md)
 * [Transfer Learning](./supervised_learning/transfer_learning/README.md)
+* [Object Detection](./supervised_learning/object_detection/README.md)
