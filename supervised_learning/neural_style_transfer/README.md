@@ -615,8 +615,8 @@ tf.Tensor(1365784700.0, shape=(), dtype=float32)
 ```
 ## 6. Content Cost
 ![](https://latex.codecogs.com/gif.latex?L_{content}&space;=&space;\frac{1}{H_{l}W_{l}C_{l}}\sum_{i}^{H_{l}}\sum_{j}^{W_{l}}\sum_{k}^{C_{l}}(F_{ijk}^{l}-P_{ijk}^{l})^2)
-$$
 
+$$
 L_{content}=\frac{1}{H_{l}W_{l}C_{l}}\sum_{i}^{H_{l}}\sum_{j}^{W_{l}}\sum_{k}^{C_{l}}(F_{ijk}^{l}-P_{ijk}^{l})^2
 $$
 See [A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576)
