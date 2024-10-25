@@ -196,6 +196,9 @@ Non-trainable params: 15304768 (58.38 MB)
 _________________________________________________________________
 ```
 ## 2. Gram Matrix 
+
+![](https://latex.codecogs.com/gif.latex?G^{l}_{ij}&space;=&space;\frac{1}{H_{l}W_{l}}\sum_{h}^{H_{l}}\sum_{w}^{W_{l}}F^{l}_{hwi}F^{l}_{hwj})
+
 $$
 G^{l}_{ij}=\frac{1}{H_{l}W_{l}}\sum_{h}^{H_{l}}\sum_{w}^{W_{l}}F^{l}_{hwi}F^{l}_{hwj}
 $$
@@ -508,6 +511,9 @@ tf.Tensor(
      0.       ]]]], shape=(1, 21, 32, 512), dtype=float32)
 ```
 ## 4. Layer Style Cost
+
+![](https://latex.codecogs.com/gif.latex?E_{l}&space;=&space;\frac{1}{C_{l}^{2}}\sum_{i}^{C_{l}}\sum_{j}^{C_{l}}(G^{l}_{ij}&space;-&space;A^{l}_{ij})^{2})
+
 $$
 E_{l}=\frac{1}{C_{l}^{2}}\sum_{i}^{C_{l}}\sum_{j}^{C_{l}}(G^{l}_{ij}-A^{l}_{ij})^{2}
 $$
@@ -558,6 +564,9 @@ if __name__ == '__main__':
 tf.Tensor(1248908.5, shape=(), dtype=float32)
 ```
 ## 5. Style Cost 
+
+![](https://latex.codecogs.com/gif.latex?L_{style}&space;=&space;\sum_{l}w_{l}E_{l})
+
 $$
 L_{style}=\sum_{l}w_{l}E_{l}
 $$
@@ -605,7 +614,9 @@ if __name__ == '__main__':
 tf.Tensor(1365784700.0, shape=(), dtype=float32)
 ```
 ## 6. Content Cost
+![](https://latex.codecogs.com/gif.latex?L_{content}&space;=&space;\frac{1}{H_{l}W_{l}C_{l}}\sum_{i}^{H_{l}}\sum_{j}^{W_{l}}\sum_{k}^{C_{l}}(F_{ijk}^{l}-P_{ijk}^{l})^2)
 $$
+
 L_{content}=\frac{1}{H_{l}W_{l}C_{l}}\sum_{i}^{H_{l}}\sum_{j}^{W_{l}}\sum_{k}^{C_{l}}(F_{ijk}^{l}-P_{ijk}^{l})^2
 $$
 See [A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576)
@@ -655,9 +666,13 @@ if __name__ == '__main__':
 tf.Tensor(109.07064, shape=(), dtype=float32)
 ```
 ## 7. Total Cost 
+![](https://latex.codecogs.com/gif.latex?L_{total}&space;=&space;\alpha&space;L_{content}&space;+&space;\beta&space;L_{style})
+
+
 $$
 L_{total}=\alpha L_{content}+\beta L_{style}
 $$
+
 See [A Neural Algorithm of Artistic Style](https://arxiv.org/pdf/1508.06576)
 Update the class `NST` to calculate the total cost:
 
