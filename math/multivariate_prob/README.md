@@ -3,18 +3,26 @@
 ## Resources
 
 * [Joint Probability Distributions](/rltoken/4PVdDmgggOYmzUy2eBLyUg "Joint Probability Distributions")
-* [Multivariate Gaussian distributions](/rltoken/Tj40bwUczl2SK33zw4WiQw "Multivariate Gaussian distributions")
-* [The Multivariate Gaussian Distribution](/rltoken/VaD5B8cPNLF1GgV7qOAfcg "The Multivariate Gaussian Distribution")
-* [An Introduction to Variance, Covariance \& Correlation](/rltoken/50vXrfm_9ADaIzKnsRFKgg "An Introduction to Variance, Covariance & Correlation")
-* [Variance\-covariance matrix using matrix notation of factor analysis](/rltoken/CsHS7KSHrUCrtjxov8dFwQ "Variance-covariance matrix using matrix notation of factor analysis")
+* [Multivariate Gaussian distributions](https://www.youtube.com/watch?v=eho8xH3E6mE "Multivariate Gaussian distributions")
+* [The Multivariate Gaussian Distribution](https://cs229.stanford.edu/section/gaussians.pdf "The Multivariate Gaussian Distribution")
+* [An Introduction to Variance, Covariance \& Correlation](https://www.alchemer.com/resources/blog/variance-covariance-correlation/ "An Introduction to Variance, Covariance & Correlation")
+* [Variance\-covariance matrix using matrix notation of factor analysis](https://www.youtube.com/watch?v=G16c2ZODcg8 "Variance-covariance matrix using matrix notation of factor analysis")
 
-## Learning Objectives
+
+* [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss)
+* [Joint probability distribution](https://en.wikipedia.org/wiki/Joint_probability_distribution)
+* [Covariance](https://en.wikipedia.org/wiki/Covariance)
+* [Covariance matrix](https://en.wikipedia.org/wiki/Covariance_matrix)
+
 
 * [numpy.cov](/rltoken/N8SO85DloHLfmi9yQVThnQ "numpy.cov")
-* [numpy.corrcoef](/rltoken/ipT5Gmv4ZaBcqmtQz3X_uw "numpy.corrcoef")
-* [numpy.linalg.det](/rltoken/DRgYUxFSWCtp3mggQmFBiQ "numpy.linalg.det")
-* [numpy.linalg.inv](/rltoken/8m1PYUnaGOIYyAxpVlid9g "numpy.linalg.inv")
-* [numpy.random.multivariate\_normal](/rltoken/zDgUDLSo47f4iXsy4d9Y7w "numpy.random.multivariate_normal")
+* [numpy.corrcoef](https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html "numpy.corrcoef")
+* [numpy.linalg.det](https://numpy.org/doc/stable/reference/generated/numpy.linalg.det.html "numpy.linalg.det")
+* [numpy.linalg.inv](https://numpy.org/doc/stable/reference/generated/numpy.linalg.inv.html "numpy.linalg.inv")
+* [numpy.random.multivariate\_normal](https://numpy.org/doc/stable/reference/random/generated/numpy.random.multivariate_normal.html "numpy.random.multivariate_normal")
+## Learning Objectives
+
+
 
 ## Tasks
 

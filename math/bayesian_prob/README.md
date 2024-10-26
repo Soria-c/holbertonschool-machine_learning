@@ -2,18 +2,18 @@
 
 ## Resources
 
-* [Bayesian probability](/rltoken/LbqcqhQMTB8rM_32zTne2Q "Bayesian probability")
-* [Bayesian statistics](/rltoken/X8-YO11zNEJVIbaQNYEyUQ "Bayesian statistics")
-* [Bayes’ Theorem \- The Simplest Case](/rltoken/whOqB5sAhc5gLXIFHC7Jdw "Bayes' Theorem - The Simplest Case")
-* [A visual guide to Bayesian thinking](/rltoken/DCcZjShoGrFtwxHaL0mVFA "A visual guide to Bayesian thinking")
-* [Base Rates](/rltoken/CfKOIbI68nOGhkEXgJ28Rg "Base Rates")
-* [Bayesian statistics: a comprehensive course](/rltoken/VOIFP5sKP_sn2jpPoHha3g "Bayesian statistics: a comprehensive course")
-	+ [Bayes’ rule \- an intuitive explanation](/rltoken/OrPZyTyYX4-yDarX0se24g "Bayes' rule - an intuitive explanation")
-	+ [Bayes’ rule in statistics](/rltoken/OlSXY3qIk6V2zKc-Hcv4qw "Bayes' rule in statistics")
-	+ [Bayes’ rule in inference \- likelihood](/rltoken/8PCYllQCETbNYrITW8TpNg "Bayes' rule in inference - likelihood")
-	+ [Bayes’ rule in inference \- the prior and denominator](/rltoken/Q1cXtDQtO5SH_2Nf7TpDyg "Bayes' rule in inference - the prior and denominator")
-	+ [Bayes’ rule denominator: discrete and continuous](/rltoken/qE_Okqp4Ez3gEKsfJDnetQ "Bayes' rule denominator: discrete and continuous")
-	+ [Bayes’ rule: why likelihood is not a probability](/rltoken/H6ZtvaxKp_t3zCeyz3pjpA "Bayes' rule: why likelihood is not a probability")
+* [Bayesian probability](https://en.wikipedia.org/wiki/Bayesian_probability "Bayesian probability")
+* [Bayesian statistics](https://en.wikipedia.org/wiki/Bayesian_statistics "Bayesian statistics")
+* [Bayes’ Theorem \- The Simplest Case](https://www.youtube.com/watch?v=XQoLVl31ZfQ "Bayes' Theorem - The Simplest Case")
+* [A visual guide to Bayesian thinking](https://www.youtube.com/watch?v=BrK7X_XlGB8 "A visual guide to Bayesian thinking")
+* [Base Rates](https://onlinestatbook.com/2/probability/base_rates.html "Base Rates")
+* [Bayesian statistics: a comprehensive course](https://www.youtube.com/playlist?list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm "Bayesian statistics: a comprehensive course")
+	+ [Bayes’ rule \- an intuitive explanation](https://www.youtube.com/watch?v=EbyUsf_jUjk&list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm&index=15 "Bayes' rule - an intuitive explanation")
+	+ [Bayes’ rule in statistics](https://www.youtube.com/watch?v=i567qvWejJA&list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm&index=16 "Bayes' rule in statistics")
+	+ [Bayes’ rule in inference \- likelihood](https://www.youtube.com/watch?v=c69a_viMRQU&list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm&index=17 "Bayes' rule in inference - likelihood")
+	+ [Bayes’ rule in inference \- the prior and denominator](https://www.youtube.com/watch?v=a5QDDZLGSXY&list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm&index=18 "Bayes' rule in inference - the prior and denominator")
+	+ [Bayes’ rule denominator: discrete and continuous](https://www.youtube.com/watch?v=QEzeLh6L9Tg&list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm&index=25 "Bayes' rule denominator: discrete and continuous")
+	+ [Bayes’ rule: why likelihood is not a probability](https://www.youtube.com/watch?v=sm60vapz2jQ&list=PLFDbGp5YzjqXQ4oE4w9GVWdiokWB9gEpm&index=26 "Bayes' rule: why likelihood is not a probability")
 
 ## Learning Objectives
 
@@ -41,7 +41,8 @@ You are conducting a study on a revolutionary cancer drug and are looking to fin
 * Returns: a 1D `numpy.ndarray` containing the likelihood of obtaining the data, `x` and `n`, for each probability in `P`, respectively
 
 
-`alexa@ubuntu-xenial:bayesian_prob$ cat 0-main.py 
+```python
+alexa@ubuntu-xenial:bayesian_prob$ cat 0-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -54,7 +55,8 @@ You are conducting a study on a revolutionary cancer drug and are looking to fin
  [0.00000000e+00 2.71330957e-04 8.71800070e-02 3.07345706e-03
  5.93701546e-07 1.14387595e-12 1.09257177e-20 6.10151799e-32
  9.54415702e-49 1.00596671e-78 0.00000000e+00]
- alexa@ubuntu-xenial:bayesian_prob$` 
+ alexa@ubuntu-xenial:bayesian_prob$
+ ``` 
 ### 1\. Intersection
 
 Based on `0-likelihood.py`, write a function `def intersection(x, n, P, Pr):` that calculates the intersection of obtaining this data with the various hypothetical probabilities:
@@ -74,7 +76,8 @@ Based on `0-likelihood.py`, write a function `def intersection(x, n, P, Pr):` th
 * Returns: a 1D `numpy.ndarray` containing the intersection of obtaining `x` and `n` with each probability in `P`, respectively
 
 
-`alexa@ubuntu-xenial:bayesian_prob$ cat 1-main.py 
+```python
+alexa@ubuntu-xenial:bayesian_prob$ cat 1-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -88,7 +91,8 @@ Based on `0-likelihood.py`, write a function `def intersection(x, n, P, Pr):` th
  [0.00000000e+00 2.46664506e-05 7.92545518e-03 2.79405187e-04
  5.39728678e-08 1.03988723e-13 9.93247059e-22 5.54683454e-33
  8.67650639e-50 9.14515194e-80 0.00000000e+00]
- alexa@ubuntu-xenial:bayesian_prob$` 
+ alexa@ubuntu-xenial:bayesian_prob$
+ ``` 
 ### 2\. Marginal Probability
 
 Based on `1-intersection.py`, write a function `def marginal(x, n, P, Pr):` that calculates the marginal probability of obtaining the data:
@@ -108,7 +112,8 @@ Based on `1-intersection.py`, write a function `def marginal(x, n, P, Pr):` that
 * Returns: the marginal probability of obtaining `x` and `n`
 
 
-`alexa@ubuntu-xenial:bayesian_prob$ cat 2-main.py 
+```python
+alexa@ubuntu-xenial:bayesian_prob$ cat 2-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -120,7 +125,8 @@ Based on `1-intersection.py`, write a function `def marginal(x, n, P, Pr):` that
  print(marginal(26, 130, P, Pr))
  alexa@ubuntu-xenial:bayesian_prob$ ./2-main.py 
  0.008229580791426582
- alexa@ubuntu-xenial:bayesian_prob$` 
+ alexa@ubuntu-xenial:bayesian_prob$
+ ``` 
 ### 3\. Posterior
 
 Based on `2-marginal.py`, write a function `def posterior(x, n, P, Pr):` that calculates the posterior probability for the various hypothetical probabilities of developing severe side effects given the data:
@@ -140,7 +146,8 @@ Based on `2-marginal.py`, write a function `def posterior(x, n, P, Pr):` that ca
 * Returns: the posterior probability of each probability in `P` given `x` and `n`, respectively
 
 
-`alexa@ubuntu-xenial:bayesian_prob$ cat 3-main.py 
+```python
+alexa@ubuntu-xenial:bayesian_prob$ cat 3-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -154,7 +161,8 @@ Based on `2-marginal.py`, write a function `def posterior(x, n, P, Pr):` that ca
  [0.00000000e+00 2.99729127e-03 9.63044824e-01 3.39513268e-02
  6.55839819e-06 1.26359684e-11 1.20692303e-19 6.74011797e-31
  1.05430721e-47 1.11125368e-77 0.00000000e+00]
- alexa@ubuntu-xenial:bayesian_prob$` 
+ alexa@ubuntu-xenial:bayesian_prob$
+ ``` 
 ### 4\. Continuous Posterior
 
 Based on `3-posterior.py`, write a function `def posterior(x, n, p1, p2):` that calculates the posterior probability that the probability of developing severe side effects falls within a specific range given the data:
@@ -172,8 +180,10 @@ Based on `3-posterior.py`, write a function `def posterior(x, n, p1, p2):` that 
 * The only import you are allowed to use is `from scipy import special`
 * Returns: the posterior probability that `p` is within the range `[p1, p2]` given `x` and `n`
 
+**Hint: See [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution) and [Beta Distribution](https://en.wikipedia.org/wiki/Beta_distribution)**
 
-`alexa@ubuntu-xenial:bayesian_prob$ cat 100-main.py 
+```python
+alexa@ubuntu-xenial:bayesian_prob$ cat 100-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -182,4 +192,5 @@ Based on `3-posterior.py`, write a function `def posterior(x, n, p1, p2):` that 
  print(posterior(26, 130, 0.17, 0.23))
  alexa@ubuntu-xenial:bayesian_prob$ ./100-main.py 
  0.6098093274896221
- alexa@ubuntu-xenial:bayesian_prob$` 
+ alexa@ubuntu-xenial:bayesian_prob$
+ ``` 

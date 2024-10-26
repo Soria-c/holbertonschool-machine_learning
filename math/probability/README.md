@@ -35,6 +35,15 @@
 * What is mean, standard deviation, and variance?
 * Common probability distributions
 
+
+
+## Mathematical Approximations
+For the following tasks, you will have to use various irrational numbers and functions. Since you are not able to import any libraries, please use the following approximations:
+
+* $$ π = 3.1415926536 $$
+* $$ e = 2.7182818285 $$
+* $$ erf(x) = \frac{2}{\sqrt{\pi}}(x-\frac{x^3}{3}+\frac{x^5}{10}-\frac{x^7}{42}+\frac{x^9}{216})$$
+
 ## Tasks
 
 ### 0\. Initialize Poisson

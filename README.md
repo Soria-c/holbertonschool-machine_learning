@@ -17,9 +17,6 @@
 * [Neural Style Transfer](./supervised_learning/neural_style_transfer/README.md)
 * [Advanced Linear Algebra](./math/advanced_linear_algebra/README.md)
 * [Probability](./math/probability/README.md)
-
-wip
-
 * [Bayesian Probability](./math/bayesian_prob/README.md)
 * [Multivariate Probability](./math/multivariate_prob/README.md)
 * [Dimensionality Reduction](./unsupervised_learning/dimensionality_reduction/README.md)

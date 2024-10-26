@@ -2,22 +2,61 @@
 
 ## Resources
 
-* [Dimensionality Reduction For Dummies — Part 1: Intuition](/rltoken/_JaBb95aqTvwirCSPQ0Q2A "Dimensionality Reduction For Dummies — Part 1: Intuition")
-* [Singular Value Decomposition](/rltoken/hRIf7xXoj3JhoEcuiL-rmg "Singular Value Decomposition")
-* [Understanding SVD (Singular Value Decomposition)](/rltoken/uqr-jWbBYErQz9l1vXPyQQ "Understanding SVD (Singular Value Decomposition)")
-* [Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition?](/rltoken/U2ssAfo2ZDs3KbNUHFWXqw "Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition?")
-* [Dimensionality Reduction: Principal Components Analysis, Part 1](/rltoken/2UO2LZc5NITBkBW8Lmh8sA "Dimensionality Reduction: Principal Components Analysis, Part 1")
-* [Dimensionality Reduction: Principal Components Analysis, Part 2](/rltoken/NRAxuzkUU_bUF7-KTQpjHQ "Dimensionality Reduction: Principal Components Analysis, Part 2")
-* [StatQuest: t\-SNE, Clearly Explained](/rltoken/cGo4lmHxxVNAGUXR477pWA "StatQuest: t-SNE, Clearly Explained")
-* [t\-SNE tutorial Part1](/rltoken/ubQGaFqOQCH7zT5GEZnx3g "t-SNE tutorial Part1")
-* [t\-SNE tutorial Part2](/rltoken/kOp-MNuN0bIDMxgNadwJSg "t-SNE tutorial Part2")
-* [How to Use t\-SNE Effectively](/rltoken/5r2ywom9O3mzWuAQQng7fg "How to Use t-SNE Effectively")
+* [Dimensionality Reduction For Dummies — Part 1: Intuition](https://towardsdatascience.com/https-medium-com-abdullatif-h-dimensionality-reduction-for-dummies-part-1-a8c9ec7b7e79 "Dimensionality Reduction For Dummies — Part 1: Intuition")
+* [Singular Value Decomposition](https://www.youtube.com/watch?v=P5mlg91as1c "Singular Value Decomposition")
+* [Understanding SVD (Singular Value Decomposition)](https://towardsdatascience.com/svd-8c2f72e264f "Understanding SVD (Singular Value Decomposition)")
+* [Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition?](https://math.stackexchange.com/questions/320220/intuitively-what-is-the-difference-between-eigendecomposition-and-singular-valu "Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition?")
+* [Dimensionality Reduction: Principal Components Analysis, Part 1](https://www.youtube.com/watch?v=ZqXnPcyIAL8 "Dimensionality Reduction: Principal Components Analysis, Part 1")
+* [Dimensionality Reduction: Principal Components Analysis, Part 2](https://www.youtube.com/watch?v=NUn6WeFM5cM "Dimensionality Reduction: Principal Components Analysis, Part 2")
+* [StatQuest: t\-SNE, Clearly Explained](https://www.youtube.com/watch?v=NEaUSP4YerM "StatQuest: t-SNE, Clearly Explained")
+* [t\-SNE tutorial Part1](https://www.youtube.com/watch?v=ohQXphVSEQM "t-SNE tutorial Part1")
+* [t\-SNE tutorial Part2](https://www.youtube.com/watch?v=W-9L6v_rFIE "t-SNE tutorial Part2")
+* [How to Use t\-SNE Effectively](https://distill.pub/2016/misread-tsne/ "How to Use t-SNE Effectively")
+
+
+* [Dimensionality Reduction](https://en.wikipedia.org/wiki/Dimensionality_reduction)
+* [Principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
+* [Eigendecomposition of a matrix](https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix)
+* [Singular value decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition)
+* [Manifold](https://en.wikipedia.org/wiki/Manifold)
+* [Kullback–Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#:~:text=In%20the%20simple%20case%2C%20a,mechanics%2C%20neuroscience%20and%20machine%20learning.)
+* [T-distributed stochastic neighbor embedding](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding)
+
+
+
+* [numpy.cumsum](https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html "numpy.cumsum")
+* [Visualizing Data using t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "Visualizing Data using t-SNE") (paper)
+* [Visualizing Data Using t\-SNE](https://www.youtube.com/watch?v=RJVL80Gg3lA "Visualizing Data Using t-SNE") (video)
+
+
+* [Kernel principal component analysis](https://en.wikipedia.org/wiki/Kernel_principal_component_analysis	)
+* [Nonlinear Dimensionality Reduction: KPCA](https://www.youtube.com/watch?v=HbDHohXPLnU)
 
 ## Learning Objectives
 
-* [numpy.cumsum](/rltoken/zyWpcoOx_gcOOxRNs_4HzQ "numpy.cumsum")
-* [Visualizing Data using t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "Visualizing Data using t-SNE") (paper)
-* [Visualizing Data Using t\-SNE](/rltoken/pqK61AJG8slrkPUprGNjaA "Visualizing Data Using t-SNE") (video)
+* What is eigendecomposition?
+* What is singular value decomposition?
+* What is the difference between eig and svd?
+* What is dimensionality reduction and what are its purposes?
+* What is principal components analysis (PCA)?
+* What is t-distributed stochastic neighbor embedding (t-SNE)?
+* What is a manifold?
+* What is the difference between linear and non-linear dimensionality reduction?
+* Which techniques are linear/non-linear?
+
+## Data
+
+Please test your main files with the following data:
+
+* mnist2500_X.txt
+* mnist2500_labels.txt
+
+## Performance between SVD and EIG
+
+Here a graph of execution time (Y-axis) for the number of iteration (X-axis) - red line is EIG and blue line is SVG
+
+![](./data/df2eac7a51b56139b4a179a83398b18fbda8868c.png)
+
 
 ## Tasks
 
@@ -34,7 +73,8 @@ Write a function `def pca(X, var=0.95):` that performs PCA on a dataset:
 * `W` is a `numpy.ndarray` of shape `(d, nd)` where `nd` is the new dimensionality of the transformed `X`
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 0-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 0-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -108,7 +148,8 @@ Write a function `def pca(X, var=0.95):` that performs PCA on a dataset:
  [ 15.87543091 0.3804009 3.67627751]
  [ 7.38044431 -1.58972122 0.60154138]]
  1.7353180054998176e-29
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 1\. PCA v2
 
 Write a function `def pca(X, ndim):` that performs PCA on a dataset:
@@ -120,7 +161,8 @@ Write a function `def pca(X, ndim):` that performs PCA on a dataset:
 * Returns: `T`, a `numpy.ndarray` of shape `(n, ndim)` containing the transformed version of `X`
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 1-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 1-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -155,7 +197,8 @@ Write a function `def pca(X, ndim):` that performs PCA on a dataset:
  0.42547833]
  [-2.25717018 3.67177791 2.83905021 ... -0.35014766 -0.01807652
  0.31548087]]
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 2\. Initialize t\-SNE
 
 Write a function `def P_init(X, perplexity):` that initializes all variables required to calculate the P affinities in [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE"):
@@ -173,7 +216,8 @@ Write a function `def P_init(X, perplexity):` that initializes all variables req
 	+ `H` is the Shannon entropy for `perplexity` perplexity with a base of 2
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 2-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 2-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -232,7 +276,8 @@ Write a function `def P_init(X, perplexity):` that initializes all variables req
  [1.]
  [1.]]
  H: 4.906890595608519
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 3\. Entropy
 
 Write a function `def HP(Di, beta):` that calculates the Shannon entropy and P affinities relative to a data point:
@@ -243,10 +288,11 @@ Write a function `def HP(Di, beta):` that calculates the Shannon entropy and P a
 * Returns: `(Hi, Pi)`
 	+ `Hi`: the Shannon entropy of the points
 	+ `Pi`: a `numpy.ndarray` of shape `(n - 1,)` containing the P affinities of the points
-* *Hint: see page 4 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE")*
+* *Hint: see page 4 of [t\-SNE](/https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE")*
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 3-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 3-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -264,7 +310,8 @@ Write a function `def HP(Di, beta):` that calculates the Shannon entropy and P a
  0.057436093636173254
  [0.00000000e+00 3.74413188e-35 8.00385528e-58 ... 1.35664798e-44
  1.00374765e-43 3.81537517e-41]
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 4\. P affinities
 
 Write a function `def P_affinities(X, tol=1e-5, perplexity=30.0):` that calculates the symmetric P affinities of a data set:
@@ -276,11 +323,12 @@ Write a function `def P_affinities(X, tol=1e-5, perplexity=30.0):` that calculat
 * `tol` is the maximum tolerance allowed (inclusive) for the difference in Shannon entropy from `perplexity` for all Gaussian distributions
 * You should use `P_init = __import__('2-P_init').P_init` and `HP = __import__('3-entropy').HP`
 * Returns: `P`, a `numpy.ndarray` of shape `(n, n)` containing the symmetric P affinities
-* *Hint 1: See page 6 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE")*
+* *Hint 1: See page 6 of [t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE")*
 * *Hint 2: For this task, you will need to perform a binary search on each point’s distribution to find the correct value of `beta` that will give a Shannon Entropy `H` within the tolerance (Think about why we analyze the Shannon entropy instead of perplexity). Since beta can be in the range `(0, inf)`, you will have to do a binary search with the `high` and `low` initially set to `None`. If in your search, you are supposed to increase/decrease `beta` to `high`/`low` but they are still set to `None`, you should double/half the value of `beta` instead.*
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 4-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 4-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -309,7 +357,8 @@ Write a function `def P_affinities(X, tol=1e-5, perplexity=30.0):` that calculat
  [1.75011944e-10 2.42913116e-10 1.25696380e-09 ... 4.11671350e-10
  6.70800054e-10 0.00000000e+00]]
  1.0000000000000004
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 5\. Q affinities
 
 Write a function `def Q_affinities(Y):` that calculates the Q affinities:
@@ -320,10 +369,11 @@ Write a function `def Q_affinities(Y):` that calculates the Q affinities:
 * Returns: `Q, num`
 	+ `Q` is a `numpy.ndarray` of shape `(n, n)` containing the Q affinities
 	+ `num` is a `numpy.ndarray` of shape `(n, n)` containing the numerator of the Q affinities
-* *Hint: See page 7 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE")*
+* *Hint: See page 7 of [t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE")*
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 5-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 5-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -363,7 +413,8 @@ Write a function `def Q_affinities(Y):` that calculates the Q affinities:
  [1.41039074e-07 9.66259681e-08 8.42001935e-08 ... 1.07850932e-07
  3.08787608e-07 0.00000000e+00]]
  1.0000000000000004
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 6\. Gradients
 
 Write a function `def grads(Y, P):` that calculates the gradients of Y:
@@ -375,10 +426,11 @@ Write a function `def grads(Y, P):` that calculates the gradients of Y:
 	+ `dY` is a `numpy.ndarray` of shape `(n, ndim)` containing the gradients of `Y`
 	+ `Q` is a `numpy.ndarray` of shape `(n, n)` containing the Q affinities of `Y`
 * You may use `Q_affinities = __import__('5-Q_affinities').Q_affinities`
-* *Hint: See page 8 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE")*
+* *Hint: See page 8 of [t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE")*
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 6-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 6-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -421,7 +473,8 @@ Write a function `def grads(Y, P):` that calculates the gradients of Y:
  [1.41039074e-07 9.66259681e-08 8.42001935e-08 ... 1.07850932e-07
  3.08787608e-07 0.00000000e+00]]
  1.0000000000000004
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 7\. Cost
 
 Write a function `def cost(P, Q):` that calculates the cost of the t\-SNE transformation:
@@ -429,11 +482,12 @@ Write a function `def cost(P, Q):` that calculates the cost of the t\-SNE transf
 * `P` is a `numpy.ndarray` of shape `(n, n)` containing the P affinities
 * `Q` is a `numpy.ndarray` of shape `(n, n)` containing the Q affinities
 * Returns: `C`, the cost of the transformation
-* *Hint 1: See page 5 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE")*
+* *Hint 1: See page 5 of [t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE")*
 * *Hint 2: Watch out for division by `0` errors! Take the minimum of all values in p and q with almost `0` (ex. `1e-12`)*
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 7-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 7-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -452,7 +506,8 @@ Write a function `def cost(P, Q):` that calculates the cost of the t\-SNE transf
  print(C)
  alexa@ubuntu-xenial:0x00-dimensionality_reduction$ ./7-main.py 
  4.531113944164376
- alexa@ubuntu-xenial:0x00-dimensionality_reduction$` 
+ alexa@ubuntu-xenial:0x00-dimensionality_reduction$
+ ``` 
 ### 8\. t\-SNE
 
 Write a function `def tsne(X, ndims=2, idims=50, perplexity=30.0, iterations=1000, lr=500):` that performs a t\-SNE transformation:
@@ -476,11 +531,12 @@ Write a function `def tsne(X, ndims=2, idims=50, perplexity=30.0, iterations=100
 	+ `cost = __import__('7-cost').cost`
 * For the first 100 iterations, perform early exaggeration with an exaggeration of 4
 * `a(t)` \= 0\.5 for the first 20 iterations and 0\.8 thereafter
-* *Hint 1: See Algorithm 1 on page 9 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE"). But WATCH OUT! There is a mistake in the gradient descent step*
-* *Hint 2: See Section 3\.4 starting on page 9 of [t\-SNE](/rltoken/S5DY2PH7B5h_xUW0kF9Ltw "t-SNE") for early exaggeration*
+* *Hint 1: See Algorithm 1 on page 9 of [t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE"). But WATCH OUT! There is a mistake in the gradient descent step*
+* *Hint 2: See Section 3\.4 starting on page 9 of [t\-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf "t-SNE") for early exaggeration*
 
 
-`alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 8-main.py 
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat 8-main.py 
  #!/usr/bin/env python3
  
  import matplotlib.pyplot as plt
@@ -525,4 +581,26 @@ Write a function `def tsne(X, ndims=2, idims=50, perplexity=30.0, iterations=100
  Cost at iteration 2700: 0.9888485527807156
  Cost at iteration 2800: 0.9865746432480398
  Cost at iteration 2900: 0.9844307720012038
- Cost at iteration 3000: 0.9824051809484152` 
+ Cost at iteration 3000: 0.9824051809484152
+ ``` 
+ ![](./data/840193a578ae3df79c7d.png)
+
+**Awesome! We can see pretty good clusters! For comparison, here’s how PCA performs on the same dataset:**
+
+```python
+alexa@ubuntu-xenial:0x00-dimensionality_reduction$ cat pca.py 
+#!/usr/bin/env python3
+
+import matplotlib.pyplot as plt
+import numpy as np
+pca = __import__('1-pca').pca
+
+X = np.loadtxt("mnist2500_X.txt")
+labels = np.loadtxt("mnist2500_labels.txt")
+Y = pca(X, 2)
+plt.scatter(Y[:, 0], Y[:, 1], 20, labels)
+plt.colorbar()
+plt.title('PCA')
+plt.show()
+```
+![](./data/a00ee1c23a3b8c0199fa.png)
