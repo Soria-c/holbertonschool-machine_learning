@@ -41,7 +41,8 @@ Write a function `def mean_cov(X):` that calculates the mean and covariance of a
 * You are not allowed to use the function `numpy.cov`
 
 
-`alexa@ubuntu-xenial:multivariate_prob$ cat 0-main.py 
+```python
+alexa@ubuntu-xenial:multivariate_prob$ cat 0-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -58,7 +59,8 @@ Write a function `def mean_cov(X):` that calculates the mean and covariance of a
  [[ 36.2007391 -29.79405239 15.37992641]
  [-29.79405239 97.77730626 -20.67970134]
  [ 15.37992641 -20.67970134 24.93956823]]
- alexa@ubuntu-xenial:multivariate_prob$` 
+ alexa@ubuntu-xenial:multivariate_prob$
+ ``` 
 ### 1\. Correlation
 
 Write a function `def correlation(C):` that calculates a correlation matrix:
@@ -70,7 +72,8 @@ Write a function `def correlation(C):` that calculates a correlation matrix:
 * Returns a `numpy.ndarray` of shape `(d, d)` containing the correlation matrix
 
 
-`alexa@ubuntu-xenial:multivariate_prob$ cat 1-main.py 
+```python
+alexa@ubuntu-xenial:multivariate_prob$ cat 1-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -88,7 +91,8 @@ Write a function `def correlation(C):` that calculates a correlation matrix:
  [[ 1. -0.5 0.5]
  [-0.5 1. -0.4]
  [ 0.5 -0.4 1. ]]
- alexa@ubuntu-xenial:multivariate_prob$` 
+ alexa@ubuntu-xenial:multivariate_prob$
+ ``` 
 ### 2\. Initialize
 
 Create the class `MultiNormal` that represents a Multivariate Normal distribution:
@@ -105,7 +109,8 @@ Create the class `MultiNormal` that represents a Multivariate Normal distributio
 * You are not allowed to use the function `numpy.cov`
 
 
-`alexa@ubuntu-xenial:multivariate_prob$ cat 2-main.py 
+```python
+alexa@ubuntu-xenial:multivariate_prob$ cat 2-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -124,7 +129,8 @@ Create the class `MultiNormal` that represents a Multivariate Normal distributio
  [[ 36.2007391 -29.79405239 15.37992641]
  [-29.79405239 97.77730626 -20.67970134]
  [ 15.37992641 -20.67970134 24.93956823]]
- alexa@ubuntu-xenial:multivariate_prob$` 
+ alexa@ubuntu-xenial:multivariate_prob$
+ ``` 
 ### 3\. PDF
 
 Update the class `MultiNormal`:
@@ -138,7 +144,8 @@ Update the class `MultiNormal`:
 	+ You are not allowed to use the function `numpy.cov`
 
 
-`alexa@ubuntu-xenial:multivariate_prob$ cat 3-main.py 
+```python
+alexa@ubuntu-xenial:multivariate_prob$ cat 3-main.py 
  #!/usr/bin/env python3
  
  if __name__ == '__main__':
@@ -156,4 +163,5 @@ Update the class `MultiNormal`:
  [32.84231319]
  [ 9.67254478]]
  0.00022930236202143827
- alexa@ubuntu-xenial:multivariate_prob$` 
+ alexa@ubuntu-xenial:multivariate_prob$
+ ``` 
