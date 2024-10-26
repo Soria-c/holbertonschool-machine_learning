@@ -2,24 +2,24 @@
 
 ## Resources
 
-* [Probability](/rltoken/_zzX167Cou_j9YkMkshs-g "Probability")
-* [Basic Concepts](/rltoken/4OvoUUBEFgGNGFQrpsEoSA "Basic Concepts")
-* [Intro to probability 1: Basic notation](/rltoken/hjRVE0-4AhPaxmlgcj4LSA "Intro to probability 1: Basic notation")
-* [Intro to probability 2: Independent and disjoint](/rltoken/Cko4HshPQUyoKHuYA94XvA "Intro to probability 2: Independent and disjoint")
-* [Intro to Probability 3: General Addition Rule; Union; OR](/rltoken/tp3M-uKDftjuD7z9JMwz6A "Intro to Probability 3: General Addition Rule; Union; OR")
-* [Intro to Probability 4: General multiplication rule; Intersection; AND](/rltoken/SjsfLf0yzOVAZAs8LS34gw "Intro to Probability 4: General multiplication rule; Intersection; AND")
-* [Permutations and Combinations](/rltoken/GfDkBxaaP78hBICE0HJTqA "Permutations and Combinations")
-* [Probability distribution](/rltoken/SWfEWFDmjj9IPbXS-WjioQ "Probability distribution")
-* [Probability Theory](/rltoken/-e2Z72F-Min57HusWnsfTQ "Probability Theory")
-* [Cumulative Distribution Functions](/rltoken/BsBsKn5TxHXC5JtpQKnqkw "Cumulative Distribution Functions")
-* [Common Probability Distributions: The Data Scientist’s Crib Sheet](/rltoken/I2nxKZIs8-Kroo2stl4ePA "Common Probability Distributions: The Data Scientist’s Crib Sheet")
-* [NORMAL MODEL PART 1 — EMPIRICAL RULE](/rltoken/W68IpKPiyl6A-rdBu1ygug "NORMAL MODEL PART 1 --- EMPIRICAL RULE")
-* [Normal Distribution](/rltoken/R6VPhsJ_j5Cz9IlpVpnYJw "Normal Distribution")
-* [Variance](/rltoken/1Lu6OA6TCX6Tm29wWLg2pg "Variance")
-* [Variance (Concept)](/rltoken/01AP3xyN6GPJaPz9Wl4aXg "Variance (Concept)")
-* [Binomial Distribution](/rltoken/muF5w4AZ0G2YIxE_Vpa3hA "Binomial Distribution")
-* [Poisson Distribution](/rltoken/c-0mElmuqFnTj6U0zGr4Og "Poisson Distribution")
-* [Hypergeometric Distribution](/rltoken/TECEEg3b_UKO4XwSFchChQ "Hypergeometric Distribution")
+* [Probability](https://en.wikipedia.org/wiki/Probability "Probability")
+* [Basic Concepts](https://onlinestatbook.com/2/probability/basic.html "Basic Concepts")
+* [Intro to probability 1: Basic notation](https://www.youtube.com/watch?v=TkU3BvDAOtQ "Intro to probability 1: Basic notation")
+* [Intro to probability 2: Independent and disjoint](https://www.youtube.com/watch?v=GnWHt9nqwBA "Intro to probability 2: Independent and disjoint")
+* [Intro to Probability 3: General Addition Rule; Union; OR](https://www.youtube.com/watch?v=TyAaVGR4MrA "Intro to Probability 3: General Addition Rule; Union; OR")
+* [Intro to Probability 4: General multiplication rule; Intersection; AND](https://www.youtube.com/watch?v=wB-ZG9bgPXY "Intro to Probability 4: General multiplication rule; Intersection; AND")
+* [Permutations and Combinations](https://onlinestatbook.com/2/probability/permutations.html "Permutations and Combinations")
+* [Probability distribution](https://en.wikipedia.org/wiki/Probability_distribution "Probability distribution")
+* [Probability Theory](https://towardsdatascience.com/probability-fundamentals-of-machine-learning-part-1-a156b4703e69 "Probability Theory")
+* [Cumulative Distribution Functions](https://www.oreilly.com/library/view/think-stats-2nd/9781491907344/ch04.html "Cumulative Distribution Functions")
+* [Common Probability Distributions: The Data Scientist’s Crib Sheet](https://medium.com/@srowen/common-probability-distributions-347e6b945ce4 "Common Probability Distributions: The Data Scientist’s Crib Sheet")
+* [NORMAL MODEL PART 1 — EMPIRICAL RULE](https://www.youtube.com/watch?v=xgolpGrAZWo&list=PLFGZup_HuWTtIs0Xbzt7vDoFrnZxN4VXT&index=23 "NORMAL MODEL PART 1 --- EMPIRICAL RULE")
+* [Normal Distribution](https://www.mathsisfun.com/data/standard-normal-distribution.html "Normal Distribution")
+* [Variance](https://en.wikipedia.org/wiki/Variance "Variance")
+* [Variance (Concept)](https://www.youtube.com/watch?v=2eP14USYwtg "Variance (Concept)")
+* [Binomial Distribution](https://onlinestatbook.com/2/probability/binomial.html "Binomial Distribution")
+* [Poisson Distribution](https://onlinestatbook.com/2/probability/poisson.html "Poisson Distribution")
+* [Hypergeometric Distribution](https://onlinestatbook.com/2/probability/hypergeometric.html "Hypergeometric Distribution")
 
 ## Learning Objectives
 
@@ -55,7 +55,8 @@ Create a class `Poisson` that represents a poisson distribution:
 		- If `data` does not contain at least two data points, raise a `ValueError` with the message `data must contain multiple values`
 
 
-`alexa@ubuntu-xenial:probability$ cat 0-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 0-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -71,7 +72,8 @@ Create a class `Poisson` that represents a poisson distribution:
  alexa@ubuntu-xenial:probability$ ./0-main.py 
  Lambtha: 4.84
  Lambtha: 5.0
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+``` 
 ### 1\. Poisson PMF
 
 Update the class `Poisson`:
@@ -84,7 +86,8 @@ Update the class `Poisson`:
 	+ Returns the PMF value for `k`
 
 
-`alexa@ubuntu-xenial:probability$ cat 1-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 1-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -100,7 +103,8 @@ Update the class `Poisson`:
  alexa@ubuntu-xenial:probability$ ./1-main.py 
  P(9): 0.03175849616802446
  P(9): 0.036265577412911795
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+``` 
 ### 2\. Poisson CDF
 
 Update the class `Poisson`:
@@ -113,7 +117,8 @@ Update the class `Poisson`:
 	+ Returns the CDF value for `k`
 
 
-`alexa@ubuntu-xenial:probability$ cat 2-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 2-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -129,7 +134,8 @@ Update the class `Poisson`:
  alexa@ubuntu-xenial:probability$ ./2-main.py 
  F(9): 0.9736102067423525
  F(9): 0.9681719426208609
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+``` 
 ### 3\. Initialize Exponential
 
 Create a class `Exponential` that represents an exponential distribution:
@@ -148,7 +154,8 @@ Create a class `Exponential` that represents an exponential distribution:
 		- If `data` does not contain at least two data points, raise a `ValueError` with the message `data must contain multiple values`
 
 
-`alexa@ubuntu-xenial:probability$ cat 3-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 3-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -164,7 +171,8 @@ Create a class `Exponential` that represents an exponential distribution:
  alexa@ubuntu-xenial:probability$ ./3-main.py 
  Lambtha: 2.1771114730906937
  Lambtha: 2.0
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 4\. Exponential PDF
 
 Update the class `Exponential`:
@@ -176,7 +184,8 @@ Update the class `Exponential`:
 	+ If `x` is out of range, return `0`
 
 
-`alexa@ubuntu-xenial:probability$ cat 4-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 4-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -192,7 +201,8 @@ Update the class `Exponential`:
  alexa@ubuntu-xenial:probability$ ./4-main.py 
  f(1): 0.24681591903431568
  f(1): 0.2706705664650693
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 5\. Exponential CDF
 
 Update the class `Exponential`:
@@ -204,7 +214,8 @@ Update the class `Exponential`:
 	+ If `x` is out of range, return `0`
 
 
-`alexa@ubuntu-xenial:probability$ cat 5-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 5-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -220,7 +231,8 @@ Update the class `Exponential`:
  alexa@ubuntu-xenial:probability$ ./5-main.py 
  F(1): 0.886631473819791
  F(1): 0.8646647167674654
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 6\. Initialize Normal
 
 Create a class `Normal` that represents a normal distribution:
@@ -240,7 +252,8 @@ Create a class `Normal` that represents a normal distribution:
 		- If `data` does not contain at least two data points, raise a `ValueError` with the message `data must contain multiple values`
 
 
-`alexa@ubuntu-xenial:probability$ cat 6-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 6-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -256,7 +269,8 @@ Create a class `Normal` that represents a normal distribution:
  alexa@ubuntu-xenial:probability$ ./6-main.py 
  Mean: 70.59808015534485 , Stddev: 10.078822447165797
  Mean: 70.0 , Stddev: 10.0
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 7\. Normalize Normal
 
 Update the class `Normal`:
@@ -271,7 +285,8 @@ Update the class `Normal`:
 	+ Returns the x\-value of `z`
 
 
-`alexa@ubuntu-xenial:probability$ cat 7-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 7-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -293,7 +308,8 @@ Update the class `Normal`:
  
  Z(90): 2.0
  X(2): 90.0
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 8\. Normal PDF
 
 Update the class `Normal`:
@@ -304,7 +320,8 @@ Update the class `Normal`:
 	+ Returns the PDF value for `x`
 
 
-`alexa@ubuntu-xenial:probability$ cat 8-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 8-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -320,7 +337,8 @@ Update the class `Normal`:
  alexa@ubuntu-xenial:probability$ ./8-main.py 
  PSI(90): 0.006206096804434349
  PSI(90): 0.005399096651147344
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 9\. Normal CDF
 
 Update the class `Normal`:
@@ -331,7 +349,8 @@ Update the class `Normal`:
 	+ Returns the CDF value for `x`
 
 
-`alexa@ubuntu-xenial:probability$ cat 9-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 9-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -347,7 +366,8 @@ Update the class `Normal`:
  alexa@ubuntu-xenial:probability$ ./9-main.py 
  PHI(90): 0.9829020110852376
  PHI(90): 0.9922398930659416
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 10\. Initialize Binomial
 
 Create a class `Binomial` that represents a binomial distribution:
@@ -370,7 +390,8 @@ Create a class `Binomial` that represents a binomial distribution:
 		- If `data` does not contain at least two data points, raise a `ValueError` with the message `data must contain multiple values`
 
 
-`alexa@ubuntu-xenial:probability$ cat 10-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 10-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -386,7 +407,8 @@ Create a class `Binomial` that represents a binomial distribution:
  alexa@ubuntu-xenial:probability$ ./10-main.py 
  n: 50 p: 0.606
  n: 50 p: 0.6
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 11\. Binomial PMF
 
 Update the class `Binomial`:
@@ -399,7 +421,8 @@ Update the class `Binomial`:
 	+ Returns the PMF value for `k`
 
 
-`alexa@ubuntu-xenial:probability$ cat 11-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 11-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -415,7 +438,8 @@ Update the class `Binomial`:
  alexa@ubuntu-xenial:probability$ ./11-main.py 
  P(30): 0.11412829839570347
  P(30): 0.114558552829524
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
 ### 12\. Binomial CDF
 
 Update the class `Binomial`:
@@ -429,7 +453,8 @@ Update the class `Binomial`:
 	+ *Hint: use the `pmf` method*
 
 
-`alexa@ubuntu-xenial:probability$ cat 12-main.py 
+```python
+alexa@ubuntu-xenial:probability$ cat 12-main.py 
  #!/usr/bin/env python3
  
  import numpy as np
@@ -445,4 +470,5 @@ Update the class `Binomial`:
  alexa@ubuntu-xenial:probability$ ./12-main.py 
  F(30): 0.5189392017296368
  F(30): 0.5535236207894576
- alexa@ubuntu-xenial:probability$` 
+ alexa@ubuntu-xenial:probability$
+ ``` 
