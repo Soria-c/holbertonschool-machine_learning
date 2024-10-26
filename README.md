@@ -15,9 +15,9 @@
 * [Transfer Learning](./supervised_learning/transfer_learning/README.md)
 * [Object Detection](./supervised_learning/object_detection/README.md)
 * [Neural Style Transfer](./supervised_learning/neural_style_transfer/README.md)
+* [Advanced Linear Algebra](./math/advanced_linear_algebra/README.md)
 
 wip
-* [Advanced Linear Algebra](./math/advanced_linear_algebra/README.md)
 
 * [Probability](./math/probability/README.md)
 * [Bayesian Probability](./math/bayesian_prob/README.md)
