@@ -20,12 +20,11 @@
 * [Bayesian Probability](./math/bayesian_prob/README.md)
 * [Multivariate Probability](./math/multivariate_prob/README.md)
 * [Dimensionality Reduction](./unsupervised_learning/dimensionality_reduction/README.md)
-
+* [Clustering](./unsupervised_learning/clustering/README.md)
 
 wip
 
 
-* [Clustering](./unsupervised_learning/clustering/README.md)
 * [Hidden Markov Models](./unsupervised_learning/hmm/README.md)
 * [ Hyperparameter Tuning](./unsupervised_learning/hyperparameter_tuning/README.md)
 * [Autoencoders](./unsupervised_learning/autoencoders/README.md)
