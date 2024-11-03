@@ -3,6 +3,7 @@
 This function plays an episode using the
 trained Q-table in the FrozenLake environment.
 """
+import numpy as np
 
 
 def play(env, Q, max_steps=100):
