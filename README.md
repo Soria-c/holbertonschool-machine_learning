@@ -22,10 +22,11 @@
 * [Dimensionality Reduction](./unsupervised_learning/dimensionality_reduction/README.md)
 * [Clustering](./unsupervised_learning/clustering/README.md)
 
+* [Hidden Markov Models](./unsupervised_learning/hmm/README.md)
+
 wip
 
 
-* [Hidden Markov Models](./unsupervised_learning/hmm/README.md)
 * [ Hyperparameter Tuning](./unsupervised_learning/hyperparameter_tuning/README.md)
 * [Autoencoders](./unsupervised_learning/autoencoders/README.md)
 * [GANs](./unsupervised_learning/gan/README.md)
