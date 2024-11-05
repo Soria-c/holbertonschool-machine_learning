@@ -25,7 +25,7 @@
 * [Training RNNs \- Loss and BPTT](https://www.youtube.com/watch?v=RrB605Mbpic "Training RNNs - Loss and BPTT")
 * [Recurrent Neural Networks Tutorial, Part 3 – Backpropagation Through Time and Vanishing Gradients](https://dennybritz.com/posts/wildml/recurrent-neural-networks-tutorial-part-3/ "Recurrent Neural Networks Tutorial, Part 3 – Backpropagation Through Time and Vanishing Gradients")
 * [Deep RNNs and Bi\- RNNs](https://www.youtube.com/watch?v=OLO6kyxwqnY "Deep RNNs and Bi- RNNs")
-* [Deep Recurrent Networkshttps://cedar.buffalo.edu/~srihari/CSE676/10.5%20DeepRecurrent.pdf "Deep Recurrent Networks")
+* [Deep Recurrent Networks](https://cedar.buffalo.edu/~srihari/CSE676/10.5%20DeepRecurrent.pdf "Deep Recurrent Networks")
 * [Training and Analyzing Deep Recurrent Neural Networks](https://papers.nips.cc/paper_files/paper/2013/file/1ff8a7b5dc7a7d1f0ed65aaa29c04b1e-Paper.pdf "Training and Analyzing Deep Recurrent Neural Networks")
 
 
