@@ -1,36 +1,5 @@
 
-
-
-![Project badge](/assets/pathway/004_color-d2fbcfb42ba7481834896ecc89a6f0ae65762b3c1096691dd0f820f7f29e3389.png)96\.43%# GANs
-
-* Novice
-* By: Gaël Collinet , Malek Mrabti
-* Weight: 3
-* Your score will be updated once you launch the project review.
-
-
-
-
-* [Description](#description)
-* [Concepts](#concepts)
-
-
-
-
-
-[Go to tasks](#)
-
-
-
-
-
-
-
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/0bf80c0d63f351e207c8f1c208ffdc27be2cf7fe.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=446378db1f63806ddbb915ad8a446e74e9a431799b7d757c72de7f6125015c63)
-  
-
-  
-
+# GANs
 
 
 ## Resources
@@ -43,27 +12,15 @@
 
 
 
-* [GoodFellow et al. (2014\)](/rltoken/pb7tygh2Jl7jAmKPVdmAgg "GoodFellow et al. (2014)")
-* [Arjovsky et al. (2017\)](/rltoken/smDUOqM_gUQJT1RwKLudZg "Arjovsky et al. (2017)")
-* [Gulrajani et al. (2017\)](/rltoken/5zHXXBinoXdWcxQfQndBCQ "Gulrajani et al. (2017)")
-* [Introduction to the Wasserstein distance](/rltoken/RV-8dwSTWvefxQkZyZAGBA "Introduction to the Wasserstein distance")
-* [This person does not exist](/rltoken/8fcZNa4l51xS2jNR-LOiBQ "This person does not exist")
-
-
-  
-
-  
+* [GoodFellow et al. (2014\)](https://proceedings.neurips.cc/paper_files/paper/2014/file/5ca3e9b122f61f8f06494c97b1afccf3-Paper.pdf "GoodFellow et al. (2014)")
+* [Arjovsky et al. (2017\)](https://arxiv.org/pdf/1701.07875 "Arjovsky et al. (2017)")
+* [Gulrajani et al. (2017\)](https://arxiv.org/pdf/1704.00028 "Gulrajani et al. (2017)")
+* [Introduction to the Wasserstein distance](https://www.youtube.com/watch?v=CDiol4LG2Ao "Introduction to the Wasserstein distance")
+* [This person does not exist](https://thispersondoesnotexist.com/ "This person does not exist")
 
 
 
 ## Basics about GANs
-
-
-  
-
-
-
-
 
 
 
@@ -77,7 +34,7 @@
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/5a2a9533a483dc7c856f754d426939dfa1293067.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=12810134a18913fa09cac7a339e483d1aca9f77cf4ceba178c6285b49e6342e3)
+![](./fata/5a2a9533a483dc7c856f754d426939dfa1293067.jpg)
 
 
 *These persons do not exist*
@@ -97,7 +54,7 @@
    
   
 
- So if a given latent vector ℓ0 furnishes a realistic picture person0\=generator(ℓ0), then for a small latent vector ε, the new latent vector ℓ0\+ε will furnish a picture person1\=generator(ℓ0\+ε) that is very close from person0. 
+ So if a given latent vector ℓ0 furnishes a realistic picture person0\=generator(ℓ0), then for a small latent vector ε, the new latent vector ℓ0 \+ ε will furnish a picture person1\=generator(ℓ0\+ε) that is very close from person0. 
    
   
 
@@ -108,10 +65,10 @@
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/2a21fc7fdeabe11364810f3c7dbf0eb8d9818bab.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=29cb0a9542aeb48f70c0feb3a550775375a2bfb8872d1200680c56b3bf84405a)
+![](./data/2a21fc7fdeabe11364810f3c7dbf0eb8d9818bab.jpg)
 
 
-*person*0 \= Generator (l*0\) on the left, person*1 \= Generator (l*0\+epsilon) on the right*
+*person*0 \= Generator (l*0\) on the left, person*1 \= Generator (l*0\+ε) on the right*
 
 
 
@@ -127,7 +84,7 @@
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/1010541eea8efd13cf53bbe23aeddb951f6832be.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=634417deacdc6391333ec94ec9575c3580caee29ae74723440008a781638a67c)
+![](./data/1010541eea8efd13cf53bbe23aeddb951f6832be.gif)
 
 
 *Walk in a star shape to and from a picture*
@@ -146,7 +103,8 @@
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/cfaa7e94c3877970f0dae2957925511becab63f6.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f422621f11261ac73a96178389020479d7ea22d3256a2b38bc55fa86581106ac)
+![](./data/cfaa7e94c3877970f0dae2957925511becab63f6.gif)
+
 *Cyclic walk from and to a picture*
 
 
@@ -190,37 +148,6 @@ This project about GANs is organized as follows :
 
 
 
-  
-
-  
-
-
-
-## Requirements
-
-
-  
-
-
-
-
-
-
-* **You should carefully read all the concept pages attached above to gain a fundamental understanding of GANs and their various types.**
-* All your files will be interpreted/compiled on (still dont know) using `python3` (version 3\.9\)
-* Your files will be executed with `numpy` (version 1\.25\.2\) and `tensorflow` (version 2\.15\.0\)
-* All your files should end with a new line
-* The first line of all your files should be exactly `#!/usr/bin/env python3`
-* A `README.md` file, at the root of the folder of the project, is mandatory
-* All your modules should have documentation `(python3 -c 'print(__import__("my_module").__doc__)')`
-* All your classes should have documentation `(python3 -c 'print(__import__("my_module").MyClass.__doc__)')`
-* All your functions (inside and outside a class) should have documentation `(python3 -c 'print(__import__("my_module").my_function.__doc__)'`  and  `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')`
-* All your files must be executable
-
-
-
-
-
 
 
 
@@ -230,11 +157,11 @@ This project about GANs is organized as follows :
 
 
 
-* [Introduction to GANs (Generative Adversarial Networks)](/concepts/1180)
-* [Simple GANs](/concepts/1181)
-* [Wasserstein GANs](/concepts/1182)
-* [Wasserstein GANs with gradient penalty](/concepts/1183)
-* [Generating Faces](/concepts/1184)
+* Introduction to GANs (Generative Adversarial Networks
+* Simple GANs
+* Wasserstein GANs
+* Wasserstein GANs with gradient penalty
+* Generating Faces
 
 
 
@@ -251,31 +178,6 @@ This project about GANs is organized as follows :
 
 
 ### 0\. Simple GAN
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
-
-
-
-
-
-
 
 
 
@@ -1034,7 +936,7 @@ $ cat 0-main_02.py
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/f1be36c734d5c1de43e0e9c67c8574a392e44753.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=538b6b464af17ca99ed429afb790ffc0990d84751c7341888f40eb1b70bbf5ca)
+![](./data/f1be36c734d5c1de43e0e9c67c8574a392e44753.png)
 
 
 
@@ -1043,7 +945,7 @@ $ cat 0-main_02.py
  
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/f9afabf1bfa0c84553dcdccca4b22f9e67f8ee1c.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=20cddfb35f39ddf6b4fe280d1922a8689974d29b7e4081344c4dc384e0295eb7)
+![](./data/f9afabf1bfa0c84553dcdccca4b22f9e67f8ee1c.gif)
 
 
 ## **Main 3 (with 5D visualization)**
@@ -1233,189 +1135,7 @@ $ cat 0-main_03.py
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/19c2c0ff90c86f1679fdd1249854b7e4aa75be79.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=b7279bf7b64260c151a11636463ae1b64cf58ce966591d117daf8a1e032574c2)
-
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/gan`
-* File: `0-simple_gan.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "0\. Simple GAN"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Check your code
- 
-
-
-
-
-×
-#### Correction of "0\. Simple GAN"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 0\. Simple GAN
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
+![](./data/19c2c0ff90c86f1679fdd1249854b7e4aa75be79.png)
 
 
 
@@ -1765,224 +1485,14 @@ should produce the following picture:
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/869f61776e2f50fd871386315e8d83c9e39c1392.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e50196526ae84e697beace1a5d580cc88e89a4d5ac2e83a7860bb20892d88c02)
-
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/gan`
-* File: `1-wgan_clip.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "1\. Wasserstein GANs"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Check your code
- 
-
-
-
-
-×
-#### Correction of "1\. Wasserstein GANs"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 1\. Wasserstein GANs
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
+![](./data/869f61776e2f50fd871386315e8d83c9e39c1392.png)
 
 
 ### 2\. Wasserstein GANs with gradient penalty
 
 
 
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 80\.00% (Checks completed: 80\.00%)
- 
-
-
-
-
-
-
-
-
- In this task we will define a class `WGAN_GP` and test it on some examples. Almost all of what we need is already explained in the presentation or in tasks 0 and 1\. We just have to modify the loss of the discriminator, and forget about clipping.
+In this task we will define a class `WGAN_GP` and test it on some examples. Almost all of what we need is already explained in the presentation or in tasks 0 and 1\. We just have to modify the loss of the discriminator, and forget about clipping.
 
 
 ## **The code to be filled in**
@@ -2288,8 +1798,7 @@ should produce the following picture:
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/53b32885c5f19d0e02a1c4123727c091dfc63fbf.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d7112f27d5921e109ea62ca30d10ad12bcbb873920d232ae540e03e1b57f85cd)
-
+![](./data/53b32885c5f19d0e02a1c4123727c091dfc63fbf.png)
 
 
 ## **Main 2 : an example where WGAN\_GP outperforms both Simple\_GAN and WGAN\_clip**
@@ -2384,7 +1893,7 @@ returns:
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/a6008c7430df282188e24011a716dfa2b030ca4d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ee0dea51f273dd82fd86f629735fa0b8dff96676582e2271b91d17a0cffb4464)
+![](./data/a6008c7430df282188e24011a716dfa2b030ca4d.png)
 
 
 
@@ -2447,7 +1956,7 @@ returns
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/7ef9127b47829fa0308dbba73093afc18dd09e41.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=74862dbc2c7ca7cee2d2d7e75025e834825dd598d2cc5a7423473deefe825627)
+![](./data/7ef9127b47829fa0308dbba73093afc18dd09e41.png)
 
 
 
@@ -2614,7 +2123,7 @@ results in
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/b1daaf29487fa76a9ede278626ce92dd5b563d4e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=66834091cef23d1c6a8ccbbd51fece36d99fc9ef1bda27bcb02064073bf2c728)
+![](./data/b1daaf29487fa76a9ede278626ce92dd5b563d4e.png)
 
 
 
@@ -2638,225 +2147,20 @@ results in
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/bab5b1f20e779126e4d87eb8df69c501699d632d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ad2e7d177e70f044ea1eac121dccf72c6d9d10f3c74127fd646cb00a60e99690)
+![](./data/bab5b1f20e779126e4d87eb8df69c501699d632d.png)
 
 
 
 
- We note that the `Simple_GAN` and `WGAN_clip` models have a very small variability in their production, while the `WGAN_GP` model furnishes pictures that are quite close from the ones coming from the real sample.
- 
-   
-  
+We note that the `Simple_GAN` and `WGAN_clip` models have a very small variability in their production, while the `WGAN_GP` model furnishes pictures that are quite close from the ones coming from the real sample.
 
- In conclusion we are now convinced that in higher dimensions the `WGAN_GP` model can outperform both of the `Simple_GAN` and `WGAN_clip` models.
 
 
 
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/gan`
-* File: `2-wgan_gp.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "2\. Wasserstein GANs with gradient penalty"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Check your code
- 
-
-
-
-
-×
-#### Correction of "2\. Wasserstein GANs with gradient penalty"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 2\. Wasserstein GANs with gradient penalty
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**4/5** 
-pts
-
-
-
-
-
-
-
+In conclusion we are now convinced that in higher dimensions the `WGAN_GP` model can outperform both of the `Simple_GAN` and `WGAN_clip` models.
 
 
 ### 3\. Generating faces
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
-
 
 Here we will convince ourselves that gans can be trained into generators of faces. In order to do so, we first need a large enough sample of real faces.
 
@@ -2865,7 +2169,7 @@ Here we will convince ourselves that gans can be trained into generators of face
 
   
 
- A sample of 10000 pictures of real faces is available in the file [small\_res\_faces\_10000\.npy](https://drive.google.com/file/d/1sQiPv0jANG5ZGysBJFxE3mSmuuMM7gK6/view?usp=drive_link). Each of these is a greyscale 16x16 picture, encoded as a (16,16\)\-array of bytes (`np.int8`)
+ A sample of 10000 pictures of real faces is available in the file [small\_res\_faces\_10000\.npy](./data/small_res_faces_10000.npy). Each of these is a greyscale 16x16 picture, encoded as a (16,16\)\-array of bytes (`np.int8`)
 
 
 
@@ -2888,7 +2192,7 @@ Here we will convince ourselves that gans can be trained into generators of face
 
 
 
-[![Image](https://i.goopics.net/3b84cl.png)](https://goopics.net/i/3b84cl)
+[![Image](https://i.goopics.net/3b84cl.png)](./data/3b84cl.png)
 
 
 
@@ -2903,7 +2207,7 @@ mean_face=array_of_pictures.mean(axis=0)
 ```
 
 
-[![Image](https://i.goopics.net/bf3os1.png)](https://goopics.net/i/bf3os1)
+[![Image](https://i.goopics.net/bf3os1.png)](./data/bf3os1.png)
 
 
 
@@ -2939,7 +2243,7 @@ This normalized array contains 10000 arrays of shape (16,16\) with coefficients 
 
 
 
-[![Image](https://i.goopics.net/kcs4m7.jpg)](https://goopics.net/i/kcs4m7)
+[![Image](https://i.goopics.net/kcs4m7.jpg)](./data/kcs4m7.jpg)
 
 
 
@@ -3209,7 +2513,7 @@ and then produces:
 
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/9/931c8dfbf248d8504e9829e6bf0c6d841c0c0796.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8f059c2c306ca73353b13edede7af55621c398c4cb3fe2b9c012c83e704eb79e)
+![](./data/931c8dfbf248d8504e9829e6bf0c6d841c0c0796.png)
 
 
 
@@ -3219,215 +2523,14 @@ and then produces:
 
 
 
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/gan`
-* File: `3-generate_faces.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "3\. Generating faces"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Check your code
- 
-
-
-
-
-×
-#### Correction of "3\. Generating faces"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 3\. Generating faces
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**5/5** 
-pts
-
-
-
-
-
-
-
-
-
 ### 4\. Our own "This person does not exist" : Playing with a pre\-trained model
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 The developers of this project have trained a  `WGAN_GP`  model just as you did in the last task, but for a larger number of epoch (150\), of a larger number of steps (200\) with a small learning rate (.0001\) and stored 
 
 
-* The weights of the generator in a file  [generator.h5](https://drive.google.com/uc?export=download&id=1KiRQKhaTPxI9UeGKkdyaMpAoixfhRQf8)
-* The weights of the discriminator in a file  [discriminator.h5](https://drive.google.com/uc?export=download&id=19S7JmeMSjKtx_DU5K-p8zpZU5NJLAUyt)
+* The weights of the generator in a file  [generator.h5](.//data/generator.h5)
+* The weights of the discriminator in a file  [discriminator.h5](./data/discriminator.h5)
 
 
 The aim of this task is to recover the  `WGAN_GP`  model from these weights, and then to play a little bit in the main with this model.
@@ -3529,7 +2632,7 @@ should produce :
 
 
 
-[![task4_main1](https://i.goopics.net/xv1vdz.png)](https://goopics.net/i/xv1vdz)
+[![task4_main1](https://i.goopics.net/xv1vdz.png)](./data/xv1vdz.png)
 
 
 
@@ -3620,7 +2723,7 @@ should produce :
 
 
 
-[![task4_main2](https://i.goopics.net/c3i5ji.png)](https://goopics.net/i/c3i5ji)
+[![task4_main2](https://i.goopics.net/c3i5ji.png)](./data/c3i5ji.png)
 
 
 
@@ -3683,7 +2786,7 @@ flat=array_of_pictures.reshape(10000,256)
 ```
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/4bef99f69db5a8f5552ea638b4fa2a09370dd074.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f0e691c701d731182c27fdc454012ded2de2942ee272a14c56d96c7de2cfd89d)
+![](./data/4bef99f69db5a8f5552ea638b4fa2a09370dd074.png)
 
 
 
@@ -3739,7 +2842,7 @@ class PCA_generator() :
 ```
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/b56603a4ea7244232b6925bada01ead79e50eebb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0d7ca6ddf3d4b06d8b4e3d75f9f6ff84f4fd5ffd3c62c8cda0e6730f6bdda6cb)
+![](./data/b56603a4ea7244232b6925bada01ead79e50eebb.png)
 
 
 
@@ -3775,7 +2878,7 @@ plt.hist(np.sum(np.square(X),axis=1),bins=100,density=True)
 ```
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/1b03cc096627fcbc1f2016c38c1e018cd7ff25a8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ffecc7cdc19d7e2238992a41b4c70cc69d5a964e1f8a53bbecd4e008e1365e17)
+![](./data/1b03cc096627fcbc1f2016c38c1e018cd7ff25a8.png)
 
 
 
@@ -3812,7 +2915,7 @@ Y=X.copy()
 ```
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/e6cf1ec0260bfe5344a5a5dcc3227400fd4037e3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=cbb78ca745b534443f4b87104cc549d8cba1ef82405a3d311919bfabcec578ef)
+![](./data/e6cf1ec0260bfe5344a5a5dcc3227400fd4037e3.png)
 
 
 
@@ -3841,294 +2944,11 @@ G.replace_weights("generator.h5","discriminator.h5")
 ```
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2023/7/a19ca618c3fbf290917b0dec98137ad354f24832.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030221Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8cc716d4a286e830e33aaabc0458f4e3ae45f149af146df310d160d2df96bf61)
+![](./data/a19ca618c3fbf290917b0dec98137ad354f24832.png)
 
 
 
 That’s all !!!
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/gan`
-* File: `4-wgan_gp.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "4\. Our own "This person does not exist" : Playing with a pre\-trained model "
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Check your code
- 
-
-
-
-
-×
-#### Correction of "4\. Our own "This person does not exist" : Playing with a pre\-trained model "
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 4\. Our own "This person does not exist" : Playing with a pre\-trained model
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
-
-
-[Previous project](/projects/2332)  
-
-
-
- Next project 
-
-
-
-
-
-
-
-### Score
-
-![Project badge](/assets/pathway/004_color-d2fbcfb42ba7481834896ecc89a6f0ae65762b3c1096691dd0f820f7f29e3389.png)96\.43%Still some tasks to work on!
-
-Please review **all the tasks** before you start the peer review.
-
-Review all the tasks
-
-
-### Score
-
-![Project badge](/assets/pathway/004_color-d2fbcfb42ba7481834896ecc89a6f0ae65762b3c1096691dd0f820f7f29e3389.png)96\.43%Still some tasks to work on!
-
-Please review **all the tasks** before you start the peer review.
-
-Review all the tasks
-
-
-
-### Tasks list
-
-
-
-
-* [Mandatory](#mandatory)
-* [Advanced](#advanced)
-
-
-
-
-
-0\. `Simple GAN`
-**100\.00%**
-
-
-1\. `Wasserstein GANs`
-**100\.00%**
-
-
-2\. `Wasserstein GANs with gradient penalty`
-**80\.00%**
-
-
-3\. `Generating faces`
-**100\.00%**
-
-
-4\. `Our own "This person does not exist" : Playing with a pre-trained model` 
-**100\.00%**
-
-
-
-
-
-
-
-
-
-×#### Recommended Sandboxes
-
-New sandbox * 
-* US East (N. Virginia)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* South America (São Paulo)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Europe (Paris)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Asia Pacific (Sydney)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-No sandboxes yet!
-
 
 
 
