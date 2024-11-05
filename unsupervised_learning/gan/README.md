@@ -34,7 +34,7 @@
 
 
 
-![](./fata/5a2a9533a483dc7c856f754d426939dfa1293067.jpg)
+![](./data/5a2a9533a483dc7c856f754d426939dfa1293067.jpg)
 
 
 *These persons do not exist*
