@@ -1147,30 +1147,9 @@ $ cat 0-main_03.py
 
 
 
- mandatory
- 
 
 
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
-
-
-
-
-
-
-
-
- In this task we will define a class `WGAN_clip` and test it on some examples. Almost all of what we need is already explained in the presentation or in task 0\. We just have to modify the losses of the generator and the discriminator, and to clip the weights of the discriminator in \[\-1,1].
+In this task we will define a class `WGAN_clip` and test it on some examples. Almost all of what we need is already explained in the presentation or in task 0\. We just have to modify the losses of the generator and the discriminator, and to clip the weights of the discriminator in \[\-1,1].
  
 
 ## **The code to be filled in**
