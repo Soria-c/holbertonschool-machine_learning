@@ -1,51 +1,32 @@
+# Autoencoders
 
-
-
-![Project badge](/assets/pathway/004_color-d2fbcfb42ba7481834896ecc89a6f0ae65762b3c1096691dd0f820f7f29e3389.png)100%# Autoencoders
-
-* Master
-* By: Alexa Orrico, Software Engineer at Holberton School
-* Weight: 1
-* Your score will be updated as you progress.
-
-
-
-
-* [Description](#description)
-* [Quiz](#quiz)
-
-
-
-
-
-[Go to tasks](#)
-
+## Resources
 **Read or watch**:
 
 
-* [Autoencoder \- definition](/rltoken/WoU4g9-ukc3CprULNz7bFQ "Autoencoder - definition")
-* [Autoencoder \- loss function](/rltoken/mwNwl6NAjS5Bq5NgOrkAIw "Autoencoder - loss function")
-* [Deep learning \- deep autoencoder](/rltoken/i-6H-NSF1EeTS-wO9XJOKw "Deep learning - deep autoencoder")
-* [Introduction to autoencoders](/rltoken/KOQVo5SHrT9KQs8DR-77XQ "Introduction to autoencoders")
-* [Variational Autoencoders \- EXPLAINED!](/rltoken/GOnvaZYR8DKYpzhNgHST8w "Variational Autoencoders - EXPLAINED!") *up to* **12:55**
-* [Variational Autoencoders](/rltoken/nmXflFRZVSepLyIeWj7ZZw "Variational Autoencoders")
-* [Intuitively Understanding Variational Autoencoders](/rltoken/scEGC5gElF9Y5hqJKCd6Ig "Intuitively Understanding Variational Autoencoders")
-* [Deep Generative Models](/rltoken/0oIkGjgD56nEmPNaaGEd4Q "Deep Generative Models") *up to* **Generative Adversarial Networks**
+* [Autoencoder \- definition](https://www.youtube.com/watch?v=FzS3tMl4Nsc&t=73s "Autoencoder - definition")
+* [Autoencoder \- loss function](https://www.youtube.com/watch?v=xTU79Zs4XKY "Autoencoder - loss function")
+* [Deep learning \- deep autoencoder](https://www.youtube.com/watch?v=z5ZYm_wJ37c "Deep learning - deep autoencoder")
+* [Introduction to autoencoders](https://www.jeremyjordan.me/autoencoders/ "Introduction to autoencoders")
+* [Variational Autoencoders \- EXPLAINED!](https://www.youtube.com/watch?v=fcvYpzHmhvA "Variational Autoencoders - EXPLAINED!") *up to* **12:55**
+* [Variational Autoencoders](https://www.youtube.com/watch?v=9zKuYvjFFS8 "Variational Autoencoders")
+* [Intuitively Understanding Variational Autoencoders](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf "Intuitively Understanding Variational Autoencoders")
+* [Deep Generative Models](https://towardsdatascience.com/deep-generative-models-25ab2821afd3 "Deep Generative Models") *up to* **Generative Adversarial Networks**
 
 
 **Definitions to skim**:
 
 
-* [Kullback–Leibler divergence](/rltoken/DqGkE0l2zKW0eXffuvYWdQ "Kullback–Leibler divergence") *recall its use in t\-SNE*
-* [Autoencoder](/rltoken/ix_r08GwJRwBVb6IJbvy9g "Autoencoder")
-* [Generative model](/rltoken/qK2qdYMuSlrKjSxOm41vlg "Generative model")
+* [Kullback–Leibler divergence](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence "Kullback–Leibler divergence") *recall its use in t\-SNE*
+* [Autoencoder](https://en.wikipedia.org/wiki/Autoencoder "Autoencoder")
+* [Generative model](https://en.wikipedia.org/wiki/Generative_model "Generative model")
 
 
 **References**:
 
 
-* [The Deep Learning textbook \- Chapter 14: Autoencoders](/rltoken/--lkUg01iTfqty_Tt02qnA "The Deep Learning textbook - Chapter 14: Autoencoders")
-* [Reducing the Dimensionality of Data with Neural Networks 2006](/rltoken/lh5A6UUOBwx5ayJG7gbGtQ "Reducing the Dimensionality of Data with Neural Networks 2006")
+* [The Deep Learning textbook \- Chapter 14: Autoencoders](https://www.deeplearningbook.org/contents/autoencoders.html "The Deep Learning textbook - Chapter 14: Autoencoders")
+* [Reducing the Dimensionality of Data with Neural Networks 2006](https://www.cs.toronto.edu/~hinton/absps/science.pdf "Reducing the Dimensionality of Data with Neural Networks 2006")
 
 
 ## Learning Objectives
@@ -59,33 +40,6 @@
 * What is a generative model?
 * What is a variational autoencoder?
 * What is the Kullback\-Leibler divergence?
-
-
-## Requirements
-
-
-### General
-
-
-* Allowed editors: `vi`, `vim`, `emacs`
-* All your files will be interpreted/compiled on Ubuntu 20\.04 LTS using `python3` (version 3\.9\)
-* Your files will be executed with `numpy` (version 1\.25\.2\) and `tensorflow` (version 2\.15\)
-* All your files should end with a new line
-* The first line of all your files should be exactly `#!/usr/bin/env python3`
-* A `README.md` file, at the root of the folder of the project, is mandatory
-* Your code should use the `pycodestyle` style (version 2\.11\.1\)
-* All your modules should have documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
-* All your classes should have documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
-* All your functions (inside and outside a class) should have documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
-* Unless otherwise noted, you are not allowed to import any module except `import tensorflow.keras as keras`
-* All your files must be executable
-
-
-
-
-
-
-
 
 
 **Great!**
@@ -103,10 +57,10 @@ What is a “vanilla” autoencoder?
 
 
 
-* A compression model
-* Composed of an encoder and decoder
+* **A compression model**
+* **Composed of an encoder and decoder**
 * A generative model
-* Learns a latent space representation
+* **Learns a latent space representation**
 
 
 
@@ -125,7 +79,7 @@ What is a bottleneck?
 * When you can no longer train your model
 * The latent space representation
 * The compressed input
-* A layer that is smaller than the previous and next layers
+* **A layer that is smaller than the previous and next layers**
 
 
 
@@ -142,8 +96,8 @@ What is a VAE?
 
 
 * An adversarial network
-* A generative model
-* Composed of an encoder and decoder
+* **A generative model**
+* **Composed of an encoder and decoder**
 * A compression model
 
 
@@ -160,10 +114,10 @@ What loss function(s) is/are used for training `vanilla` autoencoders?
 
 
 
-* Mean Squared Error
+* **Mean Squared Error**
 * L2 Normalization
-* Cross Entropy
-* Kullback\-Leibler Divergence
+* **Cross Entropy**
+* **Kullback\-Leibler Divergence**
 
 
 
@@ -179,49 +133,14 @@ What loss function(s) is/are used for training variational autoencoders?
 
 
 
-* Mean Squared Error
+* **Mean Squared Error**
 * L2 Normalization
-* Cross Entropy
-* Kullback\-Leibler Divergence
-
-
-
-
-
-
-
-
-
-
+* **Cross Entropy**
+* **Kullback\-Leibler Divergence**
 
 ## Tasks
 
-
-
-
-
-
-
 ### 0\. "Vanilla" Autoencoder
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def autoencoder(input_dims, hidden_layers, latent_dims):` that creates an autoencoder:
@@ -313,215 +232,10 @@ $ cat 0-main.py
     
 ```
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2024/8/ccd5c9418f7b834e7e8dc5948be5befffadb15cc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030101Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c5c18ced055380c9cb7daa2a8c991d93e1aa422b626d4da37e2475e19a17f04c)
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/autoencoders`
-* File: `0-vanilla.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "0\. "Vanilla" Autoencoder"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "0\. "Vanilla" Autoencoder"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 0\. "Vanilla" Autoencoder
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
+![](./data/ccd5c9418f7b834e7e8dc5948be5befffadb15cc.png)
 
 
 ### 1\. Sparse Autoencoder
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
-
 
 Write a function `def autoencoder(input_dims, hidden_layers, latent_dims, lambtha):` that creates a sparse autoencoder:
 
@@ -613,214 +327,10 @@ $ cat 1-main.py
     
 ```
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2024/8/1a512a1401ffa78411f620c203567531ea3ef1cc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030101Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=48deacf0c1e9a63f57c0dfeb97bca7bc6d37e2a9eac5544522f53f1ad1cf6cf4)
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/autoencoders`
-* File: `1-sparse.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "1\. Sparse Autoencoder"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "1\. Sparse Autoencoder"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 1\. Sparse Autoencoder
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
+![](./data/1a512a1401ffa78411f620c203567531ea3ef1cc.png)
 
 
 ### 2\. Convolutional Autoencoder
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def autoencoder(input_dims, filters, latent_dims):` that creates a convolutional autoencoder:
@@ -919,214 +429,9 @@ $ cat 2-main.py
     
 ```
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2024/8/ad8e033d741414b0b6e8b5cfb7897c28a24cd72a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030101Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c5176c1cee036d5fde94e729b794794b998da7ec3372bcbba78e937ca9e8828b)
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/autoencoders`
-* File: `2-convolutional.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "2\. Convolutional Autoencoder"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "2\. Convolutional Autoencoder"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 2\. Convolutional Autoencoder
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
-
+![](./data/ad8e033d741414b0b6e8b5cfb7897c28a24cd72a.png)
 
 ### 3\. Variational Autoencoder
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def autoencoder(input_dims, hidden_layers, latent_dims):` that creates a variational autoencoder:
@@ -1252,284 +557,9 @@ $ cat 3-main.py
     
 ```
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2024/8/9ff18c2fa04a56319c66e1b9c24f2e98724527ae.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030101Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=1c7f07b102c0d5945e77591e5c281aa02a2650f7e52008457b662ef27e2923ea)
+![](./data/9ff18c2fa04a56319c66e1b9c24f2e98724527ae.png)
 
 
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2024/8/213b7bd849e144006de46c29c16da8865d75a8c2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T030101Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=fa49199851dd86ab41c097e5e6761ee214a77ce2c0631e4edb888d4f9b662e04)
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `unsupervised_learning/autoencoders`
-* File: `3-variational.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "3\. Variational Autoencoder"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "3\. Variational Autoencoder"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 3\. Variational Autoencoder
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
-
-
-[Previous project](/projects/2299)  
-
-
-
- Next project 
-
-
-
-
-
-
-
-### Score
-
-![Project badge](/assets/pathway/004_color-d2fbcfb42ba7481834896ecc89a6f0ae65762b3c1096691dd0f820f7f29e3389.png)100%Congratulations! You made it!
-
-Next project: GANs
-
-[Open the next project](/projects/3086)
-
-
-### Score
-
-![Project badge](/assets/pathway/004_color-d2fbcfb42ba7481834896ecc89a6f0ae65762b3c1096691dd0f820f7f29e3389.png)100%Congratulations! You made it!
-
-Next project: GANs
-
-[Open the next project](/projects/3086)
-
-
-
-### Tasks list
-
-
-
-
-* [Mandatory](#mandatory)
-* [Advanced](#advanced)
-
-
-
-
-
-0\. `"Vanilla" Autoencoder`
-**100\.00%**
-
-
-1\. `Sparse Autoencoder`
-**100\.00%**
-
-
-2\. `Convolutional Autoencoder`
-**100\.00%**
-
-
-3\. `Variational Autoencoder`
-**100\.00%**
-
-
-
-
-
-
-
-
-
-×#### Recommended Sandboxes
-
-New sandbox * 
-* US East (N. Virginia)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* South America (São Paulo)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Europe (Paris)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Asia Pacific (Sydney)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-No sandboxes yet!
-
-
-
+![](./data/213b7bd849e144006de46c29c16da8865d75a8c2.png)
 
 

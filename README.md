@@ -23,12 +23,12 @@
 * [Clustering](./unsupervised_learning/clustering/README.md)
 
 * [Hidden Markov Models](./unsupervised_learning/hmm/README.md)
+* [ Hyperparameter Tuning](./unsupervised_learning/hyperparameter_tuning/README.md)
+* [Autoencoders](./unsupervised_learning/autoencoders/README.md)
 
 wip
 
 
-* [ Hyperparameter Tuning](./unsupervised_learning/hyperparameter_tuning/README.md)
-* [Autoencoders](./unsupervised_learning/autoencoders/README.md)
 * [GANs](./unsupervised_learning/gan/README.md)
 * [Time Series Forecasting](./unsupervised_learning/time_series/README.md)
 * [RNNs](./supervised_learning/RNNs/README.md)
