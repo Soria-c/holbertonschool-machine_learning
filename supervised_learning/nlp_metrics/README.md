@@ -1,24 +1,5 @@
+# Natural Language Processing \- Evaluation Metrics
 
-
-
-![Project badge](/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png)100%# Natural Language Processing \- Evaluation Metrics
-
-* Master
-* By: Alexa Orrico, Software Engineer at Holberton School
-* Weight: 1
-* Your score will be updated as you progress.
-
-
-
-
-* [Description](#description)
-* [Quiz](#quiz)
-
-
-
-
-
-[Go to tasks](#)
 
 ## Resources
 
@@ -26,29 +7,29 @@
 **Read or watch:**
 
 
-* [7 Applications of Deep Learning for Natural Language Processing](/rltoken/IYDIKPW-OMoU6MusXwtrIw "7 Applications of Deep Learning for Natural Language Processing")
-* [10 Applications of Artificial Neural Networks in Natural Language Processing](/rltoken/2DOEX8NaohA50GuwdWtcGQ "10 Applications of Artificial Neural Networks in Natural Language Processing")
-* [A Gentle Introduction to Calculating the BLEU Score for Text in Python](/rltoken/zsPawhP5ezqZDwFBc6DyYA "A Gentle Introduction to Calculating the BLEU Score for Text in Python")
-* [Bleu Score](/rltoken/hPRNbFBuuRwZguNRoUpYlg "Bleu Score")
-* [Evaluating Text Output in NLP: BLEU at your own risk](/rltoken/5Q8PN8uvw1fCVmjLdiEYbw "Evaluating Text Output in NLP: BLEU at your own risk")
-* [ROUGE metric](/rltoken/7jWThnZo7x4BIaCzTYOzjg "ROUGE metric")
-* [Evaluation and Perplexity](/rltoken/iWXkSDA5Cyw4bP_Z7VeFNg "Evaluation and Perplexity")
-* [Evaluation metrics](/rltoken/fB5mQNcsuxScDvGo0S9deA "Evaluation metrics")
+* [7 Applications of Deep Learning for Natural Language Processing](https://machinelearningmastery.com/applications-of-deep-learning-for-natural-language-processing/ "7 Applications of Deep Learning for Natural Language Processing")
+* [10 Applications of Artificial Neural Networks in Natural Language Processing](https://medium.com/product-ai/artificial-neural-networks-in-natural-language-processing-bcf62aa9151a "10 Applications of Artificial Neural Networks in Natural Language Processing")
+* [A Gentle Introduction to Calculating the BLEU Score for Text in Python](https://machinelearningmastery.com/calculate-bleu-score-for-text-python/ "A Gentle Introduction to Calculating the BLEU Score for Text in Python")
+* [Bleu Score](https://www.youtube.com/watch?v=DejHQYAGb7Q "Bleu Score")
+* [Evaluating Text Output in NLP: BLEU at your own risk](https://towardsdatascience.com/evaluating-text-output-in-nlp-bleu-at-your-own-risk-e8609665a213 "Evaluating Text Output in NLP: BLEU at your own risk")
+* [ROUGE metric](https://towardsdatascience.com/the-ultimate-performance-metric-in-nlp-111df6c64460 "ROUGE metric")
+* [Evaluation and Perplexity](https://www.youtube.com/watch?v=BAN3NB_SNHY "Evaluation and Perplexity")
+* [Evaluation metrics](https://aman.ai/primers/ai/evaluation-metrics/ "Evaluation metrics")
 
 
 **Definitions to skim**
 
 
-* [BLEU](/rltoken/5uK6B8SbX6SHp8t-H8NDFg "BLEU")
-* [ROUGE](/rltoken/izJTokzam7qDlNjlIpDwJw "ROUGE")
-* [Perplexity](/rltoken/gilvwXepRUooBDxu-3utrA "Perplexity")
+* [BLEU](https://en.wikipedia.org/wiki/BLEU "BLEU")
+* [ROUGE](https://en.wikipedia.org/wiki/ROUGE_(metric) "ROUGE")
+* [Perplexity](https://en.wikipedia.org/wiki/Perplexity "Perplexity")
 
 
 **References:**
 
 
-* [BLEU: a Method for Automatic Evaluation of Machine Translation (2002\)](/rltoken/lH3nYkepKlqhOFjI1h6Fmg "BLEU: a Method for Automatic Evaluation of Machine Translation (2002)")
-* [ROUGE: A Package for Automatic Evaluation of Summaries (2004\)](/rltoken/hIWggM4NJ19XP-wAtik--g "ROUGE: A Package for Automatic Evaluation of Summaries (2004)")
+* [BLEU: a Method for Automatic Evaluation of Machine Translation (2002\)](https://aclanthology.org/P02-1040.pdf "BLEU: a Method for Automatic Evaluation of Machine Translation (2002)")
+* [ROUGE: A Package for Automatic Evaluation of Summaries (2004\)](https://aclanthology.org/W04-1013.pdf` "ROUGE: A Package for Automatic Evaluation of Summaries (2004)")
 
 
 ## Learning Objectives
@@ -70,33 +51,9 @@ At the end of this project, you are expected to be able to [explain to anyone](/
 ## Requirements
 
 
-### General
-
-
-* Allowed editors: `vi`, `vim`, `emacs`
-* All your files will be interpreted/compiled on Ubuntu 20\.04 LTS using `python3` (version 3\.9\)
-* Your files will be executed with `numpy` (version 1\.25\.2\)
-* All your files should end with a new line
-* The first line of all your files should be exactly `#!/usr/bin/env python3`
-* All of your files must be executable
-* A `README.md` file, at the root of the folder of the project, is mandatory
-* Your code should follow the `pycodestyle` style (version 2\.11\.1\)
-* All your modules should have documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
-* All your classes should have documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
-* All your functions (inside and outside a class) should have documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
 * You are not allowed to use the `nltk` module
 
 
-
-
-
-
-
-
-
-**Great!**
- You've completed the quiz successfully! Keep going!
- (Hide quiz)
 
 
 
@@ -110,7 +67,7 @@ The BLEU score measures:
 
 
 * A model’s accuracy
-* A model’s precision
+* ***A model’s precision***
 * A model’s recall
 * A model’s perplexity
 
@@ -129,8 +86,8 @@ The ROUGE score measures:
 
 
 * A model’s accuracy
-* A model’s precision
-* A model’s recall
+* ***A model’s precision***
+* ***A model’s recall***
 * A model’s perplexity
 
 
@@ -148,7 +105,7 @@ Perplexity measures:
 
 
 * The accuracy of a prediction
-* The branching factor of a prediction
+* ***The branching factor of a prediction***
 * A prediction’s recall
 * A prediction’s accuracy
 
@@ -167,7 +124,7 @@ The BLEU score was designed for:
 
 
 * Sentiment Analysis
-* Machine Translation
+* ***Machine Translation***
 * Question\-Answering
 * Document Summarization
 
@@ -185,10 +142,10 @@ What are the shortcomings of the BLEU score?
 
 
 
-* It cannot judge grammatical accuracy
-* It cannot judge meaning
-* It does not work with languages that lack word boundaries
-* A higher score is not necessarily indicative of a better translation
+* ***It cannot judge grammatical accuracy***
+* ***It cannot judge meaning***
+* ***It does not work with languages that lack word boundaries***
+* ***A higher score is not necessarily indicative of a better translation***
 
 
 
@@ -211,23 +168,6 @@ What are the shortcomings of the BLEU score?
 ### 0\. Unigram BLEU score
 
 
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write the function `def uni_bleu(references, sentence):` that calculates the unigram BLEU score for a sentence:
@@ -258,210 +198,9 @@ $ cat 0-main.py
 
 
 
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/nlp_metrics`
-* File: `0-uni_bleu.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "0\. Unigram BLEU score"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "0\. Unigram BLEU score"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-Get a sandbox
-
- QA Review
- 
-
-
-
-
-×
-#### 0\. Unigram BLEU score
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**7/7** 
-pts
-
-
-
-
-
-
-
-
-
 ### 1\. N\-gram BLEU score
 
 
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write the function `def ngram_bleu(references, sentence, n):` that calculates the n\-gram BLEU score for a sentence:
@@ -491,212 +230,10 @@ $ cat 1-main.py
   
 ```
 
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/nlp_metrics`
-* File: `1-ngram_bleu.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "1\. N\-gram BLEU score"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "1\. N\-gram BLEU score"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-Get a sandbox
-
- QA Review
- 
-
-
-
-
-×
-#### 1\. N\-gram BLEU score
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**7/7** 
-pts
-
-
-
-
-
-
-
-
-
 ### 2\. Cumulative N\-gram BLEU score
 
 
 
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write the function `def cumulative_bleu(references, sentence, n):` that calculates the cumulative n\-gram BLEU score for a sentence:
@@ -727,283 +264,6 @@ $ cat 2-main.py
   
 ```
 
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/nlp_metrics`
-* File: `2-cumulative_bleu.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "2\. Cumulative N\-gram BLEU score"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "2\. Cumulative N\-gram BLEU score"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-Get a sandbox
-
- QA Review
- 
-
-
-
-
-×
-#### 2\. Cumulative N\-gram BLEU score
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**7/7** 
-pts
-
-
-
-
-
-
-
-
-
-[Previous project](/projects/2360)  
-
-
-
- Next project 
-
-
-
-
-
-
-
-### Score
-
-![Project badge](/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png)100%Congratulations! You made it!
-
-Next project: Attention
-
-[Open the next project](/projects/2338)
-
-
-### Score
-
-![Project badge](/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png)100%Congratulations! You made it!
-
-Next project: Attention
-
-[Open the next project](/projects/2338)
-
-
-
-### Tasks list
-
-
-
-
-* [Mandatory](#mandatory)
-* [Advanced](#advanced)
-
-
-
-
-
-0\. `Unigram BLEU score`
-**100\.00%**
-
-
-1\. `N-gram BLEU score`
-**100\.00%**
-
-
-2\. `Cumulative N-gram BLEU score`
-**100\.00%**
-
-
-
-
-
-
-
-
-
-×#### Recommended Sandbox
-
-Running only### 1 image(0/5 Sandboxes spawned)
-
-### Ubuntu 16\.04 \- Python 3\.5 \- Numpy
-
-Ubuntu 16\.04 with Python 3\.5 and Numpy installed
-
-
-Run
-×#### Recommended Sandboxes
-
-New sandbox * 
-* US East (N. Virginia)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* South America (São Paulo)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Europe (Paris)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Asia Pacific (Sydney)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-No sandboxes yet!
 
 
 

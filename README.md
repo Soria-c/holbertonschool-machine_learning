@@ -29,11 +29,11 @@
 * [Time Series Forecasting](./unsupervised_learning/time_series/README.md)
 * [RNNs](./supervised_learning/RNNs/README.md)
 * [Natural Language Processing - Word Embeddings](./supervised_learning/word_embeddings/README.md)
+* [Natural Language Processing - Evaluation Metrics](./supervised_learning/nlp_metrics/README.md)
 
 wip
 
 
-* [Natural Language Processing - Evaluation Metrics](./supervised_learning/nlp_metrics/README.md)
 * [Attention](./supervised_learning/attention/README.md)
 * [Transformer Applications](./supervised_learning/transformer_apps/README.md)
 * [QA Bot](./supervised_learning/qa_bot/README.md)
