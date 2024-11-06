@@ -21,7 +21,6 @@
 * [Multivariate Probability](./math/multivariate_prob/README.md)
 * [Dimensionality Reduction](./unsupervised_learning/dimensionality_reduction/README.md)
 * [Clustering](./unsupervised_learning/clustering/README.md)
-
 * [Hidden Markov Models](./unsupervised_learning/hmm/README.md)
 * [ Hyperparameter Tuning](./unsupervised_learning/hyperparameter_tuning/README.md)
 * [Autoencoders](./unsupervised_learning/autoencoders/README.md)
@@ -33,6 +32,9 @@
 * [Attention](./supervised_learning/attention/README.md)
 * [Transformer Applications](./supervised_learning/transformer_apps/README.md)
 * [QA Bot](./supervised_learning/qa_bot/README.md)
+* [Q-learning](./reinforcement_learning/q_learning/README.md)
+* [Deep Q-learning](./reinforcement_learning/deep_q_learning/README.md)
+* [Temporal Difference](./reinforcement_learning/temporal_difference/README.md)
 
 wip
 
