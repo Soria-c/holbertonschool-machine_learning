@@ -162,7 +162,7 @@ What is a value function?
 
 * A description of how the agent should be rewarded
 * A description of how the agent should behave
-* ***A description of how the agent could be rewarded in the ***future
+* ***A description of how the agent could be rewarded in the future***
 * ***A function that is learned***
 * A function that is set at the beginning
 
