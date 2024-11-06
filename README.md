@@ -32,9 +32,9 @@
 * [Natural Language Processing - Evaluation Metrics](./supervised_learning/nlp_metrics/README.md)
 * [Attention](./supervised_learning/attention/README.md)
 * [Transformer Applications](./supervised_learning/transformer_apps/README.md)
+* [QA Bot](./supervised_learning/qa_bot/README.md)
 
 wip
 
 
-* [QA Bot](./supervised_learning/qa_bot/README.md)
 
