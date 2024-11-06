@@ -1,27 +1,5 @@
+# Natural Language Processing \- Word Embeddings
 
-
-
-![Project badge](/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png)100%# Natural Language Processing \- Word Embeddings
-
-* Master
-* By: Alexa Orrico, Software Engineer at Holberton School
-* Weight: 2
-* Your score will be updated as you progress.
-* **Manual QA review must be done** (request it when you are done with the project)
-
-
-
-
-* [Description](#description)
-* [Quiz](#quiz)
-
-
-
-
-
-[Go to tasks](#)
-
-![](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/7/a2fa719214e8c81107842b9fcd97defd08ba3d82.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20241026%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20241026T033208Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=95e20eb06cf4e4cb0db97c466cc418b5d833a7df135397b74282229b8d847029)
 
 
 ## Resources
@@ -30,42 +8,42 @@
 **Read or watch:**
 
 
-* [An Introduction to Word Embeddings](/rltoken/nvfQT4uJGmhWEPYg6JcAAQ "An Introduction to Word Embeddings")
-* [Introduction to Word Embeddings](/rltoken/XOZasuXUStW1z7jL_D2EOg "Introduction to Word Embeddings")
-* [Natural Language Processing\|Bag Of Words Intuition](/rltoken/-mSn7HlmeJkmxIv8QZ3tAg "Natural Language Processing|Bag Of Words Intuition")
-* [Natural Language Processing\|TF\-IDF Intuition\| Text Prerocessing](/rltoken/7o-iPxs2hr8tey5_S6BfTw "Natural Language Processing|TF-IDF Intuition| Text Prerocessing")
-* [Word Embedding \- Natural Language Processing\| Deep Learning](/rltoken/p3gf0mQTNMvd0bCuGiwAUg "Word Embedding - Natural Language Processing| Deep Learning")
-* [Word2Vec Tutorial \- The Skip\-Gram Model](/rltoken/d2S2BNRUgUjM4RZFTQOvXg "Word2Vec Tutorial - The Skip-Gram Model")
-* [Word2Vec Tutorial Part 2 \- Negative Sampling](/rltoken/u8GAzgsS-Y_cUo887Mcugg "Word2Vec Tutorial Part 2 - Negative Sampling")
-* [GloVe Explained](/rltoken/Rr9mic3yK0vzSAkpSxoupQ "GloVe Explained")
-* [FastText: Under the Hood](/rltoken/ipKqg68wXw2vg23zuiX4qw "FastText: Under the Hood")
-* [ELMo Explained](/rltoken/Hb_6xoJCOihj7Lnb6si7gA "ELMo Explained")
+* [An Introduction to Word Embeddings](https://www.springboard.com/blog/data-science/introduction-word-embeddings/ "An Introduction to Word Embeddings")
+* [Introduction to Word Embeddings](https://hunterheidenreich.com/posts/intro-to-word-embeddings/ "Introduction to Word Embeddings")
+* [Natural Language Processing\|Bag Of Words Intuition](https://www.youtube.com/watch?v=IKgBLTeQQL8&list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm&index=6 "Natural Language Processing|Bag Of Words Intuition")
+* [Natural Language Processing\|TF\-IDF Intuition\| Text Prerocessing](https://www.youtube.com/watch?v=D2V1okCEsiE&list=PLZoTAELRMXVMdJ5sqbCK2LiM0HhQVWNzm&index=8 "Natural Language Processing|TF-IDF Intuition| Text Prerocessing")
+* [Word Embedding \- Natural Language Processing\| Deep Learning](https://www.youtube.com/watch?v=pO_6Jk0QtKw "Word Embedding - Natural Language Processing| Deep Learning")
+* [Word2Vec Tutorial \- The Skip\-Gram Model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/ "Word2Vec Tutorial - The Skip-Gram Model")
+* [Word2Vec Tutorial Part 2 \- Negative Sampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/ "Word2Vec Tutorial Part 2 - Negative Sampling")
+* [GloVe Explained](https://medium.com/sciforce/word-vectors-in-natural-language-processing-global-vectors-glove-51339db89639 "GloVe Explained")
+* [FastText: Under the Hood](https://towardsdatascience.com/fasttext-under-the-hood-11efc57b2b3 "FastText: Under the Hood")
+* [ELMo Explained](https://www.mihaileric.com/posts/deep-contextualized-word-representations-elmo/ "ELMo Explained")
 
 
 **Definitions to skim**
 
 
-* [Natural Language Processing](/rltoken/MxjFt_byHesq5bqJ5w4f6g "Natural Language Processing")
+* [Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing")
 
 
 **References:**
 
 
-* [Efficient Estimation of Word Representations in Vector Space (Skip\-gram, 2013\)](/rltoken/LaZB1GlSEH1ChFEvpFstTg "Efficient Estimation of Word Representations in Vector Space (Skip-gram, 2013)")
-* [Distributed Representations of Words and Phrases and their Compositionality (Word2Vec, 2013\)](/rltoken/GfP2NRiLbLJ4XwykCuP6pg "Distributed Representations of Words and Phrases and their Compositionality (Word2Vec, 2013)")
-* [GloVe: Global Vectors for Word Representation (website)](/rltoken/-ZKn1Q3bxe_frftXvu5mVw "GloVe: Global Vectors for Word Representation (website)")
-* [GloVe: Global Vectors for Word Representation (2014\)](/rltoken/6FkTMVl5BUFVaLHFPix35A "GloVe: Global Vectors for Word Representation (2014)")
-* [fastText (website)](/rltoken/gdmJqfUOLnHWZqD0Zz7Bsw "fastText (website)")
-* [Bag of Tricks for Efficient Text Classification (fastText, 2016\)](/rltoken/QSf0F-oDIRE1GuGCe5wuiA "Bag of Tricks for Efficient Text Classification (fastText, 2016)")
-* [Enriching Word Vectors with Subword Information (fastText, 2017\)](/rltoken/uBV5RU4dKzMNhFehZLFqZw "Enriching Word Vectors with Subword Information (fastText, 2017)")
-* [Probabilistic FastText for Multi\-Sense Word Embeddings (2018\)](/rltoken/93hJ3X3hi9xprqBaoXfj8A "Probabilistic FastText for Multi-Sense Word Embeddings (2018)")
-* [ELMo (website)](/rltoken/MyUqJzlbeNUXAOxU8gHcGA "ELMo (website)")
-* [Deep contextualized word representations (ELMo, 2018\)](/rltoken/yPsSxjTqk1-xrJ_Q2NZ61w "Deep contextualized word representations (ELMo, 2018)")
-* [sklearn.feature\_extraction.text.CountVectorizer](/rltoken/YWtFmZrBjn2DAKVI5m7aig "sklearn.feature_extraction.text.CountVectorizer")
-* [sklearn.feature\_extraction.text.TfidfVectorizer](/rltoken/N2zA3omshdEPKlORHQU-zA "sklearn.feature_extraction.text.TfidfVectorizer")
-* [genism.models.word2vec](/rltoken/7MHxavq6eWdHXOARS4i-pQ "genism.models.word2vec")
-* [genism.models.fasttext](/rltoken/4QG5gAQYt-fch7QNuEEPNw "genism.models.fasttext")
-* [Using Gensim Embeddings with Keras and Tensorflow](/rltoken/phrnHSAVmAIUkewKQ-h_6A "Using Gensim Embeddings with Keras and Tensorflow")
+* [Efficient Estimation of Word Representations in Vector Space (Skip\-gram, 2013\)](https://arxiv.org/pdf/1301.3781 "Efficient Estimation of Word Representations in Vector Space (Skip-gram, 2013)")
+* [Distributed Representations of Words and Phrases and their Compositionality (Word2Vec, 2013\)](https://arxiv.org/pdf/1310.4546 "Distributed Representations of Words and Phrases and their Compositionality (Word2Vec, 2013)")
+* [GloVe: Global Vectors for Word Representation (website)](https://nlp.stanford.edu/projects/glove/ "GloVe: Global Vectors for Word Representation (website)")
+* [GloVe: Global Vectors for Word Representation (2014\)](https://nlp.stanford.edu/pubs/glove.pdf "GloVe: Global Vectors for Word Representation (2014)")
+* [fastText (website)](https://fasttext.cc/ "fastText (website)")
+* [Bag of Tricks for Efficient Text Classification (fastText, 2016\)](https://arxiv.org/pdf/1607.01759 "Bag of Tricks for Efficient Text Classification (fastText, 2016)")
+* [Enriching Word Vectors with Subword Information (fastText, 2017\)](https://arxiv.org/pdf/1607.04606 "Enriching Word Vectors with Subword Information (fastText, 2017)")
+* [Probabilistic FastText for Multi\-Sense Word Embeddings (2018\)](https://arxiv.org/pdf/1806.02901 "Probabilistic FastText for Multi-Sense Word Embeddings (2018)")
+* [ELMo (website)](https://github.com/allenai/allennlp-models "ELMo (website)")
+* [Deep contextualized word representations (ELMo, 2018\)](https://arxiv.org/pdf/1802.05365 "Deep contextualized word representations (ELMo, 2018)")
+* [sklearn.feature\_extraction.text.CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer "sklearn.feature_extraction.text.CountVectorizer")
+* [sklearn.feature\_extraction.text.TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer "sklearn.feature_extraction.text.TfidfVectorizer")
+* [genism.models.word2vec](https://radimrehurek.com/gensim/models/word2vec.html "genism.models.word2vec")
+* [genism.models.fasttext](https://radimrehurek.com/gensim/models/fasttext.html "genism.models.fasttext")
+* [Using Gensim Embeddings with Keras and Tensorflow](https://github.com/piskvorky/gensim/wiki/Using-Gensim-Embeddings-with-Keras-and-Tensorflow "Using Gensim Embeddings with Keras and Tensorflow")
 
 
 ## Learning Objectives
@@ -87,24 +65,6 @@ At the end of this project, you are expected to be able to [explain to anyone](/
 * What is negative sampling?
 * What is word2vec, GloVe, fastText, ELMo?
 
-
-## Requirements
-
-
-### General
-
-
-* Allowed editors: `vi`, `vim`, `emacs`
-* All your files will be interpreted/compiled on Ubuntu 20\.04 LTS using `python3` (version 3\.9\)
-* Your files will be executed with `numpy` (version 1\.25\.2\) and `tensorflow` (version 2\.15\)
-* All your files should end with a new line
-* The first line of all your files should be exactly `#!/usr/bin/env python3`
-* All of your files must be executable
-* A `README.md` file, at the root of the folder of the project, is mandatory
-* Your code should follow the `pycodestyle` style (version 2\.11\.1\)
-* All your modules should have documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
-* All your classes should have documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
-* All your functions (inside and outside a class) should have documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
 
 
 ## Download Gensim
@@ -133,10 +93,6 @@ pip install --user gensim==4.3.3
 
 
 
-**Great!**
- You've completed the quiz successfully! Keep going!
- (Hide quiz)
-
 
 
 
@@ -149,10 +105,10 @@ Word2Vec uses:
 
 
 * Character n\-grams
-* Skip\-grams
-* CBOW
+* ***Skip\-grams***
+* ***CBOW***
 * Co\-occurrence matrices
-* Negative sampling
+* ***Negative sampling***
 
 
 
@@ -171,7 +127,7 @@ GloVe uses:
 * Character n\-grams
 * Skip\-grams
 * CBOW
-* Co\-occurrence matrices
+* ***Co\-occurrence matrices***
 * Negative sampling
 
 
@@ -188,11 +144,11 @@ FastText uses:
 
 
 
-* Character n\-grams
-* Skip\-grams
-* CBOW
+* ***Character n\-grams***
+* ***Skip\-grams***
+* ***CBOW***
 * Co\-occurrence matrices
-* Negative sampling
+* ***Negative sampling***
 
 
 
@@ -208,7 +164,7 @@ ELMo uses:
 
 
 
-* Character n\-grams
+* ***Character n\-grams***
 * Skip\-grams
 * CBOW
 * Co\-occurrence matrices
@@ -231,7 +187,7 @@ Which of the following can be used in conjunction with the others?
 * Word2Vec
 * GloVe
 * FastText
-* ELMo
+* ***ELMo***
 
 
 
@@ -252,25 +208,6 @@ Which of the following can be used in conjunction with the others?
 
 
 ### 0\. Bag Of Words
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def bag_of_words(sentences, vocab=None):` that creates a bag of words embedding matrix:
@@ -324,209 +261,10 @@ $ cat 0-main.py
 ```
 
 
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/word_embeddings`
-* File: `0-bag_of_words.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "0\. Bag Of Words"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "0\. Bag Of Words"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 0\. Bag Of Words
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**5/5** 
-pts
-
-
-
-
-
-
-
-
-
 ### 1\. TF\-IDF
 
 
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
+ 100\.00% (Checks completed: 100\.00%)
  
 
 
@@ -585,210 +323,8 @@ $ cat 1-main.py
 ```
 
 
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/word_embeddings`
-* File: `1-tf_idf.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "1\. TF\-IDF"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "1\. TF\-IDF"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 1\. TF\-IDF
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**5/5** 
-pts
-
-
-
-
-
-
-
-
-
 ### 2\. Train Word2Vec
 
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def word2vec_model(sentences, vector_size=100, min_count=5, window=5, negative=5, cbow=True, epochs=5, seed=0, workers=1):` that creates , builds and trains a `gensim` `word2vec` model:
@@ -849,210 +385,9 @@ $ cat 2-main.py
 ```
 
 
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/word_embeddings`
-* File: `2-word2vec.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "2\. Train Word2Vec"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "2\. Train Word2Vec"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 2\. Train Word2Vec
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
-
-
 ### 3\. Extract Word2Vec
 
 
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def gensim_to_keras(model):` that converts a `gensim` `word2vec` model to a `keras` Embedding layer:
@@ -1085,210 +420,7 @@ $ cat 3-main.py
 ```
 
 
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/word_embeddings`
-* File: `3-gensim_to_keras.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "3\. Extract Word2Vec"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "3\. Extract Word2Vec"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 3\. Extract Word2Vec
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
-
-
 ### 4\. FastText
-
-
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 Write a function `def fasttext_model(sentences, vector_size=100, min_count=5, negative=5, window=5, cbow=True, epochs=5, seed=0, workers=1):` that creates, builds and trains a `genism` `fastText` model:
@@ -1350,209 +482,9 @@ $ cat 4-main.py
 
 
 
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/word_embeddings`
-* File: `4-fasttext.py`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "4\. FastText"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "4\. FastText"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 4\. FastText
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**6/6** 
-pts
-
-
-
-
-
-
-
-
-
 ### 5\. ELMo
 
 
-
-
- mandatory
- 
-
-
-
-
-
-
-
-
-
-
-
- Score: 100\.00% (Checks completed: 100\.00%)
- 
 
 
 When training an ELMo embedding model, you are training:
@@ -1574,296 +506,5 @@ In the text file `5-elmo`, write the letter answer, followed by a newline, that 
 * F. 2
 * G. 3
 * H. None of the above
-
-
-
-
-
-
-
-**Repo:**
-
-
-* GitHub repository: `holbertonschool-machine_learning`
-* Directory: `supervised_learning/word_embeddings`
-* File: `5-elmo`
-
-
-
-
-
-
-
-
-
-
- Help
- 
-
-
-
-
-×
-#### Students who are done with "5\. ELMo"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Review your work
- 
-
-
-
-
-×
-#### Correction of "5\. ELMo"
-
-
-
-
-
-
-
-Start a new test
-Close
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Requirement success
- 
-
-
- Requirement fail
- 
-
-
-
-
- Code success
- 
-
-
- Code fail
- 
-
-
-
-
- Efficiency success
- 
-
-
- Efficiency fail
- 
-
-
-
-
- Text answer success
- 
-
-
- Text answer fail
- 
-
-
-
-
- Skipped \- Previous check failed
- 
-
-
-
-
-
-
-
-
- QA Review
- 
-
-
-
-
-×
-#### 5\. ELMo
-
-
-
-
-
-
-
-
-
-
-
-
-##### Commit used:
-
-
-* **User:**  \-\-\-
-* **URL:** Click here
-* **ID:** `---`
-* **Author:** \-\-\-
-* **Subject:** *\-\-\-*
-* **Date:** \-\-\-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**2/2** 
-pts
-
-
-
-
-
-
-
-
-
-[Previous project](/projects/2337)  
-
-
-
- Next project 
-
-
-
-
-
-
-
-### Score
-
-![Project badge](/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png)100%Congratulations! You made it!
-
-Now that you are ready to be reviewed, share your link to your peers. You can find some [here](#available-reviewers-modal).
-
-×#### Contact one of your peers
-
-https://intranet.hbtn.io/corrections/853587/correctDon't forget to [review one of them](/corrections/to_review).
-
-Review all the tasks[Open the next project](/projects/2394)
-
-
-### Score
-
-![Project badge](/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png)100%Congratulations! You made it!
-
-Now that you are ready to be reviewed, share your link to your peers. You can find some [here](#available-reviewers-modal).
-
-×#### Contact one of your peers
-
-https://intranet.hbtn.io/corrections/853587/correctDon't forget to [review one of them](/corrections/to_review).
-
-Review all the tasks[Open the next project](/projects/2394)
-
-
-
-### Tasks list
-
-
-
-
-* [Mandatory](#mandatory)
-* [Advanced](#advanced)
-
-
-
-
-
-0\. `Bag Of Words`
-**100\.00%**
-
-
-1\. `TF-IDF`
-**100\.00%**
-
-
-2\. `Train Word2Vec`
-**100\.00%**
-
-
-3\. `Extract Word2Vec`
-**100\.00%**
-
-
-4\. `FastText`
-**100\.00%**
-
-
-5\. `ELMo`
-**100\.00%**
-
-
-
-
-
-
-
-
-
-×#### Recommended Sandboxes
-
-New sandbox * 
-* US East (N. Virginia)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* South America (São Paulo)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Europe (Paris)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-* 
-* Asia Pacific (Sydney)
-* Ubuntu 18\.04
-* Ubuntu 22\.04
-No sandboxes yet!
-
-
-
 
 
