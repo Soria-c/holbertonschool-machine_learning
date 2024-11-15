@@ -22,44 +22,47 @@ def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
     - scores (list): All scores for each episode (sum of rewards).
     """
     # Initialize random weights with the shape of (state_space, action_space)
-    weight = np.random.rand(env.observation_space.shape[0], env.action_space.n)
     scores = []
+    weight = np.random.rand(4, 2)  # Initialize weights for the policy gradient
 
-    # Training loop
     for episode in range(nb_episodes):
-        state = env.reset()
-        episode_gradient = []
-        episode_rewards = []
-        score = 0
-
-        # Generate an episode
+        state, _ = env.reset()
         done = False
+        episode_rewards = []
+        gradients = []
+
         while not done:
-            state = state.reshape(1, -1)  # Reshape for single sample input
-            action, gradient = policy_gradient(state, weight)
-            next_state, reward, done, _ = env.step(action)
+            # Render environment every 1000 episodes if show_result is True
+            if show_result and episode % 1000 == 0:
+                env.render()
 
-            # Record the gradients and rewards
-            episode_gradient.append(gradient)
+            # Compute action and gradient using policy gradient
+            # Use correct policy_gradient function
+            action, grad = policy_gradient(state, weight)
+            action = int(action)  # Ensure action is an integer
+
+            # Take a step in the environment
+            next_state, reward, done, _, _ = env.step(action)
+
+            # Collect reward and gradient for this step
             episode_rewards.append(reward)
-            score += reward
-
-            # Move to the next state
+            gradients.append(grad)
             state = next_state
 
-        # Discounted rewards calculation
-        discounted_rewards = np.zeros_like(episode_rewards, dtype=float)
-        cumulative = 0
-        for t in reversed(range(len(episode_rewards))):
-            cumulative = cumulative * gamma + episode_rewards[t]
-            discounted_rewards[t] = cumulative
-
-        # Update weights using Monte-Carlo policy gradient
-        for t in range(len(episode_gradient)):
-            weight += alpha * episode_gradient[t] * discounted_rewards[t]
-
-        # Store the score and print the current episode's result
+        # Compute the score (sum of rewards for the episode)
+        score = sum(episode_rewards)
         scores.append(score)
-        print(f"Episode: {episode + 1} Score: {score}")
+
+        # Print the episode number and score
+        print(f"Episode: {episode} Score: {score}")
+
+        # Compute the discounted rewards and update weights
+        for t in range(len(episode_rewards)):
+            G = sum([gamma ** i * episode_rewards[i + t]
+                    for i in range(len(episode_rewards) - t)])
+
+            # Update weights using policy gradient
+            weight_update = alpha * G * gradients[t]
+            weight += weight_update
 
     return scores
