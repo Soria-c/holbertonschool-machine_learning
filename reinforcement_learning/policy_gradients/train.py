@@ -40,7 +40,7 @@ def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
         while not done:
             state = state.reshape(1, -1)  # Reshape for single sample input
             action, gradient = policy_gradient(state, weight)
-            next_state, reward, done, _ = env.step(action)
+            next_state, reward, done, trunc, _ = env.step(action)
 
             # Record the gradients and rewards
             episode_gradient.append(gradient)
