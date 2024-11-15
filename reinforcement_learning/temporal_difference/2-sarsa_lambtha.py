@@ -28,6 +28,7 @@ def sarsa_lambtha(env, Q, lambtha, episodes=5000, max_steps=100, alpha=0.1,
     Returns:
     - Q (np.ndarray): Updated Q-value estimates for each state-action pair.
     """
+    e = epsilon
 
     def epsilon_greedy_action(Q, state, epsilon):
         """Selects an action using epsilon-greedy policy based on Q-table."""
@@ -49,7 +50,7 @@ def sarsa_lambtha(env, Q, lambtha, episodes=5000, max_steps=100, alpha=0.1,
             next_action = epsilon_greedy_action(Q, next_state, epsilon)
 
             # Calculate TD error for SARSA
-            td_error = reward + gamma * Q[next_state, next_action]\
+            td_error = reward + (gamma * Q[next_state, next_action])\
                 - Q[state, action]
 
             # Update eligibility trace for the current state-action pair
@@ -67,7 +68,7 @@ def sarsa_lambtha(env, Q, lambtha, episodes=5000, max_steps=100, alpha=0.1,
                 break
 
         # Decay epsilon after each episode
-        epsilon = (min_epsilon + (epsilon - min_epsilon) *
+        epsilon = (min_epsilon + (e - min_epsilon) *
                    np.exp(-epsilon_decay * episode))
 
     return Q
