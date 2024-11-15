@@ -48,18 +48,21 @@ def policy_gradient(state, weight):
     - gradient (np.ndarray): The gradient of the log-probability
                              of the chosen action.
     """
+    # Reshaoe
+    state = state.reshape(1, -1)
+
     # Calculate the action probabilities using the policy function
-    action_probs = policy(state, weight)
+    action_probs = policy(state, weight).flatten()
 
     # Sample an action based on the probability distribution
-    action = np.random.choice(len(action_probs[0]), p=action_probs[0])
+    action = np.random.choice(len(action_probs), p=action_probs)
 
     # Calculate the gradient of the log-probability for the chosen action
     dsoftmax = action_probs.copy()
     # Subtract 1 from the probability of the chosen action
-    dsoftmax[0, action] -= 1
+    dsoftmax[action] -= 1
 
     # Compute the gradient with respect to the weights
-    gradient = np.dot(state.T, dsoftmax)
+    gradient = np.dot(state, -dsoftmax)
 
     return action, gradient
