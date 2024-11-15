@@ -27,12 +27,13 @@ def monte_carlo(env, V, policy, episodes=5000, max_steps=100,
 
     for episode in range(episodes):
         # Generate an episode
-        state = env.reset()
+        state = env.reset()[0]
         episode_data = []
-
+        # priont
         for step in range(max_steps):
             action = policy(state)
-            next_state, reward, done, _ = env.step(action)
+            next_state, reward, done, trunc, _ = env.step(action)
+
             episode_data.append((state, reward))
 
             if done:
@@ -41,7 +42,7 @@ def monte_carlo(env, V, policy, episodes=5000, max_steps=100,
 
         # Compute returns for each state in the episode
         G = 0  # Initialize return
-        visited_states = set()
+        episode_data = np.array(episode_data, dtype=int)
 
         # Reverse the episode to calculate returns for each state
         for state, reward in reversed(episode_data):
@@ -49,9 +50,7 @@ def monte_carlo(env, V, policy, episodes=5000, max_steps=100,
 
             # Only update if it's the first time the state
             # is visited in the episode
-            if state not in visited_states:
-                visited_states.add(state)
-
+            if state not in episode_data[:episode, 0]:
                 # Update value estimate using incremental mean
                 V[state] = V[state] + alpha * (G - V[state])
 
