@@ -31,9 +31,9 @@ def sarsa_lambtha(env, Q, lambtha, episodes=5000, max_steps=100, alpha=0.1,
 
     def epsilon_greedy_action(Q, state, epsilon):
         """Selects an action using epsilon-greedy policy based on Q-table."""
-        if np.random.rand() < epsilon:
-            return env.action_space.sample()
-        return np.argmax(Q[state])
+        if np.random.uniform(0, 1) > epsilon:
+            return np.argmax(Q[state, :])
+        return np.random.randint(0, Q.shape[1])
 
     for episode in range(episodes):
         # Initialize eligibility traces for each state-action pair as zero
@@ -56,17 +56,18 @@ def sarsa_lambtha(env, Q, lambtha, episodes=5000, max_steps=100, alpha=0.1,
             eligibility_traces[state, action] += 1
 
             # Update Q-values and eligibility traces for all state-action pairs
-            Q += alpha * td_error * eligibility_traces
             eligibility_traces *= gamma * lambtha
+            Q += alpha * td_error * eligibility_traces
 
             # Move to the next state and action
             state, action = next_state, next_action
 
             # End episode if done
-            if done:
+            if done or trunc:
                 break
 
         # Decay epsilon after each episode
-        epsilon = max(min_epsilon, epsilon * (1 - epsilon_decay))
+        epsilon = (min_epsilon + (epsilon - min_epsilon) *
+                   np.exp(-epsilon_decay * episode))
 
     return Q
