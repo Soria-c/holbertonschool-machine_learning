@@ -63,6 +63,6 @@ def policy_gradient(state, weight):
     dsoftmax[action] -= 1
 
     # Compute the gradient with respect to the weights
-    gradient = np.dot(state, -dsoftmax)
+    gradient = np.outer(state, -dsoftmax)
 
     return action, gradient
