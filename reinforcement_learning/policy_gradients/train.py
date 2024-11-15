@@ -7,7 +7,7 @@ import numpy as np
 policy_gradient = __import__('policy_gradient').policy_gradient
 
 
-def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
+def train(env, nb_episodes, alpha=0.000045, gamma=0.98, show_result=False):
     """
     Trains an agent using Monte-Carlo policy gradient.
 
@@ -34,6 +34,11 @@ def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
         episode_gradient = []
         episode_rewards = []
         score = 0
+
+        # Render the environment if show_result is True
+        # and episode is a multiple of 1000
+        if show_result and episode % 1000 == 0:
+            env.render()
 
         # Generate an episode
         done = False
