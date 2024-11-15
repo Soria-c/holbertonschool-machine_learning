@@ -4,7 +4,6 @@ Train an agent using Monte-Carlo policy gradient in a given environment.
 """
 
 import numpy as np
-
 policy_gradient = __import__('policy_gradient').policy_gradient
 
 
@@ -27,7 +26,11 @@ def train(env, nb_episodes, alpha=0.000045, gamma=0.98):
 
     # Training loop
     for episode in range(nb_episodes):
-        state = env.reset()
+        initial_state = env.reset()
+
+        # Handle cases where env.reset() returns (state, info) tuple
+        state = initial_state[0] if isinstance(initial_state, tuple)\
+            else initial_state
         episode_gradient = []
         episode_rewards = []
         score = 0
