@@ -36,6 +36,9 @@
 * [Deep Q-learning](./reinforcement_learning/deep_q_learning/README.md)
 * [Temporal Difference](./reinforcement_learning/temporal_difference/README.md)
 * [Policy Gradients](./reinforcement_learning/policy_gradients/README.md)
+* [Pandas](./pipeline/pandas/README.md)
+
+
 wip
 
 
