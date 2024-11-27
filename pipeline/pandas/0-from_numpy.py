@@ -4,7 +4,6 @@ From numpy
 """
 
 import pandas as pd
-import string
 
 
 def from_numpy(array):
