@@ -3,12 +3,11 @@
 From numpy
 """
 
-import numpy as np
 import pandas as pd
 import string
 
 
-def from_numpy(array: np.ndarray) -> pd.DataFrame:
+def from_numpy(array):
     """
     Converts a NumPy ndarray into a pandas DataFrame with
     columns labeled alphabetically (A, B, C, ...).
@@ -32,7 +31,7 @@ def from_numpy(array: np.ndarray) -> pd.DataFrame:
         array = array.reshape(1, -1)
 
     # Create the column labels (A, B, C, ...)
-    columns = list(string.ascii_uppercase[:array.shape[1]])
+    columns = [chr(65 + i) for i in range(array.shape[1])]
 
     # Create and return the DataFrame
     return pd.DataFrame(array, columns=columns)
