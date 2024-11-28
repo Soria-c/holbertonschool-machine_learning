@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """Descriptive statistics"""
 
-import pandas as pd
 
-
-def analyze(df: pd.DataFrame) -> pd.DataFrame:
+def analyze(df):
     """
     Computes descriptive statistics for all columns except
     the Timestamp column.
