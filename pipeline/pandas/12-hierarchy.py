@@ -24,20 +24,21 @@ def hierarchy(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
                   ordered chronologically, and with appropriate keys.
     """
     # Index both dataframes by the 'Timestamp' column
-    df1 = index(df1)
-    df2 = index(df2)
 
-    # Filter rows from both DataFrames for the timestamp range
-    # between 1417411980 and 1417417980
-    df1_filtered = df1[(df1.index >= 1417411980) & (df1.index <= 1417417980)]
-    df2_filtered = df2[(df2.index >= 1417411980) & (df2.index <= 1417417980)]
+    df1 = df1.loc[
+            (df1['Timestamp'] >= 1417411980) & (df1['Timestamp'] <= 1417417980)
+    ]
+    df2 = df2.loc[
+            (df2['Timestamp'] >= 1417411980) & (df2['Timestamp'] <= 1417417980)
+    ]
 
-    # Concatenate df2 (bitstamp) above df1 (coinbase) with appropriate keys
-    concatenated_df = pd.concat([df2_filtered, df1_filtered],
-                                keys=['bitstamp', 'coinbase'])
+    df1 = df1.set_index('Timestamp')
+    df2 = df2.set_index('Timestamp')
 
-    # Ensure the data is sorted by the Timestamp
-    # (which is now part of the index)
-    concatenated_df = concatenated_df.sort_index(level=0)
+    df = pd.concat([df2, df1], keys=['bitstamp', 'coinbase'])
 
-    return concatenated_df
+    df = df.reorder_levels([1, 0], axis=0)
+
+    df = df.sort_index()
+
+    return df
