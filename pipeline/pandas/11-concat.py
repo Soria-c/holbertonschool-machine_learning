@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Concatenate"""
 
+import pandas as pd
 
 # Assuming the 'index' function from the '10-index' module is already defined
 index = __import__('10-index').index
