@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Flip Switcg"""
-import pandas as pd
 
 
 def flip_switch(df):
