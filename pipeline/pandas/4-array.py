@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """To numpy array"""
-import pandas as pd
 
 
-def array(df: pd.DataFrame):
+def array():
     """
     Selects the last 10 rows of the 'High' and 'Close' columns
     from the input DataFrame,
