@@ -21,11 +21,7 @@ def rename(df: pd.DataFrame) -> pd.DataFrame:
     df = df.rename(columns={'Timestamp': 'Datetime'})
 
     # Convert 'Datetime' column to datetime type
-    df['Datetime'] = pd.to_datetime(df['Datetime'])
-
-    # Format 'Datetime' column to 24-hour format
-    df['Datetime'] = df['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
-
+    df['Datetime'] = pd.to_datetime(df['Datetime'], unit='s')
 
     # Select only the 'Datetime' and 'Close' columns
     df = df[['Datetime', 'Close']]
