@@ -20,19 +20,15 @@ def fill(df):
     pd.DataFrame: The modified DataFrame after filling missing
     values and removing the 'Weighted_Price' column.
     """
-    # Remove the 'Weighted_Price' column
-    df_cleaned = df.drop(columns=['Weighted_Price'], errors='ignore')
+    df = df.drop(columns=['Weighted_Price'])
+    # Missing values in Close should be set to previous row value
+    df['Close'].fillna(method='pad', inplace=True)
+    # Missing values in High, Low, Open should be set to same row's Close value
+    df['High'].fillna(df.Close, inplace=True)
+    df['Low'].fillna(df.Close, inplace=True)
+    df['Open'].fillna(df.Close, inplace=True)
+    # Missing values in Volume_(BTC) and Volume_(Currency) should be set to 0
+    df['Volume_(BTC)'].fillna(value=0, inplace=True)
+    df['Volume_(Currency)'].fillna(value=0, inplace=True)
 
-    # Fill missing values in 'Close' with the previous row's value
-    df_cleaned['Close'] = df_cleaned['Close'].fillna(method='ffill')
-
-    # Fill missing values in 'High', 'Low', and 'Open' with the corresponding
-    # 'Close' value
-    df_cleaned[['High', 'Low', 'Open']] = df_cleaned[['High', 'Low', 'Open']]\
-        .fillna(df_cleaned['Close'])
-
-    # Set missing values in 'Volume_(BTC)' and 'Volume_(Currency)' to 0
-    df_cleaned[['Volume_(BTC)', 'Volume_(Currency)']] = df_cleaned[
-        ['Volume_(BTC)', 'Volume_(Currency)']].fillna(0)
-
-    return df_cleaned
+    return df
