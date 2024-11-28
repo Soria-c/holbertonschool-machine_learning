@@ -6,7 +6,7 @@
 index = __import__('10-index').index
 
 
-def concat(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
+def concat(df1, df2):
     """
     Concatenates two DataFrames (`df1` and `df2`) after indexing
     them by the 'Timestamp' column.
