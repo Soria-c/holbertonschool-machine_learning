@@ -1,60 +1,64 @@
 #!/usr/bin/env python3
 """
-This script retrieves and displays the first launch information using
-the SpaceX API.
+This script retrieves and displays the first SpaceX launch with details:
+launch name, date, rocket name, and launchpad information.
 """
 
 import requests
+from datetime import datetime
 
 
 def get_first_launch():
     """
-    Fetches and displays information about the first
-    SpaceX launch.
+    Fetches the first SpaceX launch from the API and returns
+    the formatted details.
 
-    Format:
-        <launch name> (<date>) <rocket name> - <launchpad name>
-        (<launchpad locality>)
+    Returns:
+        str: The formatted string containing launch details,
+        or an error message.
     """
-    url = "https://api.spacexdata.com/v4/launches"
-    response = requests.get(url)
+    base_url = "https://api.spacexdata.com/v4"
 
-    if response.status_code != 200:
-        raise RuntimeError(f"Failed to fetch data: {response.status_code}")
+    # Fetch all launches
+    launches_response = requests.get(f"{base_url}/launches")
+    if launches_response.status_code != 200:
+        return "Error: Unable to fetch launches."
+    launches = launches_response.json()
 
-    launches = response.json()
+    # Find the earliest launch by date_unix
+    earliest_launch = min(launches, key=lambda launch:
+                          launch.get("date_unix", float("inf")))
 
-    # Sort launches by date_unix (ascending order)
-    launches.sort(key=lambda x: x.get("date_unix", float('inf')))
-    first_launch = launches[0]
+    # Extract launch details
+    launch_name = earliest_launch.get("name", "Unknown launch")
+    date_unix = earliest_launch.get("date_unix")
+    if date_unix is None:
+        return "Error: Date missing for the earliest launch."
+    launch_date = datetime.fromtimestamp(date_unix)\
+        .strftime("%Y-%m-%d %H:%M:%S")
 
-    # Extract required information
-    launch_name = first_launch.get("name", "Unknown Launch")
-    launch_date = first_launch.get("date_local", "Unknown Date")
-    rocket_id = first_launch.get("rocket")
-    launchpad_id = first_launch.get("launchpad")
+    rocket_id = earliest_launch.get("rocket")
+    launchpad_id = earliest_launch.get("launchpad")
 
     # Fetch rocket details
-    rocket_url = f"https://api.spacexdata.com/v4/rockets/{rocket_id}"
-    rocket_response = requests.get(rocket_url)
-    rocket_name = rocket_response.json().get("name", "Unknown Rocket")\
-        if rocket_response.status_code == 200 else "Unknown Rocket"
+    rocket_response = requests.get(f"{base_url}/rockets/{rocket_id}")
+    rocket_name = rocket_response.json().get("name", "Unknown rocket") \
+        if rocket_response.status_code == 200 else "Unknown rocket"
 
     # Fetch launchpad details
-    launchpad_url = f"https://api.spacexdata.com/v4/launchpads/{launchpad_id}"
-    launchpad_response = requests.get(launchpad_url)
+    launchpad_response = requests.get(f"{base_url}/launchpads/{launchpad_id}")
     if launchpad_response.status_code == 200:
         launchpad_data = launchpad_response.json()
-        launchpad_name = launchpad_data.get("name", "Unknown Launchpad")
-        launchpad_locality = launchpad_data.get("locality", "Unknown Locality")
+        launchpad_name = launchpad_data.get("name", "Unknown launchpad")
+        launchpad_locality = launchpad_data.get("locality", "Unknown locality")
     else:
-        launchpad_name = "Unknown Launchpad"
-        launchpad_locality = "Unknown Locality"
+        launchpad_name = "Unknown launchpad"
+        launchpad_locality = "Unknown locality"
 
-    # Format and print the result
-    print(f"{launch_name} ({launch_date}) {rocket_name} - \
-        {launchpad_name} ({launchpad_locality})")
+    # Format and return the output
+    return f"{launch_name} ({launch_date}) {rocket_name} - \
+        {launchpad_name} ({launchpad_locality})"
 
 
 if __name__ == "__main__":
-    get_first_launch()
+    print(get_first_launch())
